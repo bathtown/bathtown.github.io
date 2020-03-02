@@ -8,7 +8,7 @@ head {
     top: 0;
     left: 0;
 }
-<style type="text/css">
+
 body {
     background-color: gainsboro;
     text-align: center;
@@ -25,7 +25,7 @@ body {
 }
 
 .pin:hover {
-    transform: scale(1.01);
+    /* transform: scale(1.01); */
     /* 四周都有阴影 */
     box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.5),
         2px -2px 5px rgba(128, 128, 128, 0.5),
@@ -44,5 +44,5 @@ body {
 
 .pin p {
     border-top: 1px solid gainsboro;
+    padding-top: 10px;
 }
-</style>
