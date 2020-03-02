@@ -1,0 +1,48 @@
+body {
+    background-color: gainsboro;
+    color: black;
+    font-family: "Gill Sans", sans-serif;}
+
+head {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+<style type="text/css">
+body {
+    background-color: gainsboro;
+    text-align: center;
+}
+
+.pin {
+    width: 200px;
+    height: 400px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all 0.5s;
+    float: left;
+}
+
+.pin:hover {
+    transform: scale(1.01);
+    /* 四周都有阴影 */
+    box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.5),
+        2px -2px 5px rgba(128, 128, 128, 0.5),
+        -2px 2px 5px rgba(128, 128, 128, 0.5),
+        -2px -2px 5px rgba(128, 128, 128, 0.5);
+}
+
+.pin img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.pin img:hover {
+    opacity: 0.8;
+}
+
+.pin p {
+    border-top: 1px solid gainsboro;
+}
+</style>
