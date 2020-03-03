@@ -1,0 +1,163 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    background-color: white;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-size: normal;
+    text-align: center;
+    margin-bottom: 60px;
+    padding-bottom: 60px;
+    font-family: "Gill Sans", sans-serif;
+    text-align: center;
+    flex-direction: column
+}
+
+header {
+    background-color: #444444;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul li {
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+    float: left;
+}
+
+.InputAddOn {
+    display: flex;
+    height: 90%;
+}
+
+.InputAddOn-field {
+    flex: 1;
+}
+
+header ul li a:link, a:visited {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    display: block;
+    width: 160px;
+    transition-duration: 0.2s;
+}
+
+header ul li a:hover, a:active {
+    color: #fafafa;
+    font-size: 1.25rem;
+}
+
+ul li ul li {
+    float: none;
+    background-color: #444444;
+}
+
+ul li ul {
+    position: absolute;
+    display: none;
+    box-shadow: 3px 0px 3px #444444, -3px 0px 3px #444444, 0px 3px 3px #444444;
+}
+
+ul li:hover ul {
+    display: block;
+}
+
+article {
+    padding: 20px;
+    padding-top: 70px;
+    margin: auto;
+    /* 流式布局 */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    /* align-content: space-between; */
+}
+
+.pin {
+    justify-content: center;
+    max-width: 100%;
+    width: 240px;
+    height: 420px;
+    margin: 10px;
+    overflow: hidden;
+    /* border: 1px solid gainsboro; */
+    background-color: #fafafa;
+    border-radius: 10px;
+    transition: all 0.2s;
+    float: left;
+    text-align: center;
+}
+
+.pin:hover {
+    transform-origin: bottom;
+    transform: scale(1.01);
+    /* 四周都有阴影 */
+    box-shadow: 2px 2px 5px gainsboro, 2px -2px 5px gainsboro, -2px 2px 5px gainsboro, -2px -2px 5px gainsboro;
+}
+
+.pin a {
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.pin img {
+    cursor: pointer;
+    width: 100%;
+}
+
+.pin img:hover {
+    opacity: 0.8;
+}
+
+.pin h1 {
+    font-size: 1.6rem;
+    margin: 10px;
+}
+
+.pin p {
+    border-top: 1px solid gainsboro;
+    padding: 5px;
+    margin: 5px;
+    font-size: 1.2rem;
+    text-align: left;
+    /* color: gray; */
+}
+
+footer {
+    background-color: #fafafa;
+    height: 60px;
+    line-height: 60px;
+    margin: 0;
+    padding: 0;
+    clear: both;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 1rem;
+    text-align: center;
+    color: gray;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,66 @@
+.wrapper {
+	padding: 20px;
+	text-align: center;
+}
+
+.list-unstyled {
+	padding-left: 0;
+	list-style: none;
+}
+
+.list-inline li {
+	display: inline-block;
+	padding-right: 5px;
+	padding-left: 5px;
+	margin-bottom: 10px;
+}
+
+.social-icons .fa {
+	font-size: 1.6em;
+	/*icons size*/
+	width: 50px;
+	/*icons circle size*/
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.7);
+	transition: all 0.3s ease-in-out;
+}
+
+.social-icons.icon-circle .fa {
+	border-radius: 50%;
+	/* to insure it's round */
+}
+
+.social-icons .fa:hover, .social-icons .fa:active {
+	color: white;
+	box-shadow: 2px 2px 2px rgb(204, 204, 204);
+}
+
+.social-icons .fa-dribbble {
+	background-color: #F46899;
+}
+
+.social-icons .fa-facebook {
+	background-color: #3C599F;
+}
+
+.social-icons .fa-github {
+	background-color: #444444;
+}
+
+.social-icons .fa-instagram {
+	background-color: rgb(243, 91, 32);
+}
+
+.social-icons .fa-pinterest {
+	background-color: rgb(197, 7, 14);
+}
+
+.social-icons .fa-twitter {
+	background-color: #32CCFE;
+}
+
+.social-icons .fa-weibo {
+	background-color: #D72B2B;
+}
