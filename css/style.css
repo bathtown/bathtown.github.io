@@ -1,163 +1,317 @@
+@charset "utf-8";
+* {
+    padding: 0;
+    margin: 0;
+}
+
 html {
-    min-height: 100%;
-    position: relative;
+    font-size: 12px;
 }
 
 body {
-    background-color: white;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    font-size: normal;
-    text-align: center;
-    margin-bottom: 60px;
-    padding-bottom: 60px;
+    /* basic font */
     font-family: "Gill Sans", sans-serif;
     text-align: center;
-    flex-direction: column
+    color: black;
+    background-color: white;
+    /* position */
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 header {
     background-color: #444444;
     width: 100%;
-    margin: 0px;
-    padding: 0px;
     position: fixed;
-    top: 0px;
-    left: 0px;
+    float: left;
+    clear: both;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
-ul {
+header #emoji {
+    width: 60px;
+    text-align: center;
+}
+
+header ul {
     list-style: none;
-    margin: 0px;
-    padding: 0px;
 }
 
-ul li {
+header ul li {
     line-height: 40px;
     text-align: center;
     position: relative;
     float: left;
 }
 
-.InputAddOn {
-    display: flex;
-    height: 90%;
-}
-
-.InputAddOn-field {
-    flex: 1;
-}
-
-header ul li a:link, a:visited {
+header ul li a, header ul li p {
+    cursor: pointer;
     font-size: 1.2rem;
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.8);
+    color: gainsboro;
     display: block;
     width: 160px;
     transition-duration: 0.2s;
 }
 
-header ul li a:hover, a:active {
-    color: #fafafa;
-    font-size: 1.25rem;
+header ul li p {
+    cursor: default;
 }
 
-ul li ul li {
+header ul li a:hover {
+    color: #fafafa;
+    /* font-size: 1.25rem; */
+}
+
+header ul li ul li {
     float: none;
     background-color: #444444;
 }
 
-ul li ul {
+header ul li ul {
     position: absolute;
     display: none;
     box-shadow: 3px 0px 3px #444444, -3px 0px 3px #444444, 0px 3px 3px #444444;
 }
 
-ul li:hover ul {
+header ul li:hover ul {
     display: block;
 }
 
 article {
-    padding: 20px;
-    padding-top: 70px;
-    margin: auto;
-    /* 流式布局 */
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    /* align-content: space-between; */
+    width: 100%;
+    /* to insure footer is under */
+    flex: 1;
 }
 
-.pin {
+/* main=browser */
+
+article #browser {
+    padding-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    max-width: 100%;
-    width: 240px;
-    height: 420px;
-    margin: 10px;
+}
+
+article #browser #firstPic img {
+    width: 100%;
+}
+
+article #browser #showPic {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+article #browser #showPic .pin {
+    width: 200px;
+    height: auto;
+    margin: 10px auto;
     overflow: hidden;
-    /* border: 1px solid gainsboro; */
     background-color: #fafafa;
     border-radius: 10px;
     transition: all 0.2s;
-    float: left;
-    text-align: center;
 }
 
-.pin:hover {
+article #browser #showPic .pin:hover {
     transform-origin: bottom;
     transform: scale(1.01);
     /* 四周都有阴影 */
     box-shadow: 2px 2px 5px gainsboro, 2px -2px 5px gainsboro, -2px 2px 5px gainsboro, -2px -2px 5px gainsboro;
 }
 
-.pin a {
-    width: 100%;
+article #browser #showPic .pin a {
     text-decoration: none;
-    font-size: 1.2rem;
 }
 
-.pin img {
+article #browser #showPic .pin a img {
     cursor: pointer;
     width: 100%;
 }
 
-.pin img:hover {
+article #browser #showPic .pin img:hover {
     opacity: 0.8;
 }
 
-.pin h1 {
+article #browser #showPic .pin h1 {
     font-size: 1.6rem;
     margin: 10px;
+    cursor: default;
 }
 
-.pin p {
+article #browser #showPic .pin p {
+    color: #444444;
     border-top: 1px solid gainsboro;
-    padding: 5px;
+    padding: 5px 15px;
     margin: 5px;
     font-size: 1.2rem;
     text-align: left;
-    /* color: gray; */
+    cursor: default;
+    /* enable to long words ... */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* main=login */
+
+article #login {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+article #login>h1 {
+    font-weight: normal;
+    padding: 60px;
+}
+
+article #login p {
+    padding: 30px;
+}
+
+article #login section {
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    margin: auto;
+    border-radius: 20px;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+article #login section h1 {
+    font-size: 1.6rem;
+}
+
+article #login section.p {
+    font-size: 1.2rem;
+}
+
+article #login section form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+article #login section form input {
+    border: none;
+    width: 80%;
+    height: 40px;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: white;
+}
+
+article #login section form input:focus {
+    border: none;
+    width: 80%;
+    height: 40px;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: gainsboro;
+}
+
+article #login section form a {
+    width: 80%;
+    margin: 5px auto;
+    padding: 0;
+    text-decoration: none;
+    text-align: left;
+    font-size: 1rem;
+    color: grey;
+}
+
+article #login section form a:hover {
+    color: black;
+}
+
+article #login section form #sign {
+    display: inline-block;
+    border: none;
+    width: 80%;
+    height: 40px;
+    border-radius: 10px;
+    margin: 20px 40 40 20 auto;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #444444;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+
+article #login section form #sign:hover {
+    color: white;
+}
+
+article #login section div {
+    width: 80%;
+    margin: 5px auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+article #login section div a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: grey;
+}
+
+article #login section div a:hover {
+    color: black;
 }
 
 footer {
     background-color: #fafafa;
     height: 60px;
-    line-height: 60px;
-    margin: 0;
-    padding: 0;
-    clear: both;
-    position: absolute;
-    bottom: 0px;
-    left: 0;
     width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+footer section {
+    text-align: center;
+    line-height: 30px;
+}
+
+footer section a {
+    padding: 10px;
+    /* font-size: 1rem; */
+    width: 120px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #444444;
+}
+
+footer section span {
+    color: grey;
+    cursor: default;
 }
 
 footer p {
+    height: 30px;
     font-size: 1rem;
     text-align: center;
     color: gray;
-    margin: 0;
-    padding: 0;
+    cursor: default;
 }

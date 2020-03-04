@@ -1,3 +1,4 @@
+@charset "utf-8";
 .wrapper {
 	padding: 20px;
 	text-align: center;
@@ -16,12 +17,12 @@
 }
 
 .social-icons .fa {
-	font-size: 1.6em;
 	/*icons size*/
-	width: 50px;
+	font-size: 1em;
 	/*icons circle size*/
-	height: 50px;
-	line-height: 50px;
+	width: 45px;
+	height: 45px;
+	line-height: 45px;
 	text-align: center;
 	color: rgba(255, 255, 255, 0.7);
 	transition: all 0.3s ease-in-out;

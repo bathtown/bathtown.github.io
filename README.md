@@ -26,11 +26,27 @@
 
 * CSS设计手册
   * font-size:
-    * body.font-size: normal;
-    * a.font-size: 1.2rem;p.font-size: 1.2rem;
-    * h1.font-size: 1.6rem;
-    * footer.p.font-size: 1rem;
+    * html.`font-size: 12px`;html的font-size才是root，而不是body
+    * a.`font-size: 1.2rem`;
+    * p.`font-size: 1.2rem`;
+    * h1.`font-size: 1.6rem`;
+    * footer.p.`font-size: 1rem`;
   * color
-    * white < #fafafa < gainsboro
-    * before linked: rgba(255, 255, 255, 0.8)
-    * black > #444444
+    * `white` < `#fafafa` < `gainsboro` < `grey`
+    * before linked: `rgba(255, 255, 255, 0.8)`
+    * `black` > `#444444`
+  * font-family: "Gill Sans", sans-serif;
+
+* 🙃彩蛋：Solar System
+
+* Boostrap
+
+* 神秘情形：在chrome和firefox无法显示，搜了好久：在CSS文件头加上 `@charset "utf-8"`
+
+* 实现一段文字溢出后显示省略号
+
+    ```css
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    ```
