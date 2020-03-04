@@ -13,7 +13,7 @@ body {
     font-family: "Gill Sans", sans-serif;
     text-align: center;
     color: black;
-    background-color: white;
+    background-color: #fafafa;
     /* position */
     width: 100%;
     display: flex;
@@ -21,7 +21,11 @@ body {
     flex-direction: column;
 }
 
-header {
+/* header */
+
+/* laptopHeader */
+
+#laptopHeader {
     background-color: #444444;
     width: 100%;
     position: fixed;
@@ -33,23 +37,23 @@ header {
     justify-content: space-between;
 }
 
-header #emoji {
+#laptopHeader #emoji {
     width: 60px;
     text-align: center;
 }
 
-header ul {
+#laptopHeader ul {
     list-style: none;
 }
 
-header ul li {
+#laptopHeader ul li {
     line-height: 40px;
     text-align: center;
     position: relative;
     float: left;
 }
 
-header ul li a, header ul li p {
+#laptopHeader ul li a, #laptopHeader ul li p {
     cursor: pointer;
     font-size: 1.2rem;
     text-decoration: none;
@@ -59,29 +63,98 @@ header ul li a, header ul li p {
     transition-duration: 0.2s;
 }
 
-header ul li p {
+#laptopHeader ul li p {
     cursor: default;
 }
 
-header ul li a:hover {
+#laptopHeader ul li a:hover {
     color: #fafafa;
     /* font-size: 1.25rem; */
 }
 
-header ul li ul li {
+#laptopHeader ul li ul li {
     float: none;
     background-color: #444444;
 }
 
-header ul li ul {
+#laptopHeader ul li ul {
     position: absolute;
     display: none;
     box-shadow: 3px 0px 3px #444444, -3px 0px 3px #444444, 0px 3px 3px #444444;
 }
 
-header ul li:hover ul {
+#laptopHeader ul li:hover ul {
     display: block;
 }
+
+#phoneHeader {
+    display: none;
+}
+
+/* phoneHeader */
+
+@media screen and (max-width: 725px) {
+    #laptopHeader {
+        display: none;
+    }
+    #phoneHeader {
+        display: block;
+        background-color: #444444;
+        width: 100%;
+        position: fixed;
+        float: left;
+        clear: both;
+        top: 0;
+        left: 0;
+    }
+    #phoneHeader ul {
+        list-style: none;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+    }
+    #phoneHeader ul li {
+        width: 100px;
+        line-height: 40px;
+        text-align: center;
+        position: relative;
+        float: left;
+    }
+    #phoneHeader ul #bar, #emoji, #my {
+        margin: auto;
+    }
+    #phoneHeader ul li a, #phoneHeader ul li p {
+        cursor: pointer;
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: gainsboro;
+        display: block;
+        transition-duration: 0.2s;
+    }
+    #phoneHeader ul li p {
+        cursor: default;
+    }
+    #phoneHeader ul li a:hover {
+        color: #fafafa;
+    }
+    #phoneHeader ul li ul li {
+        float: none;
+        background-color: #444444;
+    }
+    #phoneHeader ul li ul {
+        /* width: 200px; */
+        position: absolute;
+        display: none;
+        box-shadow: 3px 0px 3px #444444, -3px 0px 3px #444444, 0px 3px 3px #444444;
+    }
+    #phoneHeader ul li:hover ul {
+        display: block;
+    }
+}
+
+/* article */
 
 article {
     width: 100%;
@@ -107,6 +180,7 @@ article #browser #showPic {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 article #browser #showPic .pin {
@@ -114,9 +188,21 @@ article #browser #showPic .pin {
     height: auto;
     margin: 10px auto;
     overflow: hidden;
-    background-color: #fafafa;
+    background-color: white;
     border-radius: 10px;
     transition: all 0.2s;
+}
+
+@media screen and (max-width: 480px) {
+    article #browser #showPic .pin {
+        width: 40%;
+        height: auto;
+        margin: 10px auto;
+        overflow: hidden;
+        background-color: white;
+        border-radius: 10px;
+        transition: all 0.2s;
+    }
 }
 
 article #browser #showPic .pin:hover {
@@ -162,11 +248,25 @@ article #browser #showPic .pin p {
 /* main=login */
 
 article #login {
-    height: inherit;
+    width: 400px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-color: white;
+    }
+    article #login {
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 article #login>h1 {
@@ -179,12 +279,11 @@ article #login p {
 }
 
 article #login section {
-    width: 400px;
+    width: inherit;
     height: 400px;
-    padding: 20px;
     margin: auto;
     border-radius: 20px;
-    background-color: #fafafa;
+    background-color: white;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -213,19 +312,7 @@ article #login section form input {
     padding: 5px;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: white;
-}
-
-article #login section form input:focus {
-    border: none;
-    width: 80%;
-    height: 40px;
-    border-radius: 10px;
-    margin: 20px auto;
-    padding: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-    background-color: gainsboro;
+    background-color: #fafafa;
 }
 
 article #login section form a {
@@ -281,8 +368,8 @@ article #login section div a:hover {
 }
 
 footer {
-    background-color: #fafafa;
-    height: 60px;
+    background-color: whitesmoke;
+    /* height: 60px; */
     width: 100%;
     text-align: center;
     display: flex;
@@ -292,12 +379,26 @@ footer {
 footer section {
     text-align: center;
     line-height: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer section #copyright {
+    /* width: 300px; */
+    text-align: center;
+}
+
+footer section div {
+    width: 350px;
 }
 
 footer section a {
-    padding: 10px;
-    /* font-size: 1rem; */
-    width: 120px;
+    font-size: 1rem;
+    /* width: 80px; */
+    padding-left: 10px;
+    padding-right: 10px;
     text-decoration: none;
     cursor: pointer;
     color: #444444;
@@ -309,6 +410,7 @@ footer section span {
 }
 
 footer p {
+    line-height: 30px;
     height: 30px;
     font-size: 1rem;
     text-align: center;
