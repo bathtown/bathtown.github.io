@@ -10,7 +10,7 @@ html {
 
 body {
     /* basic font */
-    font-family: "Gill Sans", sans-serif;
+    font-family: "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     text-align: center;
     color: black;
     background-color: #fafafa;
@@ -109,14 +109,14 @@ body {
     }
     #phoneHeader ul {
         list-style: none;
-        width: 100%;
+        width: inherit;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         text-align: center;
     }
     #phoneHeader ul li {
-        width: 100px;
+        width: 120px;
         line-height: 40px;
         text-align: center;
         position: relative;
@@ -179,28 +179,30 @@ article #browser #firstPic img {
 article #browser #showPic {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
+    background-color: white;
+    padding: 2%;
 }
 
 article #browser #showPic .pin {
     width: 200px;
     height: auto;
-    margin: 10px auto;
+    margin: 10px;
+    background-color: #fafafa;
+    border-radius: 15px;
     overflow: hidden;
-    background-color: white;
-    border-radius: 10px;
     transition: all 0.2s;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
     article #browser #showPic .pin {
-        width: 40%;
+        width: 45%;
         height: auto;
-        margin: 10px auto;
+        margin: 15px auto;
         overflow: hidden;
-        background-color: white;
-        border-radius: 10px;
+        background-color: #fafafa;
+        border-radius: 15px;
         transition: all 0.2s;
     }
 }
@@ -271,7 +273,7 @@ article #login {
 
 article #login>h1 {
     font-weight: normal;
-    padding: 60px;
+    padding: 50px;
 }
 
 article #login p {
@@ -291,6 +293,7 @@ article #login section {
 
 article #login section h1 {
     font-size: 1.6rem;
+    padding: 30px;
 }
 
 article #login section.p {
@@ -392,6 +395,10 @@ footer section #copyright {
 
 footer section div {
     width: 350px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 footer section a {
@@ -401,7 +408,7 @@ footer section a {
     padding-right: 10px;
     text-decoration: none;
     cursor: pointer;
-    color: #444444;
+    color: grey;
 }
 
 footer section span {
@@ -411,7 +418,6 @@ footer section span {
 
 footer p {
     line-height: 30px;
-    height: 30px;
     font-size: 1rem;
     text-align: center;
     color: gray;

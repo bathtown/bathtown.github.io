@@ -50,3 +50,5 @@
     overflow: hidden;
     text-overflow: ellipsis;
     ```
+
+* height和line-height：设置了height后，如果被压缩换行，则样式就无法显示了！所以设置line-height就比较好（）
