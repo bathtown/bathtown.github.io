@@ -250,7 +250,7 @@ article #browser #showPic .pin p {
 /* main=login */
 
 article #login {
-    width: 400px;
+    width: 450px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -375,8 +375,8 @@ article #login section div a:hover {
 /* main=Register */
 
 article #Register {
-    width: 500px;
-    height: 600px;
+    width: 450px;
+    height: 500px;
     border-radius: 10px;
     margin: auto;
     display: flex;
@@ -387,8 +387,7 @@ article #Register {
 }
 
 article #Register form {
-    width: 400px;
-    height: 450px;
+    width: inherit;
     margin: auto;
     border-radius: 20px;
     /* background-color: #fafafa; */
@@ -445,6 +444,7 @@ article #Register form #verifyCode {
 
 article #Register form #verifyCode #inputCode {
     width: 60%;
+    height: 40px;
 }
 
 article #Register form #verifyCode #getCode {
@@ -493,7 +493,7 @@ article #Register form p {
 }
 
 article #Register form .agreeText, article #Register form>p {
-    width: 88%;
+    width: 85%;
     margin: 0 auto;
     text-align: left;
 }
