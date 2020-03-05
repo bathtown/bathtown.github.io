@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="icon" href="../images/Bathtub.png" type="image/x-icon" />
+    <base target="_blank">
+    <title>Register</title>
+</head>
+
+<body>
+
+    <article>
+        <main id="Register">
+            <form action="" method="post">
+                <h1>Register an Account</h1>
+                <input type="text" placeholder="Enter mobile number/email address" class="name" name="name"
+                    autofocus="autofocus" required="required" />
+                <section id="verifyCode">
+                    <input type="text" placeholder="Please enter code" id="inputCode" name="code" required="required" />
+                    <input type="submit" onclick="alert('This is my PJ')" id="getCode" value="Get Code">
+                </section>
+                <input type="password" placeholder="Please enter password" class="password" name="password"
+                    required="required" />
+                <p>The password shall be 6-16 characters long, and a combination of at least 2 types of characters
+                    including digits, letters or symbols</p>
+                <div class="agreeText">
+                    <input type="checkbox" id="checkAgreement">
+                    <p>I've read and agree to
+                        <span onclick="javascript:window.open('../html/end.html')">Agreement on
+                            Bathtub ID Use</span>,
+                        <span onclick="javascript:window.open('../html/end.html')">Bathtub ID Privacy
+                            Statement</span>
+                    </p>
+                </div>
+                <input type="submit" onclick="alert('This is my PJ')" id="regiterButton" value="Register">
+            </form>
+        </main>
+    </article>
+
+    <footer>
+        <section>
+            <span id="copyright">Copyright © 2020 Bathtub Inc. All rights reserved.</span>
+            <div>
+                <a href="./html/end.html">Privacy Policy</a>
+                <span>|</span>
+                <a href="./html/end.html">Terms of Use</a>
+                <span>|</span>
+                <a href="./html/end.html">Legal</a>
+                <span>|</span>
+                <a href="./html/end.html">Site Map</a>
+            </div>
+        </section>
+    </footer>
+
+</body>
+
+</html>
