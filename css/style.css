@@ -61,6 +61,8 @@ body {
     display: block;
     width: 160px;
     transition-duration: 0.2s;
+    text-align: left;
+    padding-left: 20%;
 }
 
 #laptopHeader ul li p {
@@ -122,8 +124,8 @@ body {
         position: relative;
         float: left;
     }
-    #phoneHeader ul #bar, #logo, #my {
-        margin: auto;
+    #phoneHeader ul #bar, #phoneHeader ul #logo, #phoneHeader ul #my {
+        text-align: center;
     }
     #phoneHeader ul li a, #phoneHeader ul li p {
         cursor: pointer;
@@ -132,6 +134,8 @@ body {
         color: gainsboro;
         display: block;
         transition-duration: 0.2s;
+        text-align: left;
+        padding-left: 10%;
     }
     #phoneHeader ul li p {
         cursor: default;
@@ -450,14 +454,14 @@ article #Register form #verifyCode #inputCode {
 article #Register form #verifyCode #getCode {
     width: 30%;
     height: 50px;
-    background-color: darkgray;
+    background-color: darkgrey;
     color: white;
     text-align: center;
     cursor: pointer;
 }
 
 article #Register form #verifyCode #getCode:hover {
-    background-color: gray;
+    background-color: grey;
     color: white;
 }
 
@@ -481,7 +485,7 @@ article #Register form #regiterButton:hover {
 }
 
 article #Register form p {
-    color: darkgray;
+    color: darkgrey;
     margin: 0 auto;
     text-align: left;
     padding: 5px;
@@ -569,6 +573,6 @@ footer p {
     line-height: 30px;
     font-size: 1rem;
     text-align: center;
-    color: gray;
+    color: grey;
     cursor: default;
 }

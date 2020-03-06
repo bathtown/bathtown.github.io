@@ -2,7 +2,7 @@
 
 * sources：[fudan_19ss_web基础课程_Project_01_旅游照片分享平台（上）](https://github.com/fudansswebfundamental/Project1-2020)
 
-## 奇异现象
+## 奇异现象👻
 
 * 在设置CSS的hover时，有时会发现hover不起作用，原因：  
   * 顺序：`a:link` < `a:visited` < `a:hover` < `a:active`
@@ -98,7 +98,21 @@
       }
     ```
 
-## CSS设计手册
+## 设计手册
+
+* 页面
+  * Home
+  * Browser
+  * Search
+  * login
+  * register
+  * upload
+  * my favorites & my photos
+
+* 流程
+  * 框架逻辑
+  * 所有页面内容
+  * 统一CSS样式
 
 * 字体大小`font-size`:
   * html.`font-size: 12px`;html的font-size才是root，而不是body
