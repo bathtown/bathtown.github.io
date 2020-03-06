@@ -98,6 +98,42 @@
       }
     ```
 
+* 回到顶部
+  * 设置锚点
+
+    ```html
+    <body style="height:2000px;">
+        <div id="topAnchor"></div>
+        <a href="#topAnchor" style="position:fixed;right:0;bottom:0">回到顶部</a>
+    </body>
+    ```
+
+  * scrollTop（表示被隐藏在内容区域上方的像素数）
+
+    ```html
+    <body style="height:2000px;">
+        <button id="test" style="position:fixed;right:0;bottom:0">回到顶部</button>
+        <script>
+            test.onclick = function(){
+                document.body.scrollTop = document.documentElement.scrollTop = 0;
+            }
+        </script>
+    </body>
+    ```
+
+  * scrollTo()
+
+    ```html
+    <body style="height:2000px;">
+        <button id="test" style="position:fixed;right:0;bottom:0">回到顶部</button>
+        <script>
+            test.onclick = function(){
+                scrollTo(0,0);
+            }
+        </script>
+    </body>
+    ```
+
 ## 设计手册
 
 * 页面

@@ -157,6 +157,12 @@ body {
     }
 }
 
+/* The page I'm looking */
+
+.imlooking {
+    border-bottom: 2px solid gainsboro;
+}
+
 /* article */
 
 article {
@@ -575,4 +581,33 @@ footer p {
     text-align: center;
     color: grey;
     cursor: default;
+}
+
+/* extension part */
+
+.extension {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.extension i {
+    font-size: 1.5em;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgb(128,128,128,0.6);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.extension i:hover {
+    color: white;
+    background-color: #444444;
 }
