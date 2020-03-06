@@ -6,6 +6,7 @@
 
 html {
     font-size: 12px;
+    height: 100vh;
 }
 
 body {
@@ -537,7 +538,9 @@ article #Register form .agreeText span:hover {
 
 article #Details {
     width: 80%;
-    margin: 40px auto auto auto;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -605,8 +608,8 @@ article #Details .de_author .likeShare {
 
 article #Details .de_author .likeShare .liked .fa {
     font-size: 1.5rem;
-    width: 45px;
-    height: 45px;
+    width: 10px;
+    height: 10px;
     line-height: 45px;
     border-radius: 50%;
     margin: 5px;
@@ -622,14 +625,13 @@ article #Details .de_author .likeShare .liked .fa:hover {
 }
 
 article #Details .de_author .likeShare #likedNumber {
-    /* -webkit-appearance: button; */
-    position: relative;
     top: 5px;
     right: 24px;
     color: rgb(255, 69, 0);
     width: 20px;
     font-family: monospace;
     cursor: default;
+    margin-top: 6px;
 }
 
 /* share element */
@@ -769,7 +771,7 @@ article #Details .de_message .de_message_choice .selected {
 }
 
 article #Details .de_message .de_myWords {
-    width: 95%;
+    width: 80%;
     text-align: justify;
     margin: 20px auto;
     word-wrap: break-word;
@@ -787,8 +789,12 @@ article #Details .de_message .de_content .de_myProperties {
 }
 
 @media screen and (max-width: 840px) {
+    #Details {
+        background-color: white;
+    }
     article #Details {
         width: 100%;
+        height: auto;
     }
     article #Details .de_author {
         order: 2;
@@ -883,8 +889,8 @@ footer p {
     height: 45px;
     line-height: 45px;
     text-align: center;
-    color: rgba(255, 255, 255, 0.6);
-    background-color: rgb(128, 128, 128, 0.6);
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgb(68, 68, 68, 0.8);
     border-radius: 50%;
     cursor: pointer;
 }
