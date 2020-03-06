@@ -17,16 +17,20 @@
         <main id="Register">
             <form action="" method="post">
                 <h1>Register an Account</h1>
-                <input type="text" placeholder="Enter mobile number/email address" class="name" name="name"
-                    autofocus="autofocus" required="required" />
+                <input type="text" placeholder="Please enter user name" class="name" name="name" autofocus="autofocus"
+                    required="required" />
+                <input type="password" placeholder="Please enter password" class="password" name="password"
+                    required="required" />
+                <p>* The password shall be 6-16 characters long, and a combination of at least 2 types of characters
+                    including digits, letters or symbols</p>
+                <input type="password" placeholder="Please verify password" class="password" name="password"
+                    required="required" />
+                <input type="text" placeholder="Enter mobile number/email address" class="address" name="address"
+                    required="required" />
                 <section id="verifyCode">
                     <input type="text" placeholder="Please enter code" id="inputCode" name="code" required="required" />
                     <input type="submit" onclick="alert('This is my PJ')" id="getCode" value="Get Code">
                 </section>
-                <input type="password" placeholder="Please enter password" class="password" name="password"
-                    required="required" />
-                <p>The password shall be 6-16 characters long, and a combination of at least 2 types of characters
-                    including digits, letters or symbols</p>
                 </br>
                 <div class="agreeText">
                     <input type="checkbox" id="checkAgreement">

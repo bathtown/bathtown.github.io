@@ -161,6 +161,7 @@ body {
 
 .imlooking {
     border-bottom: 2px solid gainsboro;
+    display: inline-block;
 }
 
 /* article */
@@ -168,6 +169,7 @@ body {
 article {
     width: 100%;
     /* to insure footer is under */
+    height: 100%;
     flex: 1;
     display: flex;
 }
@@ -388,7 +390,7 @@ article #login section div a:hover {
 
 article #Register {
     width: 450px;
-    height: 500px;
+    height: inherit;
     border-radius: 10px;
     margin: auto;
     display: flex;
@@ -406,6 +408,7 @@ article #Register form {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    height: 600px;
 }
 
 @media screen and (max-width: 480px) {
@@ -436,7 +439,7 @@ article #Register form input {
     width: 80%;
     height: 40px;
     border-radius: 10px;
-    margin: 20px auto;
+    margin: 10px auto;
     padding: 5px;
     padding-left: 15px;
     padding-right: 15px;
@@ -447,21 +450,20 @@ article #Register form #verifyCode {
     border: none;
     width: 88%;
     height: 50px;
-    margin: 0 auto;
+    margin: 10px auto;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    /* overflow: hidden; */
 }
 
 article #Register form #verifyCode #inputCode {
     width: 60%;
-    height: 40px;
 }
 
 article #Register form #verifyCode #getCode {
     width: 30%;
-    height: 50px;
+    height: 100%;
     background-color: darkgrey;
     color: white;
     text-align: center;
@@ -476,7 +478,7 @@ article #Register form #verifyCode #getCode:hover {
 article #Register form #regiterButton {
     display: inline-block;
     border: none;
-    width: 88%;
+    width: 86.67%;
     height: 50px;
     border-radius: 10px;
     margin: 20px 40 40 20 auto;
@@ -507,7 +509,9 @@ article #Register form p {
 article #Register form .agreeText, article #Register form>p {
     width: 85%;
     margin: 0 auto;
-    text-align: left;
+    text-align: justify;
+    padding: 0 10px 0 10px;
+    line-height: 20px;
 }
 
 article #Register form #checkAgreement {
