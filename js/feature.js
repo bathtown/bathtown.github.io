@@ -1,11 +1,19 @@
 // goto top
-goTop.onclick = function () {
+function goTop() {
     scrollTo(0, 0);
 }
 
 // refresh pictures
-refreshPic.onclick=function(){
+function refreshPic() {
     // 刷新页面
-    // location.reload();
+    location.reload();
+    alert('This is my PJ');
+}
+
+var likedNumber = 99;
+// heart++
+function likedPlus() {
+    likedNumber++;
+    document.getElementById("likedNumber").innerHTML = likedNumber;
     alert('This is my PJ');
 }

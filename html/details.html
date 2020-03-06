@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="hyf">
+    <meta name="referrer" content="no-referrer">
+    <!-- 加载网络上的图片 -->
+    <meta name="description" content="nothing">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="icon" href="../images/Bathtub.png" type="image/x-icon" />
+    <base target="_self">
+    <title>Details</title>
+</head>
+
+<body>
+    <header id="laptopHeader">
+        <ul>
+            <li><a href="../html/solarSystem.html" class="logo"><i class="fa fa-bathtub"></i></a></li>
+            <li><a href="../index.html" class="home"><i class="fa fa-home"></i> Home</a> </li>
+            <li><a href="../html/end.html" class="browser"><i class="fa fa-cloud"></i> Browser</a></li>
+            <li><a href="../html/end.html" class="search"><i class="fa fa-search"></i> Search</a> </li>
+        </ul>
+        <ul>
+            <li>
+                <p class="account">My Account <i class="fa fa-angle-down"></i></p>
+                <ul>
+                    <li><a target="_self" href="../html/register.html"><i class="fa fa-male"></i> Log up</a>
+                    <li><a target="_self" href="../html/login.html"><i class="fa fa-child"></i> Log in</a>
+                    <li><a href="../html/end.html"><i class="fa fa-cloud-upload"></i> Upload</a>
+                    <li><a href="../html/end.html"><i class="fa fa-photo"></i> My Gallery</a>
+                    <li><a href="../html/end.html"><i class="fa fa-star"></i> My Favorites</a>
+                </ul>
+            </li>
+        </ul>
+    </header>
+
+    <header id="phoneHeader">
+        <ul>
+            <li>
+                <p id="bar"><i class="fa fa-bars"></i></p>
+                <ul id="barlist">
+                    <li><a href="../index.html" class="home"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="../html/end.html" class="browser"><i class="fa fa-cloud"></i> Browser</a></li>
+                    <li><a href="../html/end.html" class="search"><i class="fa fa-search"></i> Search</a> </li>
+                </ul>
+            </li>
+            <li><a href="../html/solarSystem.html" id="logo"><i class="fa fa-bathtub"></i></a></li>
+            <li>
+                <p id="my"><i class="fa fa-user"></i></p>
+                <ul>
+                    <li><a target="_self" href="../html/register.html"><i class="fa fa-male"></i> Log up</a>
+                    <li><a target="_self" href="../html/login.html"><i class="fa fa-child"></i> Log in</a>
+                    <li><a href="../html/end.html"><i class="fa fa-cloud-upload"></i> Upload</a>
+                    <li><a href="../html/end.html"><i class="fa fa-photo"></i> My Gallery</a>
+                    <li><a href="../html/end.html"><i class="fa fa-star"></i> My Favorites</a>
+                </ul>
+            </li>
+        </ul>
+    </header>
+
+    <article>
+        <main id="Details">
+
+            <section class="de_author">
+
+                <!-- 头图和名字 -->
+                <div class="headPic">
+                    <a href="#"><img src="../images/headPic.jpg" alt="head pic"></a>
+                    <div class="creator">
+                        <h1>The Greatest Web River</h1>
+                        <p>by<span>Bathtown</span></p>
+                    </div>
+                </div>
+
+                <!-- 喜欢和分享 -->
+                <div class="likeShare">
+                    <div class="liked"><i class="fa fa-heart" onclick="likedPlus()" id="liking" title="like it!"></i>
+                    </div>
+                    <p id="likedNumber">99</p>
+                    <div class="shareList">
+                        <i class="shareBtn fa fa-share-alt" title="share!"></i>
+                        <div class="dropdown-content">
+                            <ul>
+                                <li> <a href="#"><i class="fa fa-weibo" title="share on weibo~"></i></a></li>
+                                <li> <a href="#"><i class="fa fa-instagram" title="share on instagram~"></i></a></li>
+                                <li> <a href="#"><i class="fa fa-dribbble" title="share on dribbble~"></i></a></li>
+                                <li> <a href="#"><i class="fa fa-twitter" title="share on twitter~"></i></a></li>
+                                <li> <a href="#"><i class="fa fa-facebook" title="share on facebook~"></i></a></li>
+                                <li> <a href="#"><i class="fa fa-github" title="share on github~"></i></a></li>
+                                <li> <a href="../html/solarSystem.html"><i class="fa fa-grav"
+                                            title="share to yourself~"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="de_mainPic">
+                <img src="../images/firstPic (5).jpg" alt="detail pic">
+            </section>
+
+            <section class="de_message">
+                <p class="de_message_choice">
+                    <span id="description" class="selected">Description</span>
+                    <span id="properties">Properties</span>
+                </p>
+                <div class="de_content">
+                    <p class="de_choice de_myWords">
+                        I loved you, and I probably still do,
+                        And for a while the feeling may remain...
+                        But let my love no longer trouble you,
+                        I do not wish to cause you any pain.
+                        I loved you; and the hopelessness I knew,
+                        The jealousy, the shyness - though in vain -
+                        Made up a love so tender and so true
+                        As may God grant you to be loved again.
+                    </p>
+                    <table class="de_choice de_myProperties">
+                        <tr>
+                            <th>Content</th>
+                            <th>Country</th>
+                            <th>City</th>
+                        </tr>
+                        <tr>
+                            <td>Scenery</td>
+                            <td>China</td>
+                            <td>Shanghai</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </article>
+    <footer>
+        <section>
+            <span id="copyright">Copyright © 2020 Bathtub Inc. All rights reserved.</span>
+            <div>
+                <a href="../html/end.html">Privacy Policy</a>
+                <span>|</span>
+                <a href="../html/end.html">Terms of Use</a>
+                <span>|</span>
+                <a href="../html/end.html">Legal</a>
+                <span>|</span>
+                <a href="../index.html">Site Map</a>
+            </div>
+        </section>
+    </footer>
+
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/feature.js" type="text/javascript"></script>
+    <script>
+        // switch description and properties
+        $(function () {
+            $(".de_message_choice span").click(function () {
+                //获取要显示或隐藏的对s象
+                var divShow = $(".de_content").children('.de_choice');
+                //判断当前对象是否被选中，如果没选中的话进入if循环
+                while (!$(this).hasClass('selected')) {
+                    //获取当前对象的索引
+                    var index = $(this).index();
+                    //当前对象添加选中样式并且其同胞移除选中样式；
+                    $(this).addClass('selected').siblings('span').removeClass('selected');
+                    //索引对应的div块显示
+                    $(divShow[index]).show();
+                    //索引对应的div块的同胞隐藏
+                    $(divShow[index]).siblings('.de_choice').hide();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

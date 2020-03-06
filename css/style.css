@@ -289,6 +289,7 @@ article #login>h1 {
 
 article #login p {
     padding: 0px 30px 30px 30px;
+    cursor: default;
 }
 
 article #login section {
@@ -306,6 +307,7 @@ article #login section h1 {
     font-size: 2rem;
     padding: 20px;
     font-weight: normal;
+    cursor: default;
 }
 
 article #login section.p {
@@ -527,6 +529,282 @@ article #Register form .agreeText span:hover {
     cursor: pointer;
 }
 
+/* main=details */
+
+article #Details {
+    width: 80%;
+    margin: 40px auto auto auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article #Details .de_author {
+    order: 1;
+    width: 80%;
+    margin: 4rem auto 2rem auto;
+    justify-content: space-between;
+    /* padding: 20px 0; */
+    cursor: default;
+    display: flex;
+    align-items: center;
+}
+
+article #Details .de_author img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+article #Details .de_author .headPic {
+    flex-shrink: 2;
+    display: flex;
+    flex-direction: row;
+    /* flex: 1; */
+    align-items: center;
+}
+
+article #Details .de_author .headPic .creator {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 5px;
+}
+
+article #Details .de_author .headPic .creator>h1 {
+    line-height: 30px;
+    font-size: 1.5rem;
+    display: inline-block;
+}
+
+article #Details .de_author .headPic .creator>p {
+    line-height: 20px;
+    display: inline;
+}
+
+article #Details .de_author .headPic .creator>p>span {
+    color: grey;
+    cursor: pointer;
+    padding: 5px;
+}
+
+article #Details .de_author .headPic .creator>p>span:hover {
+    color: #444444;
+}
+
+article #Details .de_author .likeShare {
+    flex-shrink: 1;
+    display: flex;
+    /* flex: 0; */
+    /* width: 110px; */
+}
+
+article #Details .de_author .likeShare .liked .fa {
+    font-size: 1.5rem;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    margin: 5px;
+    text-align: center;
+    color: rgb(255, 69, 0, 0.6);
+    background-color: rgb(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+article #Details .de_author .likeShare .liked .fa:hover {
+    color: orangered;
+    font-size: 1.6rem;
+}
+
+article #Details .de_author .likeShare #likedNumber {
+    /* -webkit-appearance: button; */
+    position: relative;
+    top: 5px;
+    right: 24px;
+    color: rgb(255, 69, 0);
+    width: 20px;
+    font-family: monospace;
+    cursor: default;
+}
+
+/* share element */
+
+.shareList {
+    width: fit-content;
+    float: right;
+    /* position: fixed; */
+    cursor: pointer;
+}
+
+.shareList .dropdown-content {
+    display: none;
+    /* position: fixed; */
+}
+
+.shareList:hover .dropdown-content {
+    display: flex;
+    /* float: left; */
+    position: fixed;
+    /* flex-direction: row; */
+}
+
+.shareList ul {
+    list-style: none;
+    position: relative;
+    top: 45px;
+}
+
+.shareList ul a {
+    text-decoration: none;
+}
+
+.shareList .fa {
+    /*icons size*/
+    font-size: 1.5rem;
+    /*icons circle size*/
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    /* to insure it's round */
+    border-radius: 50%;
+    margin: 5px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.shareList .fa:hover, .shareList .fa:active {
+    color: white;
+    transform: translateY(-5px);
+}
+
+.shareList .fa-dribbble {
+    background-color: #F46899;
+}
+
+.shareList .fa-facebook {
+    background-color: #3C599F;
+}
+
+.shareList .fa-github {
+    background-color: #444444;
+}
+
+.shareList .fa-instagram {
+    background-color: rgb(243, 91, 32);
+}
+
+.shareList .fa-pinterest {
+    background-color: rgb(197, 7, 14);
+}
+
+.shareList .fa-twitter {
+    background-color: #32CCFE;
+}
+
+.shareList .fa-weibo {
+    background-color: #D72B2B;
+}
+
+.shareList .fa-grav {
+    background-color: #333333;
+}
+
+.shareList .shareBtn {
+    background-color: rgb(0, 0, 0, 0);
+    color: #444444;
+    cursor: pointer;
+    font-weight: 100;
+    float: right;
+    /* cursor: pointer; */
+}
+
+.shareList .shareBtn:hover {
+    color: #444444;
+}
+
+article #Details .de_mainPic {
+    order: 2;
+    width: 80%;
+}
+
+article #Details .de_mainPic img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+article #Details .de_message {
+    order: 3;
+    width: 80%;
+    margin: 2rem auto;
+    background-color: white;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+article #Details .de_message .de_message_choice {
+    width: 100%;
+    display: flex;
+    margin: 20px auto 0 auto;
+    justify-content: space-around;
+}
+
+article #Details .de_message .de_message_choice span {
+    font-size: 1.4rem;
+    line-height: 40px;
+    border: none;
+    background-color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    cursor: pointer;
+}
+
+article #Details .de_message .de_message_choice .selected {
+    border-bottom: 1.5px solid grey;
+}
+
+article #Details .de_message .de_myWords {
+    width: 95%;
+    text-align: justify;
+    margin: 20px auto;
+    word-wrap: break-word;
+    font-size: 1.25rem;
+    line-height: 30px;
+}
+
+article #Details .de_message .de_content .de_myProperties {
+    display: none;
+    text-align: center;
+    margin: auto;
+    width: 90%;
+    line-height: 50px;
+    font-size: 1.25rem;
+}
+
+@media screen and (max-width: 840px) {
+    article #Details {
+        width: 100%;
+    }
+    article #Details .de_author {
+        order: 2;
+        width: 100%;
+        margin: 0 auto;
+        /* overflow: hidden; */
+    }
+    article #Details .de_mainPic {
+        order: 1;
+        width: 100%;
+    }
+    article #Details .de_mainPic img {
+        border-radius: 0;
+    }
+    article #Details .de_message {
+        order: 3;
+        width: 100%;
+    }
+}
+
 /* footer */
 
 footer {
@@ -596,13 +874,13 @@ footer p {
 }
 
 .extension i {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     width: 45px;
     height: 45px;
     line-height: 45px;
     text-align: center;
     color: rgba(255, 255, 255, 0.6);
-    background-color: rgb(128,128,128,0.6);
+    background-color: rgb(128, 128, 128, 0.6);
     border-radius: 50%;
     cursor: pointer;
 }
