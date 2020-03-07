@@ -18,6 +18,10 @@
 
 * 前面的css会被后面的css覆盖🙃  
 
+* `transform` 对应的时间是 `transition-duration` 🙃  
+
+* `document.getElementById( ).style.color` 获取不了外部css的颜色，所以最开始都是 `""` ，类型是字符串型，而且 `=` 是拷贝而不是引用，无法改变原值
+
 ## 一些实现
 
 * 实现一段文字溢出后显示省略号

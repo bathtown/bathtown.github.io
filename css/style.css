@@ -11,7 +11,7 @@ html {
 
 body {
     /* basic font */
-    font-family: "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: monospace;
     text-align: center;
     color: black;
     background-color: #fafafa;
@@ -119,7 +119,7 @@ body {
         text-align: center;
     }
     #phoneHeader ul li {
-        width: 120px;
+        width: inherit;
         line-height: 40px;
         text-align: center;
         position: relative;
@@ -136,7 +136,8 @@ body {
         display: block;
         transition-duration: 0.2s;
         text-align: left;
-        padding-left: 10%;
+        padding-left: 1rem;
+        /* overflow: auto; */
     }
     #phoneHeader ul li p {
         cursor: default;
@@ -580,6 +581,7 @@ article #Details .de_author img {
     width: 55px;
     height: 55px;
     border-radius: 50%;
+    padding: 0.5rem;
 }
 
 article #Details .de_author .headPic {
@@ -625,32 +627,31 @@ article #Details .de_author .likeShare {
     /* width: 110px; */
 }
 
-article #Details .de_author .likeShare .liked .fa {
+article #Details .de_author .likeShare #liking {
     font-size: 1.5rem;
-    width: 10px;
-    height: 10px;
     line-height: 45px;
     border-radius: 50%;
     margin: 5px;
     text-align: center;
-    color: rgb(255, 69, 0, 0.6);
+    color: rgba(255, 69, 0, 0.2);
     background-color: rgb(0, 0, 0, 0);
     cursor: pointer;
+    transition-duration: 0.4s;
 }
 
-article #Details .de_author .likeShare .liked .fa:hover {
+article #Details .de_author .likeShare #liking:hover {
     color: orangered;
-    font-size: 1.6rem;
+    transform: scale(1.2);
 }
 
 article #Details .de_author .likeShare #likedNumber {
     top: 5px;
     right: 24px;
-    color: rgb(255, 69, 0);
+    color: orangered;
     width: 20px;
-    font-family: monospace;
     cursor: default;
     margin-top: 6px;
+    font-weight: 900;
 }
 
 /* share element */
@@ -859,7 +860,7 @@ article #NotFound>img {
 }
 
 article #NotFound>img:hover {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
 }
 
 article #NotFound>h1 {
@@ -956,7 +957,6 @@ footer section #copyright {
 }
 
 footer section div {
-    width: 350px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
