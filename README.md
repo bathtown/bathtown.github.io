@@ -22,6 +22,13 @@
 
 * `document.getElementById( ).style.color` 获取不了外部css的颜色，所以最开始都是 `""` ，类型是字符串型，而且 `=` 是拷贝而不是引用，无法改变原值
 
+* 下层元素的 `transform` 会覆盖掉其他元素，甚至连 `position: fixed` 都无法幸免，解决：
+
+  ```css
+  transform: none;
+  z-index: 2;
+  ```
+
 ## 一些实现
 
 * 实现一段文字溢出后显示省略号

@@ -36,6 +36,8 @@ body {
     left: 0;
     display: flex;
     justify-content: space-between;
+    transform: none;
+    z-index: 2;
 }
 
 #laptopHeader #emoji {
@@ -109,6 +111,8 @@ body {
         clear: both;
         top: 0;
         left: 0;
+        transform: none;
+        z-index: 2;
     }
     #phoneHeader ul {
         list-style: none;
@@ -196,16 +200,16 @@ article #browser #firstPic img {
 article #browser #showPic {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     background-color: white;
     padding: 2%;
+    width: auto;
 }
 
 article #browser #showPic .pin {
-    width: 200px;
-    height: auto;
-    margin: 10px;
+    width: 250px;
+    margin: 20px;
     background-color: #fafafa;
     border-radius: 15px;
     overflow: hidden;
@@ -229,7 +233,7 @@ article #browser #showPic .pin:hover {
     /* transform: scale(1.01); */
     /* 四周都有阴影 */
     box-shadow: 2px 2px 5px gainsboro, 2px -2px 5px gainsboro, -2px 2px 5px gainsboro, -2px -2px 5px gainsboro;
-    /* transform: translateY(-10px); */
+    transform: translateY(-10px);
 }
 
 article #browser #showPic .pin a {
