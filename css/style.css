@@ -855,16 +855,17 @@ article #NotFound {
     cursor: default;
 }
 
-article #NotFound>img {
-    max-width: 150px;
-    /* max-height: 30%; */
+article #NotFound>#NotFoundLogo {
     border-radius: 50%;
     margin: auto;
     transition-duration: 0.5s;
     cursor: pointer;
-}
+    background-color: white;
+    font-size: 8rem;
+    padding: 4rem;
+}    
 
-article #NotFound>img:hover {
+article #NotFound>#NotFoundLogo:hover {
     transform: rotate(-360deg);
 }
 
