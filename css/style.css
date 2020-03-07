@@ -451,6 +451,14 @@ article #Register form input {
     background-color: #fafafa;
 }
 
+article #Register form #password1+p {
+    display: none;
+}
+
+article #Register form #password1:focus+p {
+    display: block;
+}
+
 article #Register form #verifyCode {
     border: none;
     width: 88%;
@@ -480,32 +488,12 @@ article #Register form #verifyCode #getCode:hover {
     color: white;
 }
 
-article #Register form #regiterButton {
-    display: inline-block;
-    border: none;
-    width: 86.67%;
-    height: 50px;
-    border-radius: 10px;
-    margin: 20px 40 40 20 auto;
-    padding: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-    background-color: #444444;
-    color: rgba(255, 255, 255, 0.8);
-    cursor: pointer;
-}
-
-article #Register form #regiterButton:hover {
-    color: white;
-}
-
 article #Register form p {
     color: darkgrey;
     margin: 0 auto;
     text-align: left;
     padding: 5px;
     display: inline;
-    /* word-break: normal; */
     word-wrap: break-word;
     hyphens: manual;
     cursor: default;
@@ -520,21 +508,48 @@ article #Register form .agreeText, article #Register form>p {
 }
 
 article #Register form #checkAgreement {
-    /* display: inline; */
     margin: 0;
     padding: 0;
     width: 13px;
     height: 13px;
+    position: relative;
+    left: 30px;
+    top: 16px;
+    cursor: pointer;
+}
+
+article #Register form .agreeText p {
+    margin-left: 1rem;
 }
 
 article #Register form .agreeText span {
     text-decoration: none;
     font-size: 1rem;
     color: grey;
+    cursor: pointer;
 }
 
 article #Register form .agreeText span:hover {
-    color: black;
+    color: #444444;
+}
+
+article #Register form #regiterButton {
+    display: inline-block;
+    border: none;
+    width: 86.67%;
+    height: 50px;
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: grey;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: default;
+}
+
+article #Register form #checkAgreement:checked~#regiterButton {
+    background-color: #444444;
+    color: white;
     cursor: pointer;
 }
 
@@ -681,6 +696,7 @@ article #Details .de_author .likeShare #likedNumber {
     margin: 5px;
     text-align: center;
     color: rgba(255, 255, 255, 0.6);
+    transition-duration: 0.5s;
 }
 
 .shareList .fa:hover, .shareList .fa:active {
@@ -727,10 +743,12 @@ article #Details .de_author .likeShare #likedNumber {
     font-weight: 100;
     float: right;
     /* cursor: pointer; */
+    transform: none;
 }
 
 .shareList .shareBtn:hover {
     color: #444444;
+    transform: none;
 }
 
 article #Details .de_mainPic {
@@ -817,6 +835,99 @@ article #Details .de_message .de_content .de_myProperties {
         order: 3;
         width: 100%;
     }
+}
+
+/* main=404 */
+
+article #NotFound {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    align-items: center;
+    cursor: default;
+}
+
+article #NotFound>img {
+    max-width: 150px;
+    /* max-height: 30%; */
+    border-radius: 50%;
+    margin: auto;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+article #NotFound>img:hover {
+    transform: rotate(360deg);
+}
+
+article #NotFound>h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    padding: 5rem 5rem 0.5rem;
+    text-align: center;
+    width: 80%;
+    line-height: 4rem;
+    /* border-bottom: 1px solid; */
+}
+
+article #NotFound>p {
+    font-size: 1.5rem;
+    padding: 1em;
+    line-height: 3rem;
+    border-top: 2px solid grey;
+}
+
+article #NotFound>.socialIcon .fa {
+    /*icons size*/
+    font-size: 1.5rem;
+    /*icons circle size*/
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    /* to insure it's round */
+    border-radius: 50%;
+    margin: 5px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    transition-duration: 0.5s;
+}
+
+article #NotFound>.socialIcon .fa:hover {
+    color: white;
+    transform: translateY(-5px);
+}
+
+article #NotFound>.socialIcon .fa-github {
+    background-color: #444444;
+}
+
+article #NotFound>.socialIcon .fa-weibo {
+    background-color: #D72B2B;
+}
+
+article #NotFound>.socialIcon .fa-wechat {
+    background-color: #2fdd5b;
+}
+
+article #NotFound>button {
+    width: 12rem;
+    line-height: 3rem;
+    border: 0;
+    font-size: 1.5rem;
+    background-color: grey;
+    color: #fafafa;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 4rem auto;
+    transition-duration: 0.5s;
+}
+
+article #NotFound>button:hover {
+    background-color: #444444;
+    color: white;
+    transform: scale(1.2);
 }
 
 /* footer */
