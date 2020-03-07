@@ -1,6 +1,6 @@
 // goto top
 function goTop() {
-    scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 // refresh pictures

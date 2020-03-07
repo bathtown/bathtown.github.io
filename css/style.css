@@ -476,7 +476,7 @@ article #Register form #verifyCode {
     align-items: center;
 }
 
-article #Register form #verifyCode #inputCode {
+article #Register form #verifyCode #codeAddress {
     width: 60%;
 }
 

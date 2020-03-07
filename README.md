@@ -154,7 +154,7 @@
         <button id="test" style="position:fixed;right:0;bottom:0">回到顶部</button>
         <script>
             test.onclick = function(){
-                scrollTo(0,0);
+                scrollTo(0,0);//window.scrollTo({ top: 0, behavior: "smooth" });平滑滚动
             }
         </script>
     </body>
