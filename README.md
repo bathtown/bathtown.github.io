@@ -29,6 +29,10 @@
   z-index: 2;
   ```
 
+* `position: absolute;` 相对于相对于 `static` 定位以外的第一个父元素； `position: fixed;` 相对于窗口，在做share list 时候要用absolute，以防止滚动不变
+
+* 现代浏览器无法支持透明度？不！只是把 `rgba` 写成了 `rgb` ...
+
 ## 一些实现
 
 * 实现一段文字溢出后显示省略号
