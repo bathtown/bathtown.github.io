@@ -2,21 +2,21 @@
 
 * sources：[fudan_19ss_web基础课程_Project_01_旅游照片分享平台（上）](https://github.com/fudansswebfundamental/Project1-2020)
 
-## 奇异现象👻
+## wicked problems👻
 
 * 在设置CSS的hover时，有时会发现hover不起作用，原因：  
   * 顺序：`a:link` < `a:visited` < `a:hover` < `a:active`
-  * hover后面有空格——子元素起效  
+  * `hover` 后面有空格——子元素起效  
   * 颜色没写对🙃
 
-* 在chrome和firefox无法显示css——在CSS文件头加上 `@charset "utf-8"`
+* 在 chrome 和 firefox 无法显示 css ——在 CSS 文件头加上 `@charset "utf-8"`
 
 * `<input type="submit"\>` 的 `width` 会包括 `padding` ，而 `<input type="text"\>` 和 `<input type="password"\>` 不会🙃  
   * W3C盒子模型（标准模型）：`width` 不包含 `padding` 和 `border`
   * IE盒子模型：`width = padding + border`
   * 怪异盒子模型：部分部分
 
-* 前面的css会被后面的css覆盖🙃  
+* 前面的 css 会被后面的 css 覆盖🙃  
 
 * `transform` 对应的时间是 `transition-duration` 🙃  
 
@@ -29,7 +29,7 @@
   z-index: 2;
   ```
 
-* `position: absolute;` 相对于相对于 `static` 定位以外的第一个父元素； `position: fixed;` 相对于窗口，在做share list 时候要用absolute，以防止滚动不变
+* `position: absolute;` 相对于相对于 `static` 定位以外的第一个父元素； `position: fixed;` 相对于窗口，在做 share list 时候要用 `absolute` ，以防止滚动不变
 
 * 现代浏览器无法支持透明度？不！只是把 `rgba` 写成了 `rgb` ...
 
@@ -44,20 +44,11 @@
   ```
 
 * 做一个nav
-  * 避免nav遮盖下面内容：body设置padding-top
+  * `fixed`
+  * `transform : none`
+  * 避免nav遮盖下面内容：`body` 设置 `padding-top`
   
-* 下拉菜单
-  *HTML
-
-  ···html
-
-  ···
-
-  *CSS
-
-  ···css
-
-  ···
+* 下拉菜单：整个 `dropList` 分为 `dropBtn` 和 `dropContent` 两个部分， `dropContent` 最开始隐藏，当鼠标移动到 `dropList` (这时就是指 `dropBtn` ) 上时，整个 `dropList` 显示
 
 * 代码兼容
 
@@ -73,7 +64,7 @@
 * 夜间模式
   * Reference: [How to Enable Dark Mode on Your Website with Pure CSS?](https://dev.to/oahehc/how-to-enable-dark-mode-on-your-website-with-pure-css-ake)
   * CSS `var()` 函数：`var(custom-property-name, value)`，`custom-property-name`必须以`--`开头，如：`--main-bg-color: white;`
-  * `<input type="checkbox" id="nightMode" />`的兄弟元素`<article>...</article>`
+  * `<input type="checkbox" id="nightMode" />` 的兄弟元素 `<article>...</article>`
   * HTML
 
     ```html
@@ -180,28 +171,23 @@
   * bonus
   * end
 
-* 正在浏览页面：`class="imlooking`
+* 正在浏览页面：`class="imlooking"`
 
-* 流程
-  * 框架逻辑
-  * 所有页面内容
-  * 统一CSS样式
-
-* 字体大小`font-size`:
-  * html.`font-size: 12px`;html的font-size才是root，而不是body
+* 字体大小 `font-size`:
+  * html.`font-size: 12px`; html 的 `font-size` 才是 root，而不是 body
   * a.`font-size: 1.2rem`;
   * p.`font-size: 1.2rem`;
   * h1.`font-size: 1.6rem`;
   * footer.p.`font-size: 1rem`;
 
-* 字体`font-family: "Gill Sans", sans-serif;`
+* 字体 `font-family: monospace;`
 
 * 颜色
-  * `white` < `#fafafa` < `gainsboro` < `grey`
-  * before linked: `rgba(255, 255, 255, 0.8)`
-  * `black` > `#444444`
+  * 浅色： `white` < `#fafafa` < `gainsboro` < `grey`
+  * 深色：`black` > `#444444`  
+  * 透明白色：before linked: `rgba(255, 255, 255, 0.8)`
 
-* 盒子模型
+* 全局设置
 
   ```css
   * {
@@ -215,8 +201,8 @@
 
 * 响应式布局  
   * 少使用绝对的宽度，多使用百分比  
-  * 字体不使用px，使用rem  
-  * 选择加载css：`<link rel="stylesheet" type="text/css" media="screen and (max-device-width: 400px)" href="tinyScreen.css" />`如果屏幕宽度小于400像素（max-device-width: 400px），就加载tinyScreen.css文件
+  * 字体不使用 `px` ，使用 `rem ` 
+  * 选择加载css：`<link rel="stylesheet" type="text/css" media="screen and (max-device-width: 400px)" href="tinyScreen.css" />` 如果屏幕宽度小于400像素（max-device-width: 400px），就加载 tinyScreen.css 文件
   * Media Queries：
     * CSS
 
@@ -248,7 +234,7 @@
 
     * 横屏：`@media screen and (orientation: landscape) {...}`
 
-  * `width: 100%;max-width: 150px;`一起设定
+  * `width: 100%;max-width: 150px;` 一起设定
   * 不同分辨率设备显示不同大小的图片
 
     ```html
