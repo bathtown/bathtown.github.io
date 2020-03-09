@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 * {
     padding: 0;
     margin: 0;
@@ -56,7 +57,8 @@ body {
     float: left;
 }
 
-#laptopHeader ul li a, #laptopHeader ul li p {
+#laptopHeader ul li a,
+#laptopHeader ul li p {
     cursor: pointer;
     font-size: 1.2rem;
     text-decoration: none;
@@ -102,6 +104,7 @@ body {
     #laptopHeader {
         display: none;
     }
+
     #phoneHeader {
         display: block;
         background-color: #444444;
@@ -114,6 +117,7 @@ body {
         transform: none;
         z-index: 2;
     }
+
     #phoneHeader ul {
         list-style: none;
         width: inherit;
@@ -122,6 +126,7 @@ body {
         justify-content: space-between;
         text-align: center;
     }
+
     #phoneHeader ul li {
         width: inherit;
         line-height: 40px;
@@ -129,10 +134,15 @@ body {
         position: relative;
         float: left;
     }
-    #phoneHeader ul #bar, #phoneHeader ul #logo, #phoneHeader ul #my {
+
+    #phoneHeader ul #bar,
+    #phoneHeader ul #logo,
+    #phoneHeader ul #my {
         text-align: center;
     }
-    #phoneHeader ul li a, #phoneHeader ul li p {
+
+    #phoneHeader ul li a,
+    #phoneHeader ul li p {
         cursor: pointer;
         font-size: 1.2rem;
         text-decoration: none;
@@ -143,21 +153,26 @@ body {
         padding-left: 1rem;
         /* overflow: auto; */
     }
+
     #phoneHeader ul li p {
         cursor: default;
     }
+
     #phoneHeader ul li a:hover {
         color: #fafafa;
     }
+
     #phoneHeader ul li ul li {
         float: none;
         background-color: #444444;
     }
+
     #phoneHeader ul li ul {
         position: absolute;
         display: none;
         box-shadow: 3px 0px 3px #444444, -3px 0px 3px #444444, 0px 3px 3px #444444;
     }
+
     #phoneHeader ul li:hover ul {
         display: block;
     }
@@ -285,6 +300,7 @@ article #login {
     body {
         background-color: white;
     }
+
     article #login {
         width: inherit;
         display: flex;
@@ -430,6 +446,7 @@ article #Register form {
         justify-content: space-between;
         align-items: center;
     }
+
     article #Register form {
         width: 100%;
     }
@@ -505,7 +522,8 @@ article #Register form p {
     cursor: default;
 }
 
-article #Register form .agreeText, article #Register form>p {
+article #Register form .agreeText,
+article #Register form>p {
     width: 85%;
     margin: 0 auto;
     text-align: justify;
@@ -705,7 +723,8 @@ article #Details .de_author .likeShare #likedNumber {
     transition-duration: 0.5s;
 }
 
-.shareList .fa:hover, .shareList .fa:active {
+.shareList .fa:hover,
+.shareList .fa:active {
     color: white;
     transform: translateY(-5px);
 }
@@ -820,23 +839,28 @@ article #Details .de_message .de_content .de_myProperties {
     #Details {
         background-color: white;
     }
+
     article #Details {
         width: 100%;
         height: auto;
     }
+
     article #Details .de_author {
         order: 2;
         width: 100%;
         margin: 0 auto;
         /* overflow: hidden; */
     }
+
     article #Details .de_mainPic {
         order: 1;
         width: 100%;
     }
+
     article #Details .de_mainPic img {
         border-radius: 0;
     }
+
     article #Details .de_message {
         order: 3;
         width: 100%;
@@ -863,7 +887,7 @@ article #NotFound>#NotFoundLogo {
     background-color: white;
     font-size: 8rem;
     padding: 4rem;
-}    
+}
 
 article #NotFound>#NotFoundLogo:hover {
     transform: rotate(-360deg);

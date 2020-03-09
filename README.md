@@ -11,10 +11,11 @@
 
 * 在 chrome 和 firefox 无法显示 css ——在 CSS 文件头加上 `@charset "utf-8"`
 
-* `<input type="submit"\>` 的 `width` 会包括 `padding` ，而 `<input type="text"\>` 和 `<input type="password"\>` 不会🙃  
+* 盒子模型
   * W3C盒子模型（标准模型）：`width` 不包含 `padding` 和 `border`
   * IE盒子模型：`width = padding + border`
   * 怪异盒子模型：部分部分
+  * 参见 `box-sizing: content-box | border-box;`
 
 * 前面的 css 会被后面的 css 覆盖🙃  
 
@@ -29,9 +30,12 @@
   z-index: 2;
   ```
 
-* `position: absolute;` 相对于相对于 `static` 定位以外的第一个父元素； `position: fixed;` 相对于窗口，在做 share list 时候要用 `absolute` ，以防止滚动不变
+* 定位
+  * `position: absolute;` 是相对于 `static` 定位以外的第一个父元素
+  * `position: fixed;` 相对于窗口
+  * 在做 share list 时候要用 `absolute` ，以防止滚动不变
 
-* 现代浏览器无法支持透明度？不！只是把 `rgba` 写成了 `rgb` ...
+* 现代浏览器无法支持透明度？不！只是把 `rgba` 写成了 `rgb` ...🙃
 
 ## 一些实现
 
@@ -48,7 +52,9 @@
   * `transform : none`
   * 避免nav遮盖下面内容：`body` 设置 `padding-top`
   
-* 下拉菜单：整个 `dropList` 分为 `dropBtn` 和 `dropContent` 两个部分， `dropContent` 最开始隐藏，当鼠标移动到 `dropList` (这时就是指 `dropBtn` ) 上时，整个 `dropList` 显示
+* 下拉菜单
+  * 整个 `dropList` 分为 `dropBtn` 和 `dropContent` 两个部分
+  * `dropContent` 最开始隐藏，当鼠标移动到 `dropList` (这时就是指 `dropBtn` ) 上时，整个 `dropList` 显示
 
 * 代码兼容
 
@@ -155,7 +161,7 @@
     </body>
     ```
 
-* 模糊：`filter: blur;`
+* 模糊：`filter: blur;//filter用处很多啊`
 
 ## 设计手册
 
@@ -174,11 +180,11 @@
 * 正在浏览页面：`class="imlooking"`
 
 * 字体大小 `font-size`:
-  * html.`font-size: 12px`; html 的 `font-size` 才是 root，而不是 body
-  * a.`font-size: 1.2rem`;
-  * p.`font-size: 1.2rem`;
-  * h1.`font-size: 1.6rem`;
-  * footer.p.`font-size: 1rem`;
+  * html. `font-size: 12px`; html 的 `font-size` 才是 root，而不是 body
+  * a. `font-size: 1.2rem`;
+  * p. `font-size: 1.2rem`;
+  * h1. `font-size: 1.6rem`;
+  * footer.p. `font-size: 1rem`;
 
 * 字体 `font-family: monospace;`
 
@@ -191,7 +197,7 @@
 
   ```css
   * {
-      padding: 0;/* 避免浏览器自动添加的padding和margin */
+      padding: 0;/* 避免样式自动添加的padding和margin */
       margin: 0;
       box-sizing: content-box | border-box;/* 标准盒子模型 */
   }
@@ -201,8 +207,10 @@
 
 * 响应式布局  
   * 少使用绝对的宽度，多使用百分比  
-  * 字体不使用 `px` ，使用 `rem ` 
-  * 选择加载css：`<link rel="stylesheet" type="text/css" media="screen and (max-device-width: 400px)" href="tinyScreen.css" />` 如果屏幕宽度小于400像素（max-device-width: 400px），就加载 tinyScreen.css 文件
+  * 字体不使用 `px` ，使用 `rem`
+  * 选择加载css
+    * `<link rel="stylesheet" type="text/css" media="screen and (max-device-width: 400px)" href="tinyScreen.css" />` 
+    * 如果屏幕宽度小于400像素（max-device-width: 400px），就加载 tinyScreen.css 文件
   * Media Queries：
     * CSS
 
@@ -265,24 +273,71 @@
   * Reference: [阮一峰：Flex-语法](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
   * Reference: [阮一峰：Flex-实例]( http://www.ruanyifeng.com/blog/2015/07/flex-examples.html)
   * 设为 Flex 布局以后，子元素的 `float` 、 `clear` 和 `vertical-align` 属性将失效
+  * 首先设置父元素 `display:flex;`
   * 父元素六个属性
-    * `flex-direction` 排列方向：`flex-direction: row | row-reverse | column | column-reverse;`
-    * `flex-wrap` 换不换行： `flex-wrap: nowrap | wrap | wrap-reverse;`
+    * `flex-direction` 排列方向
+
+      ```css
+      flex-direction: row | row-reverse | column | column-reverse;
+      ```
+
+    * `flex-wrap` 换不换行
+
+      ```css
+      flex-wrap: nowrap | wrap | wrap-reverse;
+      ```
+
     * `flex-flow`：`flex-direction` + `flex-wrap`
-    * `justify-content` 水平居中方式： `justify-content: flex-start | flex-end | center | space-between | space-around;`
-      * `space-between` ：两端无间隔，中间有间隔
-      * `space-around` ：两边也有间隔
-    * `align-items` 垂直居中方式： `align-items: flex-start | flex-end | center | baseline | stretch;`
-      * `baseline` ：以第一行文字为基线对齐
-      * `stretch(default)` ：如果项目未设置高度或设为auto，将占满整个容器的高度。
-    * `align-content` 多行对齐方式： `align-content: flex-start | flex-end | center | space-between | space-around | stretch;`
+  
+    * `justify-content` 水平居中方式
+
+      ```css
+      justify-content: flex-start | flex-end | center | space-between | space-around;
+      /* space-between ：两端无间隔，中间有间隔, space-around ：两边也有间隔 */
+      ```
+
+    * `align-items` 垂直居中方式
+
+      ```css
+      align-items: flex-start | flex-end | center | baseline | stretch;
+      /*  baseline ：以第一行文字为基线对齐, stretch(default) ：如果项目未设置高度或设为 auto ，将占满整个容器的高度。 */
+      ```
+
+    * `align-content` 多行对齐方式：
+
+      ```css
+      align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+      ```
+
   * 子元素六个属性
-    * `order` 前后顺序（左到右或上到下）：`order: <integer>;`
-    * `flex-grow` 放大比例： `flex-grow: <number>; /* default 0 */`
-    * `flex-shrink`缩小比例： `flex-shrink: <number>; /* default 1 */`
+    * `order` 前后顺序（左到右或上到下）
+
+      ```css
+      order: <integer>;
+      ```
+
+    * `flex-grow` 放大比例
+
+      ```css
+      flex-grow: <number>; /* default 0 */
+      ```
+
+    * `flex-shrink`缩小比例
+
+      ```css
+      flex-shrink: <number>; /* default 1 */
+      ```
+
     * `flex-basis` 长度（父代 `flex-direction: column` ）或宽度（父代 `flex-direction: row` ），有点奇怪
+
     * `flex` ： `flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]`
-    * `align-self` 与其他子代不同的对齐方式，覆盖父代的 `align-items` ： `align-self: auto | flex-start | flex-end | center | baseline | stretch;`
+
+    * `align-self` 与其他子代不同的对齐方式，覆盖父代的 `align-items`
+
+      ```css
+      align-self: auto | flex-start | flex-end | center | baseline | stretch;
+      ```
+
   * 固定底栏
     * HTML
 
