@@ -188,9 +188,9 @@ body {
     color: rgba(250, 250, 250, 0.5);
 }
 
-/* article */
+/* main */
 
-article {
+main {
     width: 100%;
     /* to insure footer is under */
     height: 100%;
@@ -198,9 +198,9 @@ article {
     display: flex;
 }
 
-/* main=browser */
+/* article=browser */
 
-article #browser {
+main #browser {
     padding-top: 40px;
     width: 100%;
     display: flex;
@@ -209,11 +209,11 @@ article #browser {
     background-color: white;
 }
 
-article #browser #firstPic img {
+main #browser #firstPic img {
     width: 100%;
 }
 
-article #browser #showPic {
+main #browser #showPic {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -223,7 +223,7 @@ article #browser #showPic {
     width: auto;
 }
 
-article #browser #showPic .pin {
+main #browser #showPic .pin {
     width: 250px;
     margin: 20px;
     background-color: #fafafa;
@@ -233,7 +233,7 @@ article #browser #showPic .pin {
 }
 
 @media screen and (max-width: 720px) {
-    article #browser #showPic .pin {
+    main #browser #showPic .pin {
         width: 45%;
         height: auto;
         margin: 15px auto;
@@ -244,7 +244,7 @@ article #browser #showPic .pin {
     }
 }
 
-article #browser #showPic .pin:hover {
+main #browser #showPic .pin:hover {
     transform-origin: bottom;
     /* transform: scale(1.01); */
     /* 四周都有阴影 */
@@ -252,26 +252,26 @@ article #browser #showPic .pin:hover {
     transform: translateY(-10px);
 }
 
-article #browser #showPic .pin a {
+main #browser #showPic .pin a {
     text-decoration: none;
 }
 
-article #browser #showPic .pin a img {
+main #browser #showPic .pin a img {
     cursor: pointer;
     width: 100%;
 }
 
-article #browser #showPic .pin img:hover {
+main #browser #showPic .pin img:hover {
     opacity: 0.8;
 }
 
-article #browser #showPic .pin h1 {
+main #browser #showPic .pin h1 {
     font-size: 1.6rem;
     margin: 10px;
     cursor: default;
 }
 
-article #browser #showPic .pin p {
+main #browser #showPic .pin p {
     color: #444444;
     border-top: 1px solid gainsboro;
     padding: 5px 15px;
@@ -285,9 +285,9 @@ article #browser #showPic .pin p {
     text-overflow: ellipsis;
 }
 
-/* main=login */
+/* article=login */
 
-article #login {
+main #login {
     width: 450px;
     margin: auto;
     display: flex;
@@ -301,7 +301,7 @@ article #login {
         background-color: white;
     }
 
-    article #login {
+    main #login {
         width: inherit;
         display: flex;
         flex-direction: column;
@@ -310,18 +310,18 @@ article #login {
     }
 }
 
-article #login>h1 {
+main #login>h1 {
     padding: 20px;
     font-size: 3.5em;
     font-weight: normal;
 }
 
-article #login p {
+main #login p {
     padding: 0px 30px 30px 30px;
     cursor: default;
 }
 
-article #login section {
+main #login section {
     width: inherit;
     height: 450px;
     margin: auto;
@@ -332,24 +332,24 @@ article #login section {
     flex-direction: column;
 }
 
-article #login section h1 {
+main #login section h1 {
     font-size: 2rem;
     padding: 20px;
     font-weight: normal;
     cursor: default;
 }
 
-article #login section.p {
+main #login section.p {
     font-size: 1.2rem;
 }
 
-article #login section form {
+main #login section form {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-article #login section form input {
+main #login section form input {
     border: none;
     width: 80%;
     height: 40px;
@@ -361,7 +361,7 @@ article #login section form input {
     background-color: #fafafa;
 }
 
-article #login section form a {
+main #login section form a {
     width: 80%;
     margin: 5px auto;
     padding: 0;
@@ -371,11 +371,11 @@ article #login section form a {
     color: grey;
 }
 
-article #login section form a:hover {
+main #login section form a:hover {
     color: black;
 }
 
-article #login section form #sign {
+main #login section form #sign {
     display: inline-block;
     border: none;
     width: 88%;
@@ -390,11 +390,11 @@ article #login section form #sign {
     cursor: pointer;
 }
 
-article #login section form #sign:hover {
+main #login section form #sign:hover {
     color: white;
 }
 
-article #login section div {
+main #login section div {
     width: 80%;
     margin: 5px auto;
     padding: 0;
@@ -403,19 +403,19 @@ article #login section div {
     flex-wrap: wrap;
 }
 
-article #login section div a {
+main #login section div a {
     text-decoration: none;
     font-size: 1rem;
     color: grey;
 }
 
-article #login section div a:hover {
+main #login section div a:hover {
     color: black;
 }
 
-/* main=Register */
+/* article=Register */
 
-article #Register {
+main #Register {
     width: 450px;
     height: inherit;
     border-radius: 10px;
@@ -427,7 +427,7 @@ article #Register {
     background-color: white;
 }
 
-article #Register form {
+main #Register form {
     width: inherit;
     margin: auto;
     border-radius: 20px;
@@ -439,7 +439,7 @@ article #Register form {
 }
 
 @media screen and (max-width: 480px) {
-    article #Register {
+    main #Register {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -447,12 +447,12 @@ article #Register form {
         align-items: center;
     }
 
-    article #Register form {
+    main #Register form {
         width: 100%;
     }
 }
 
-article #Register form h1 {
+main #Register form h1 {
     /* width: 400px; */
     margin: 0 auto;
     color: black;
@@ -462,7 +462,7 @@ article #Register form h1 {
     cursor: default;
 }
 
-article #Register form input {
+main #Register form input {
     border: none;
     width: 80%;
     height: 40px;
@@ -474,15 +474,15 @@ article #Register form input {
     background-color: #fafafa;
 }
 
-article #Register form #password1+p {
+main #Register form #password1+p {
     display: none;
 }
 
-article #Register form #password1:focus+p {
+main #Register form #password1:focus+p {
     display: block;
 }
 
-article #Register form #verifyCode {
+main #Register form #verifyCode {
     border: none;
     width: 88%;
     height: 50px;
@@ -493,11 +493,11 @@ article #Register form #verifyCode {
     align-items: center;
 }
 
-article #Register form #verifyCode #codeAddress {
+main #Register form #verifyCode #codeAddress {
     width: 60%;
 }
 
-article #Register form #verifyCode #getCode {
+main #Register form #verifyCode #getCode {
     width: 30%;
     height: 100%;
     background-color: darkgrey;
@@ -506,12 +506,12 @@ article #Register form #verifyCode #getCode {
     cursor: pointer;
 }
 
-article #Register form #verifyCode #getCode:hover {
+main #Register form #verifyCode #getCode:hover {
     background-color: grey;
     color: white;
 }
 
-article #Register form p {
+main #Register form p {
     color: darkgrey;
     margin: 0 auto;
     text-align: left;
@@ -522,8 +522,8 @@ article #Register form p {
     cursor: default;
 }
 
-article #Register form .agreeText,
-article #Register form>p {
+main #Register form .agreeText,
+main #Register form>p {
     width: 85%;
     margin: 0 auto;
     text-align: justify;
@@ -531,7 +531,7 @@ article #Register form>p {
     line-height: 20px;
 }
 
-article #Register form #checkAgreement {
+main #Register form #checkAgreement {
     margin: 0;
     padding: 0;
     width: 13px;
@@ -542,22 +542,22 @@ article #Register form #checkAgreement {
     cursor: pointer;
 }
 
-article #Register form .agreeText p {
+main #Register form .agreeText p {
     margin-left: 1rem;
 }
 
-article #Register form .agreeText span {
+main #Register form .agreeText span {
     text-decoration: none;
     font-size: 1rem;
     color: grey;
     cursor: pointer;
 }
 
-article #Register form .agreeText span:hover {
+main #Register form .agreeText span:hover {
     color: #444444;
 }
 
-article #Register form #regiterButton {
+main #Register form #regiterButton {
     display: inline-block;
     border: none;
     width: 86.67%;
@@ -571,15 +571,15 @@ article #Register form #regiterButton {
     cursor: default;
 }
 
-article #Register form #checkAgreement:checked~#regiterButton {
+main #Register form #checkAgreement:checked~#regiterButton {
     background-color: #444444;
     color: white;
     cursor: pointer;
 }
 
-/* main=details */
+/* article=details */
 
-article #Details {
+main #Details {
     width: 80%;
     margin-top: 40px;
     margin-left: auto;
@@ -589,7 +589,7 @@ article #Details {
     align-items: center;
 }
 
-article #Details .de_author {
+main #Details .de_author {
     order: 1;
     width: 80%;
     margin: 4rem auto 2rem auto;
@@ -600,14 +600,14 @@ article #Details .de_author {
     align-items: center;
 }
 
-article #Details .de_author img {
+main #Details .de_author img {
     width: 55px;
     height: 55px;
     border-radius: 50%;
     padding: 0.5rem;
 }
 
-article #Details .de_author .headPic {
+main #Details .de_author .headPic {
     flex-shrink: 2;
     display: flex;
     flex-direction: row;
@@ -615,42 +615,42 @@ article #Details .de_author .headPic {
     align-items: center;
 }
 
-article #Details .de_author .headPic .creator {
+main #Details .de_author .headPic .creator {
     display: flex;
     flex-direction: column;
     text-align: left;
     padding-left: 5px;
 }
 
-article #Details .de_author .headPic .creator>h1 {
+main #Details .de_author .headPic .creator>h1 {
     line-height: 30px;
     font-size: 1.5rem;
     display: inline-block;
 }
 
-article #Details .de_author .headPic .creator>p {
+main #Details .de_author .headPic .creator>p {
     line-height: 20px;
     display: inline;
 }
 
-article #Details .de_author .headPic .creator>p>span {
+main #Details .de_author .headPic .creator>p>span {
     color: grey;
     cursor: pointer;
     padding: 5px;
 }
 
-article #Details .de_author .headPic .creator>p>span:hover {
+main #Details .de_author .headPic .creator>p>span:hover {
     color: #444444;
 }
 
-article #Details .de_author .likeShare {
+main #Details .de_author .likeShare {
     flex-shrink: 1;
     display: flex;
     /* flex: 0; */
     /* width: 110px; */
 }
 
-article #Details .de_author .likeShare #liking {
+main #Details .de_author .likeShare #liking {
     font-size: 1.5rem;
     line-height: 45px;
     border-radius: 50%;
@@ -662,12 +662,12 @@ article #Details .de_author .likeShare #liking {
     transition-duration: 0.4s;
 }
 
-article #Details .de_author .likeShare #liking:hover {
+main #Details .de_author .likeShare #liking:hover {
     color: orangered;
     transform: scale(1.2);
 }
 
-article #Details .de_author .likeShare #likedNumber {
+main #Details .de_author .likeShare #likedNumber {
     top: 5px;
     right: 24px;
     color: orangered;
@@ -675,6 +675,7 @@ article #Details .de_author .likeShare #likedNumber {
     cursor: default;
     margin-top: 6px;
     font-weight: 900;
+    font-size: 1.2rem;
 }
 
 /* share element */
@@ -776,17 +777,17 @@ article #Details .de_author .likeShare #likedNumber {
     transform: none;
 }
 
-article #Details .de_mainPic {
+main #Details .de_mainPic {
     order: 2;
     width: 80%;
 }
 
-article #Details .de_mainPic img {
+main #Details .de_mainPic img {
     width: 100%;
     border-radius: 10px;
 }
 
-article #Details .de_message {
+main #Details .de_message {
     order: 3;
     width: 80%;
     margin: 2rem auto;
@@ -795,14 +796,14 @@ article #Details .de_message {
     overflow: auto;
 }
 
-article #Details .de_message .de_message_choice {
+main #Details .de_message .de_message_choice {
     width: 100%;
     display: flex;
     margin: 20px auto 0 auto;
     justify-content: space-around;
 }
 
-article #Details .de_message .de_message_choice span {
+main #Details .de_message .de_message_choice span {
     font-size: 1.4rem;
     line-height: 40px;
     border: none;
@@ -813,11 +814,11 @@ article #Details .de_message .de_message_choice span {
     cursor: pointer;
 }
 
-article #Details .de_message .de_message_choice .selected {
+main #Details .de_message .de_message_choice .selected {
     border-bottom: 1.5px solid grey;
 }
 
-article #Details .de_message .de_myWords {
+main #Details .de_message .de_myWords {
     width: 80%;
     text-align: justify;
     margin: 20px auto;
@@ -826,7 +827,7 @@ article #Details .de_message .de_myWords {
     line-height: 30px;
 }
 
-article #Details .de_message .de_content .de_myProperties {
+main #Details .de_message .de_content .de_myProperties {
     display: none;
     text-align: center;
     margin: auto;
@@ -840,36 +841,36 @@ article #Details .de_message .de_content .de_myProperties {
         background-color: white;
     }
 
-    article #Details {
+    main #Details {
         width: 100%;
         height: auto;
     }
 
-    article #Details .de_author {
+    main #Details .de_author {
         order: 2;
         width: 100%;
         margin: 0 auto;
         /* overflow: hidden; */
     }
 
-    article #Details .de_mainPic {
+    main #Details .de_mainPic {
         order: 1;
         width: 100%;
     }
 
-    article #Details .de_mainPic img {
+    main #Details .de_mainPic img {
         border-radius: 0;
     }
 
-    article #Details .de_message {
+    main #Details .de_message {
         order: 3;
         width: 100%;
     }
 }
 
-/* main=404 */
+/* article=404 */
 
-article #NotFound {
+main #NotFound {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -879,7 +880,7 @@ article #NotFound {
     cursor: default;
 }
 
-article #NotFound>#NotFoundLogo {
+main #NotFound>#NotFoundLogo {
     border-radius: 50%;
     margin: auto;
     transition-duration: 0.5s;
@@ -889,11 +890,11 @@ article #NotFound>#NotFoundLogo {
     padding: 4rem;
 }
 
-article #NotFound>#NotFoundLogo:hover {
+main #NotFound>#NotFoundLogo:hover {
     transform: rotate(-360deg);
 }
 
-article #NotFound>h1 {
+main #NotFound>h1 {
     font-size: 2.5rem;
     font-weight: normal;
     padding: 5rem 5rem 0.5rem;
@@ -903,14 +904,14 @@ article #NotFound>h1 {
     /* border-bottom: 1px solid; */
 }
 
-article #NotFound>p {
+main #NotFound>p {
     font-size: 1.5rem;
     padding: 1em;
     line-height: 3rem;
     border-top: 2px solid grey;
 }
 
-article #NotFound>.socialIcon .fa {
+main #NotFound>.socialIcon .fa {
     /*icons size*/
     font-size: 1.5rem;
     /*icons circle size*/
@@ -925,24 +926,24 @@ article #NotFound>.socialIcon .fa {
     transition-duration: 0.5s;
 }
 
-article #NotFound>.socialIcon .fa:hover {
+main #NotFound>.socialIcon .fa:hover {
     color: white;
     transform: translateY(-5px);
 }
 
-article #NotFound>.socialIcon .fa-github {
+main #NotFound>.socialIcon .fa-github {
     background-color: #444444;
 }
 
-article #NotFound>.socialIcon .fa-weibo {
+main #NotFound>.socialIcon .fa-weibo {
     background-color: #D72B2B;
 }
 
-article #NotFound>.socialIcon .fa-wechat {
+main #NotFound>.socialIcon .fa-wechat {
     background-color: #2fdd5b;
 }
 
-article #NotFound>button {
+main #NotFound>button {
     width: 12rem;
     line-height: 3rem;
     border: 0;
@@ -955,7 +956,7 @@ article #NotFound>button {
     transition-duration: 0.5s;
 }
 
-article #NotFound>button:hover {
+main #NotFound>button:hover {
     background-color: #444444;
     color: white;
     transform: scale(1.2);
@@ -984,6 +985,7 @@ footer section {
 footer section #copyright {
     /* width: 300px; */
     text-align: center;
+    cursor: default;
 }
 
 footer section div {
@@ -1001,6 +1003,10 @@ footer section a {
     text-decoration: none;
     cursor: pointer;
     color: grey;
+}
+
+footer section a:hover {
+    color: #444444;
 }
 
 footer section span {

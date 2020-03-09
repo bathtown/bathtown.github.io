@@ -163,6 +163,8 @@
 
 * 模糊：`filter: blur;//filter用处很多啊`
 
+* 404 page 直接参考 giuhub 官方教程，值得注意的是，所有地址要引用绝对地址（css rel，href……），而不是相对于文件夹的地址
+
 ## 设计手册
 
 * 页面
@@ -202,6 +204,14 @@
       box-sizing: content-box | border-box;/* 标准盒子模型 */
   }
   ```
+
+* 语义元素
+  * `main`：主体部分
+    * `article`：主体内容中的文章
+  * `copyright`：用于页脚版权
+  * `hgroup`：用于 site map 列表
+  * `details`：用于细节，有折叠起来的样式（ `summary` & `p`）
+  * `small`：定义小型文本
 
 ## 新的知识🧀
 
