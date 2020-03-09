@@ -11,17 +11,31 @@
 
 * 在 chrome 和 firefox 无法显示 css ——在 CSS 文件头加上 `@charset "utf-8"`
 
-* 盒子模型
+* content 到底有没有 padding 和 border？
   * W3C盒子模型（标准模型）：`width` 不包含 `padding` 和 `border`
   * IE盒子模型：`width = padding + border`
   * 怪异盒子模型：部分部分
   * 参见 `box-sizing: content-box | border-box;`
 
-* 前面的 css 会被后面的 css 覆盖🙃  
+* 前面的 css 会被后面的 css 覆盖🙃
 
 * `transform` 对应的时间是 `transition-duration` 🙃  
 
 * `document.getElementById( ).style.color` 获取不了外部css的颜色，所以最开始都是 `""` ，类型是字符串型，而且 `=` 是拷贝而不是引用，无法改变原值
+
+  ```js
+  function likedPlus() {
+    if (document.getElementById("liking").style.color == "rgb(255, 225, 225)" || document.getElementById("liking").style.color == "") {
+        likedNumber++;
+        document.getElementById("liking").style.color = "orangered";
+    } else {
+        likedNumber--;
+        document.getElementById("liking").style.color = "rgb(255, 225, 225)";
+    }
+    document.getElementById("likedNumber").innerHTML = likedNumber;
+    alert('This is my PJ');
+  }
+  ```
 
 * 下层元素的 `transform` 会覆盖掉其他元素，甚至连 `position: fixed` 都无法幸免，解决：
 
@@ -30,7 +44,7 @@
   z-index: 2;
   ```
 
-* 定位
+* 定位浮动
   * `position: absolute;` 是相对于 `static` 定位以外的第一个父元素
   * `position: fixed;` 相对于窗口
   * 在做 share list 时候要用 `absolute` ，以防止滚动不变
@@ -55,15 +69,6 @@
 * 下拉菜单
   * 整个 `dropList` 分为 `dropBtn` 和 `dropContent` 两个部分
   * `dropContent` 最开始隐藏，当鼠标移动到 `dropList` (这时就是指 `dropBtn` ) 上时，整个 `dropList` 显示
-
-* 代码兼容
-
-  ```html
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-  <![endif]-->
-  ```
 
 * 浏览器上加logo：`<link rel="icon" href="../images/Bathtub.png" type="image/x-icon"/>`
 
@@ -163,7 +168,34 @@
 
 * 模糊：`filter: blur;//filter用处很多啊`
 
-* 404 page 直接参考 giuhub 官方教程，值得注意的是，所有地址要引用绝对地址（css rel，href……），而不是相对于文件夹的地址
+* 404 page ：直接参考 giuhub 官方教程，值得注意的是，所有地址要引用绝对地址（css rel，href……），而不是相对于文件夹的地址
+
+* 解决 font-awesome icon 加载太慢（16.5s，难以置信）
+  * 换成 `svg` 图片，利用 `<embed src="imooc.svg" width="1024" height="768" type="image/svg+xml" />` 插入（注意：embed是html5的标准）/或者直接在 HTML 嵌入 SVG 代码（丑陋）
+  * [Iconfont-Font Awesome](https://www.iconfont.cn/collections/detail?spm=a313x.7781069.0.da5a778a4&cid=2124)
+  * 不直接用 .css 文件，而是使用 .ttf 字体文件（其实可以看到，font-awesome.css 里面就是这么做的）（**效果也不太好**）
+
+    CSS
+
+    ```css
+    @font-face {
+      font-family: 'FontAwesome';
+      src: url('https://bathtown.github.io/font-awesome-4.7.0/fonts/fontawesome-webfont.eot');
+    }
+
+    .fa-github:before {
+      content: '\f09b';
+      font-family: FontAwesome;
+    }
+    ```
+
+    HTML
+
+    ```html
+    <span class="fa fa-github" title="share on github~"></span> <!-- 注意，这里如果是 <i> 标签则会被识别为斜体，如果是 <div> 则会是块元素 -->
+    ```
+
+* 解决图片加载太慢
 
 ## 设计手册
 
@@ -212,6 +244,7 @@
   * `hgroup`：用于 site map 列表
   * `details`：用于细节，有折叠起来的样式（ `summary` & `p`）
   * `small`：定义小型文本
+  * `figure`：图表，标题为 `figcaption`
 
 ## 新的知识🧀
 
@@ -373,3 +406,11 @@
       ```
 
 * Grid布局
+
+## 未实现
+
+* 首页图片切换
+
+* 黑暗模式
+
+* 导航栏合并
