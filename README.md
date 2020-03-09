@@ -209,7 +209,7 @@
   * 少使用绝对的宽度，多使用百分比  
   * 字体不使用 `px` ，使用 `rem`
   * 选择加载css
-    * `<link rel="stylesheet" type="text/css" media="screen and (max-device-width: 400px)" href="tinyScreen.css" />` 
+    * `<link rel="stylesheet" type="text/css" media="screen and (max-device-width: 400px)" href="tinyScreen.css" />`
     * 如果屏幕宽度小于400像素（max-device-width: 400px），就加载 tinyScreen.css 文件
   * Media Queries：
     * CSS
