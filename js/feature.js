@@ -14,11 +14,10 @@ function refreshPic() {
 }
 
 // heart++
-var num = 99;
-var likedNumberObj = document.getElementById("likedNumber");
-likedNumberObj.innerHTML = num;
 
 function likedPlus() {
+    var likedNumberObj = document.getElementById("likedNumber");
+    var num = likedNumberObj.textContent;
     var heart = document.getElementById("liking");
     if (heart.style.color == "rgb(255, 225, 225)" ||
         heart.style.color == "") {
