@@ -1,3 +1,13 @@
+var mobileHover = function () {
+    $('*').on('touchstart', function () {
+        $(this).trigger('hover');
+    }).on('touchend', function () {
+        $(this).trigger('hover');
+    });
+};
+
+document.body.addEventListener('touchstart', function () { }, false);
+
 // goto top
 function goTop() {
     window.scrollTo({
