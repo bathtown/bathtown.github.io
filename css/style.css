@@ -22,6 +22,12 @@ body {
     flex-direction: column;
 }
 
+/* 解决safari圆角问题 */
+
+input[type="submit"], input[type="checkbox"], input[type="button"] {
+    appearance: none;
+}
+
 /* header */
 
 /* laptopHeader */
@@ -70,6 +76,8 @@ body {
 
 #laptopHeader ul li p {
     cursor: default;
+    overflow: hidden;
+    width: 160px;
 }
 
 #laptopHeader ul li a:hover, #laptopHeader ul li a:active {
@@ -80,6 +88,7 @@ body {
 #laptopHeader ul li ul li {
     float: none;
     background-color: #444444;
+    overflow: hidden;
 }
 
 #laptopHeader ul li ul {
