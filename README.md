@@ -2,6 +2,8 @@
 
 * sources：[fudan_19ss_web基础课程_Project_01_旅游照片分享平台（上）](https://github.com/fudansswebfundamental/Project1-2020)
 
+* PJ is PJ.
+
 ## wicked problems👻
 
 * 在设置CSS的hover时，有时会发现hover不起作用，原因：  
@@ -452,3 +454,7 @@
 * 黑暗模式
 
 * 导航栏合并
+
+* 用户换头像
+
+* Safari 浏览器适配
