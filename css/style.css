@@ -875,7 +875,6 @@ main #NotFound {
     display: flex;
     flex-direction: column;
     width: 50%;
-    height: 100%;
     margin: auto;
     align-items: center;
     cursor: default;
@@ -889,6 +888,8 @@ main #NotFound>#NotFoundLogo {
     background-color: white;
     font-size: 8rem;
     padding: 4rem;
+    width: 96px;
+    height: 96px;
 }
 
 main #NotFound>#NotFoundLogo:hover {
