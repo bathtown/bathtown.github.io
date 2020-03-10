@@ -197,6 +197,23 @@
 
 * 解决图片加载太慢
 
+* transition：[cubic-bezier(.17,.67,.83,.67)](https://cubic-bezier.com/#.17,.67,.83,.67)
+
+* 下拉选框
+
+  ```html
+  <form>
+    <input list="browsers">
+      <datalist id="browsers">
+        <option value="Internet Explorer">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+      </datalist>
+  </form>
+  ```
+
 ## 设计手册
 
 * 页面
@@ -406,6 +423,8 @@
       ```
 
 * Grid布局
+
+  * [Grid 网格布局教程 - 阮一峰](http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html)
 
 ## 未实现
 
