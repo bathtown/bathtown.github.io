@@ -925,6 +925,7 @@ main #NotFound>.socialIcon .fa {
     text-align: center;
     color: rgba(255, 255, 255, 0.6);
     transition-duration: 0.5s;
+    display: inline-block;
 }
 
 main #NotFound>.socialIcon .fa:hover {
@@ -1045,7 +1046,7 @@ footer p {
     background-color: rgba(68, 68, 68, 0.8);
     border-radius: 50%;
     cursor: pointer;
-    /* display: inline-block; */
+    display: inline-block;
 }
 
 .extension .fa:hover {

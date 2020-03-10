@@ -171,8 +171,8 @@
 * 404 page ：直接参考 giuhub 官方教程，值得注意的是，所有地址要引用绝对地址（css rel，href……），而不是相对于文件夹的地址
 
 * 解决 font-awesome icon 加载太慢（16.5s，难以置信）
-  * 换成 `svg` 图片，利用 `<embed src="imooc.svg" width="1024" height="768" type="image/svg+xml" />` 插入（注意：embed是html5的标准）/或者直接在 HTML 嵌入 SVG 代码（丑陋）
-  * [Iconfont-Font Awesome](https://www.iconfont.cn/collections/detail?spm=a313x.7781069.0.da5a778a4&cid=2124)
+  * 换成 `svg` 图片，利用 `<embed src="imooc.svg" width="1024" height="768" type="image/svg+xml" />` 插入（注意：embed是html5的标准）/或者直接在 HTML 嵌入 SVG 代码（丑陋）**（效果不是很好，可能是我没有掌握到，放弃）**
+  
   * 不直接用 .css 文件，而是使用 .ttf 字体文件（其实可以看到，font-awesome.css 里面就是这么做的）（**效果也不太好**）
 
     CSS
@@ -194,6 +194,8 @@
     ```html
     <span class="fa fa-github" title="share on github~"></span> <!-- 注意，这里如果是 <i> 标签则会被识别为斜体，如果是 <div> 则会是块元素 -->
     ```
+  
+  * ⭐️ [Icon font 4 Font Awesome](https://www.iconfont.cn/collections/detail?spm=a313x.7781069.0.da5a778a4&cid=2124) **一开始就应该改选这个！！**
 
 * 解决图片加载太慢
 
