@@ -722,6 +722,7 @@ main #Details .de_author .likeShare #likedNumber {
     text-align: center;
     color: rgba(255, 255, 255, 0.6);
     transition-duration: 0.5s;
+    display: inline-block;
 }
 
 .shareList .fa:hover,
@@ -1034,7 +1035,7 @@ footer p {
     justify-content: space-between;
 }
 
-.extension i {
+.extension .fa {
     font-size: 1.5rem;
     width: 45px;
     height: 45px;
@@ -1044,9 +1045,10 @@ footer p {
     background-color: rgba(68, 68, 68, 0.8);
     border-radius: 50%;
     cursor: pointer;
+    /* display: inline-block; */
 }
 
-.extension i:hover {
+.extension .fa:hover {
     color: white;
     background-color: #444444;
 }
