@@ -51,6 +51,18 @@
 
 * 现代浏览器无法支持透明度？不！只是把 `rgba` 写成了 `rgb` ...🙃
 
+* safari 浏览器中 `hover` 失效
+
+  * 试图添加 `:active`——没用
+
+  * 解决：在 js 中添加代码 `document.body.addEventListener('touchstart', function () { }, false);`
+
+* 防止safari 识别电话号码
+
+  * `<meta name="format-detection" content="telephone=no"/>`
+  
+  * `pointer-events: none;`
+
 ## 一些实现
 
 * 实现一段文字溢出后显示省略号

@@ -1000,6 +1000,7 @@ footer p {
     color: grey;
     cursor: default;
     text-decoration: none;
+    pointer-events: none;
 }
 
 /* extension part */
