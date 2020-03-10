@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 * {
     padding: 0;
     margin: 0;
@@ -57,8 +56,7 @@ body {
     float: left;
 }
 
-#laptopHeader ul li a,
-#laptopHeader ul li p {
+#laptopHeader ul li a, #laptopHeader ul li p {
     cursor: pointer;
     font-size: 1.2rem;
     text-decoration: none;
@@ -74,7 +72,7 @@ body {
     cursor: default;
 }
 
-#laptopHeader ul li a:hover {
+#laptopHeader ul li a:hover, #laptopHeader ul li a:active {
     color: #fafafa;
     /* font-size: 1.25rem; */
 }
@@ -90,7 +88,7 @@ body {
     box-shadow: 3px 0px 3px #444444, -3px 0px 3px #444444, 0px 3px 3px #444444;
 }
 
-#laptopHeader ul li:hover ul {
+#laptopHeader ul li:hover ul, #laptopHeader ul li:active ul {
     display: block;
 }
 
@@ -104,7 +102,6 @@ body {
     #laptopHeader {
         display: none;
     }
-
     #phoneHeader {
         display: block;
         background-color: #444444;
@@ -117,7 +114,6 @@ body {
         transform: none;
         z-index: 2;
     }
-
     #phoneHeader ul {
         list-style: none;
         width: inherit;
@@ -126,7 +122,6 @@ body {
         justify-content: space-between;
         text-align: center;
     }
-
     #phoneHeader ul li {
         width: inherit;
         line-height: 40px;
@@ -134,15 +129,10 @@ body {
         position: relative;
         float: left;
     }
-
-    #phoneHeader ul #bar,
-    #phoneHeader ul #logo,
-    #phoneHeader ul #my {
+    #phoneHeader ul #bar, #phoneHeader ul #logo, #phoneHeader ul #my {
         text-align: center;
     }
-
-    #phoneHeader ul li a,
-    #phoneHeader ul li p {
+    #phoneHeader ul li a, #phoneHeader ul li p {
         cursor: pointer;
         font-size: 1.2rem;
         text-decoration: none;
@@ -153,27 +143,22 @@ body {
         padding-left: 1rem;
         /* overflow: auto; */
     }
-
     #phoneHeader ul li p {
         cursor: default;
     }
-
-    #phoneHeader ul li a:hover {
+    #phoneHeader ul li a:hover, #phoneHeader ul li a:active {
         color: #fafafa;
     }
-
     #phoneHeader ul li ul li {
         float: none;
         background-color: #444444;
     }
-
     #phoneHeader ul li ul {
         position: absolute;
         display: none;
         box-shadow: 3px 0px 3px #444444, -3px 0px 3px #444444, 0px 3px 3px #444444;
     }
-
-    #phoneHeader ul li:hover ul {
+    #phoneHeader ul li:hover ul, #phoneHeader ul li:active ul {
         display: block;
     }
 }
@@ -184,7 +169,7 @@ body {
     color: rgba(250, 250, 250, 0.5);
 }
 
-.imlooking:hover {
+.imlooking:hover, .imlooking:active {
     color: rgba(250, 250, 250, 0.5);
 }
 
@@ -244,7 +229,7 @@ main #browser #showPic .pin {
     }
 }
 
-main #browser #showPic .pin:hover {
+main #browser #showPic .pin:hover, main #browser #showPic .pin:active {
     transform-origin: bottom;
     /* transform: scale(1.01); */
     /* 四周都有阴影 */
@@ -261,7 +246,7 @@ main #browser #showPic .pin a img {
     width: 100%;
 }
 
-main #browser #showPic .pin img:hover {
+main #browser #showPic .pin img:hover, main #browser #showPic .pin img:active {
     opacity: 0.8;
 }
 
@@ -300,7 +285,6 @@ main #login {
     body {
         background-color: white;
     }
-
     main #login {
         width: inherit;
         display: flex;
@@ -371,7 +355,7 @@ main #login section form a {
     color: grey;
 }
 
-main #login section form a:hover {
+main #login section form a:hover, main #login section form a:active {
     color: black;
 }
 
@@ -390,7 +374,7 @@ main #login section form #sign {
     cursor: pointer;
 }
 
-main #login section form #sign:hover {
+main #login section form #sign:hover, main #login section form #sign:active {
     color: white;
 }
 
@@ -409,7 +393,7 @@ main #login section div a {
     color: grey;
 }
 
-main #login section div a:hover {
+main #login section div a:hover, main #login section div a:active {
     color: black;
 }
 
@@ -446,7 +430,6 @@ main #Register form {
         justify-content: space-between;
         align-items: center;
     }
-
     main #Register form {
         width: 100%;
     }
@@ -506,7 +489,7 @@ main #Register form #verifyCode #getCode {
     cursor: pointer;
 }
 
-main #Register form #verifyCode #getCode:hover {
+main #Register form #verifyCode #getCode:hover, main #Register form #verifyCode #getCode:active {
     background-color: grey;
     color: white;
 }
@@ -522,8 +505,7 @@ main #Register form p {
     cursor: default;
 }
 
-main #Register form .agreeText,
-main #Register form>p {
+main #Register form .agreeText, main #Register form>p {
     width: 85%;
     margin: 0 auto;
     text-align: justify;
@@ -553,7 +535,7 @@ main #Register form .agreeText span {
     cursor: pointer;
 }
 
-main #Register form .agreeText span:hover {
+main #Register form .agreeText span:hover, main #Register form .agreeText span:active {
     color: #444444;
 }
 
@@ -639,7 +621,7 @@ main #Details .de_author .headPic .creator>p>span {
     padding: 5px;
 }
 
-main #Details .de_author .headPic .creator>p>span:hover {
+main #Details .de_author .headPic .creator>p>span:hover, main #Details .de_author .headPic .creator>p>span:active {
     color: #444444;
 }
 
@@ -662,7 +644,7 @@ main #Details .de_author .likeShare #liking {
     transition-duration: 0.4s;
 }
 
-main #Details .de_author .likeShare #liking:hover {
+main #Details .de_author .likeShare #liking:hover, main #Details .de_author .likeShare #liking:active {
     color: orangered;
     transform: scale(1.2);
 }
@@ -692,7 +674,7 @@ main #Details .de_author .likeShare #likedNumber {
     /* position: fixed; */
 }
 
-.shareList:hover .dropdown-content {
+.shareList:hover .dropdown-content, .shareList:active .dropdown-content {
     display: flex;
     /* float: left; */
     position: absolute;
@@ -725,8 +707,7 @@ main #Details .de_author .likeShare #likedNumber {
     display: inline-block;
 }
 
-.shareList .fa:hover,
-.shareList .fa:active {
+.shareList .fa:hover, .shareList .fa:active {
     color: white;
     transform: translateY(-5px);
 }
@@ -773,7 +754,7 @@ main #Details .de_author .likeShare #likedNumber {
     transform: none;
 }
 
-.shareList .shareBtn:hover {
+.shareList .shareBtn:hover, .shareList .shareBtn:active {
     color: #444444;
     transform: none;
 }
@@ -841,28 +822,23 @@ main #Details .de_message .de_content .de_myProperties {
     #Details {
         background-color: white;
     }
-
     main #Details {
         width: 100%;
         height: auto;
     }
-
     main #Details .de_author {
         order: 2;
         width: 100%;
         margin: 0 auto;
         /* overflow: hidden; */
     }
-
     main #Details .de_mainPic {
         order: 1;
         width: 100%;
     }
-
     main #Details .de_mainPic img {
         border-radius: 0;
     }
-
     main #Details .de_message {
         order: 3;
         width: 100%;
@@ -892,7 +868,7 @@ main #NotFound>#NotFoundLogo {
     height: 96px;
 }
 
-main #NotFound>#NotFoundLogo:hover {
+main #NotFound>#NotFoundLogo:hover, main #NotFound>#NotFoundLogo:active {
     transform: rotate(-360deg);
 }
 
@@ -929,7 +905,7 @@ main #NotFound>.socialIcon .fa {
     display: inline-block;
 }
 
-main #NotFound>.socialIcon .fa:hover {
+main #NotFound>.socialIcon .fa:hover, main #NotFound>.socialIcon .fa:active {
     color: white;
     transform: translateY(-5px);
 }
@@ -959,7 +935,7 @@ main #NotFound>button {
     transition-duration: 0.5s;
 }
 
-main #NotFound>button:hover {
+main #NotFound>button:hover, main #NotFound>button:active {
     background-color: #444444;
     color: white;
     transform: scale(1.2);
@@ -1008,7 +984,7 @@ footer section a {
     color: grey;
 }
 
-footer section a:hover {
+footer section a:hover, footer section a:active {
     color: #444444;
 }
 
@@ -1023,6 +999,7 @@ footer p {
     text-align: center;
     color: grey;
     cursor: default;
+    text-decoration: none;
 }
 
 /* extension part */
@@ -1050,7 +1027,7 @@ footer p {
     display: inline-block;
 }
 
-.extension .fa:hover {
+.extension .fa:hover, .extension .fa:active {
     color: white;
     background-color: #444444;
 }
