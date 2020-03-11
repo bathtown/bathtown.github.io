@@ -458,3 +458,5 @@
 * 用户换头像
 
 * Safari 浏览器适配
+
+* 懒加载：[js实现图片懒加载原理](https://blog.csdn.net/w1418899532/article/details/90515969)
