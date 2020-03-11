@@ -272,8 +272,10 @@ main #browser #showPic .pin:active {
 
 main #browser #showPic .pin a {
     text-decoration: none;
-    padding-bottom: 75%;
+    padding-bottom: 133.3%;
     height: 0;
+    /* display: inline-block; */
+    overflow: hidden;
 }
 
 main #browser #showPic .pin a img {
