@@ -253,8 +253,6 @@ main #browser #showPic .pin {
 @media screen and (max-width: 720px) {
     main #browser #showPic .pin {
         width: 45%;
-        padding-bottom: 75%;
-        height: 0;
         margin: 15px auto;
         overflow: hidden;
         background-color: #fafafa;
@@ -274,6 +272,8 @@ main #browser #showPic .pin:active {
 
 main #browser #showPic .pin a {
     text-decoration: none;
+    padding-bottom: 75%;
+    height: 0;
 }
 
 main #browser #showPic .pin a img {
