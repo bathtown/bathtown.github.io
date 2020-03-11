@@ -464,3 +464,32 @@
 * 瀑布流
 
 * 图片加载太慢
+
+## Log
+
+### 3.11.2020
+
+* 1.0 版本完成，完成内容：所有网站已搭建（ browser、search、myGallery、myHearts、upload 无内容）,index.html 做一个重定向到 login.html
+
+* 解决问题：图片占位
+
+  HTML
+  
+  ```html
+  <div>
+    <img>
+  </div>
+  ```
+
+  CSS
+
+  ```css
+  div {
+    width: 100%;
+    padding-bottom: 56.25%;/* 16:9 */
+    height: 0;
+    overflow: hidden;
+  }
+
+  img {width: 100%;}
+  ```
