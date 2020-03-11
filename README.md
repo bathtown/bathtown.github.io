@@ -27,7 +27,7 @@
 
   ```js
   function likedPlus() {
-    if (document.getElementById("liking").style.color == "rgb(255, 225, 225)" || document.getElementById("liking").style.color == "") {
+    if (document.getElementById("liking").style.color === "rgb(255, 225, 225)" || document.getElementById("liking").style.color == "") {
         likedNumber++;
         document.getElementById("liking").style.color = "orangered";
     } else {
@@ -216,9 +216,7 @@
 
   * 原因：带宽太低、图片太大——控制在 100kb 之内最好
 
-  * 解决方法：[tinypng](https://tinypng.com/)、[压缩图](https://www.yasuotu.com/)
-
-  * 图片替换
+  * 解决方法：[tinypng](https://tinypng.com/)、[压缩图](https://www.yasuotu.com/)(**不完全**)
 
 * transition：[cubic-bezier(.17,.67,.83,.67)](https://cubic-bezier.com/#.17,.67,.83,.67)
 
@@ -464,3 +462,5 @@
 * 懒加载：[js实现图片懒加载原理](https://blog.csdn.net/w1418899532/article/details/90515969)
 
 * 瀑布流
+
+* 图片加载太慢

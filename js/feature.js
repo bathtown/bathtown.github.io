@@ -1,18 +1,18 @@
 // for safari
 document.body.addEventListener('touchstart', function () {}, false);
 
-function replacePic() {
-    var imgs = document.images; // All images
-    var len = imgs.length;
+// function replacePic() {
+//     var imgs = document.images; // All images
+//     var len = imgs.length;
 
-    document.body.onload = function () {
-        for (let i = 0; i < len; i++) {
-            imgs[i].setAttribute("src", imgs[i].getAttribute("data-src"));
-        }
-    }
-}
+//     document.body.onload = function () {
+//         for (let i = 0; i < len; i++) {
+//             imgs[i].setAttribute("src", imgs[i].getAttribute("data-src"));
+//         }
+//     }
+// }
 
-replacePic();
+// replacePic();
 
 // goto top
 function goTop() {
@@ -32,9 +32,9 @@ function refreshPic() {
 // heart++
 
 function likedPlus() {
-    var likedNumberObj = document.getElementById("likedNumber");
-    var num = likedNumberObj.textContent;
-    var heart = document.getElementById("liking");
+    const likedNumberObj = document.getElementById("likedNumber");
+    let num = likedNumberObj.textContent;
+    const heart = document.getElementById("liking");
     if (heart.style.color == "rgb(255, 225, 225)" ||
         heart.style.color == "") {
         num++;
@@ -51,7 +51,7 @@ function likedPlus() {
 $(function () {
     $(".de_message_choice span").click(function () {
         //获取要显示或隐藏的对s象
-        var divShow = $(".de_content").children('.de_choice');
+        const divShow = $(".de_content").children('.de_choice');
         //判断当前对象是否被选中，如果没选中的话进入if循环
         while (!$(this).hasClass('selected')) {
             //获取当前对象的索引
