@@ -1,5 +1,28 @@
 document.body.addEventListener('touchstart', function () { }, false);
 
+function replacePic() {
+    var imgs = document.images;// All images
+    var len = imgs.length;
+    var att = document.createAttribute("datasrc");// add attribute
+    att.value = "";
+
+    var lazysrc = "https://bathtown.github.io/images/lazyLoad.png";
+
+    for (let i = 0; i < len; i++) {
+        imgs[i].setAttribute("datasrc", imgs[i].src);
+        imgs[i].setAttribute("src", lazysrc);
+    }
+    // var attribute = imgs[0].getAttribute("datasrc");
+    // alert(attribute);
+    document.body.onload = function () {
+        for (let i = 0; i < len; i++) {
+            imgs[i].setAttribute("src", imgs[i].getAttribute("datasrc"));
+        }
+    }
+}
+
+replacePic();
+
 // goto top
 function goTop() {
     window.scrollTo({

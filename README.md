@@ -218,6 +218,8 @@
 
   * 解决方法：[tinypng](https://tinypng.com/)、[压缩图](https://www.yasuotu.com/)
 
+  * 图片替换
+
 * transition：[cubic-bezier(.17,.67,.83,.67)](https://cubic-bezier.com/#.17,.67,.83,.67)
 
 * 下拉选框
@@ -460,3 +462,5 @@
 * Safari 浏览器适配
 
 * 懒加载：[js实现图片懒加载原理](https://blog.csdn.net/w1418899532/article/details/90515969)
+
+* 瀑布流

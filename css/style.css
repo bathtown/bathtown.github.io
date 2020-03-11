@@ -204,7 +204,10 @@ main #browser {
 }
 
 main #browser #firstPic img {
-    width: 100%;
+    /* 16:9 */
+    width: 100vw;
+    height: 56.25vw;
+    overflow: hidden;
 }
 
 main #browser #showPic {
