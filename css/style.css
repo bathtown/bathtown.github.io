@@ -24,8 +24,8 @@ body {
 
 /* 解决safari圆角问题 */
 
-input[type="submit"], input[type="checkbox"], input[type="button"] {
-    appearance: none;
+input[type="submit"], input[type="button"] {
+    -webkit-appearance: none;
 }
 
 /* header */
@@ -304,14 +304,19 @@ main #login {
 }
 
 main #login>h1 {
+    margin: 30px;
+}
+
+main #login>h1>.fa {
     padding: 20px;
-    font-size: 3.5em;
+    font-size: 3em;
     font-weight: normal;
 }
 
 main #login p {
-    padding: 0px 30px 30px 30px;
+    padding: 0 0 30px 0;
     cursor: default;
+    margin: auto;
 }
 
 main #login section {
