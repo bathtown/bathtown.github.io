@@ -905,6 +905,8 @@ main #Details .de_message .de_content .de_myProperties {
     main #Details .de_mainPic {
         order: 1;
         width: 100%;
+        /* height: 0; */
+        padding-bottom: 56.25%;
     }
 
     main #Details .de_mainPic img {
