@@ -48,21 +48,25 @@ function likedPlus() {
 }
 
 // switch description and properties
-$(function () {
-    $(".de_message_choice span").click(function () {
-        //获取要显示或隐藏的对s象
-        const divShow = $(".de_content").children('.de_choice');
-        //判断当前对象是否被选中，如果没选中的话进入if循环
-        while (!$(this).hasClass('selected')) {
-            //获取当前对象的索引
-            var index = $(this).index();
-            //当前对象添加选中样式并且其同胞移除选中样式；
-            $(this).addClass('selected').siblings('span').removeClass(
-                'selected');
-            //索引对应的div块显示
-            $(divShow[index]).show();
-            //索引对应的div块的同胞隐藏
-            $(divShow[index]).siblings('.de_choice').hide();
-        }
-    });
-});
+function swap() {
+    document.getElementsByClassName("de_choice de_myProperties")[0].style.display = "none";
+
+    var choice1 = document.getElementById("description");// 上面两个tab
+    var choice2 = document.getElementById("properties");
+
+    choice1.onclick = function () {
+        document.getElementsByClassName("de_choice de_myProperties")[0].style.display = "none";
+        document.getElementsByClassName("de_choice de_myWords")[0].style.display = "block";
+        choice1.className = "selected";
+        choice2.className = "";
+    }
+
+    choice2.onclick = function () {
+        document.getElementsByClassName("de_choice de_myProperties")[0].style.display = "inline-table";
+        document.getElementsByClassName("de_choice de_myWords")[0].style.display = "none";
+        choice1.className = "";
+        choice2.className = "selected";
+    }
+}
+
+swap();

@@ -218,6 +218,8 @@
 
   * 解决方法：[tinypng](https://tinypng.com/)、[压缩图](https://www.yasuotu.com/)(**不完全**)
 
+  * 转化为 webp 格式
+
 * transition：[cubic-bezier(.17,.67,.83,.67)](https://cubic-bezier.com/#.17,.67,.83,.67)
 
 * 下拉选框
@@ -493,4 +495,36 @@
   }
 
   img {width: 100%;}
+  ```
+
+### 3.12.2020
+
+* 取消掉对 jq 的依赖，纯原生 js 实现 tab 切换，减少下载负担
+
+  Javascript
+  
+  ```js
+  // switch description and properties
+  function swap() {
+      document.getElementsByClassName("de_choice de_myProperties")[0].style.display = "none";
+
+      var choice1 = document.getElementById("description");// 上面两个tab
+      var choice2 = document.getElementById("properties");
+
+      choice1.onclick = function () {
+          document.getElementsByClassName("de_choice de_myProperties")[0].style.display = "none";
+          document.getElementsByClassName("de_choice de_myWords")[0].style.display = "block";
+          choice1.className = "selected";
+          choice2.className = "";
+      }
+
+      choice2.onclick = function () {
+          document.getElementsByClassName("de_choice de_myProperties")[0].style.display = "inline-table";
+          document.getElementsByClassName("de_choice de_myWords")[0].style.display = "none";
+          choice1.className = "";
+          choice2.className = "selected";
+      }
+  }
+
+  swap();
   ```
