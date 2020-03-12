@@ -489,6 +489,7 @@
     padding-bottom: 56.25%;/* 16:9 */
     height: 0;
     overflow: hidden;
+    background-color: gainsboro;/* rainbow color not complete */
   }
 
   img {width: 100%;}

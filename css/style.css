@@ -229,6 +229,7 @@ main #browser #firstPic {
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
+    background-color: gainsboro;
 }
 
 
@@ -287,6 +288,7 @@ main #browser #showPic .pin a div {
     height: 0;
     padding-bottom: 133.3%;
     overflow: hidden;
+    background-color: gainsboro;
 }
 
 main #browser #showPic .pin a img {
