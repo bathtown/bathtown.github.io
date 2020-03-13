@@ -52,7 +52,7 @@ function likedPlus() {
 function swap() {
     document.getElementsByClassName("de_choice de_myProperties")[0].style.display = "none";
 
-    const choice1 = document.getElementById("description");// 上面两个tab
+    const choice1 = document.getElementById("description"); // 上面两个tab
     const choice2 = document.getElementById("properties");
 
     choice1.onclick = function () {
@@ -71,3 +71,16 @@ function swap() {
 }
 
 swap();
+
+// show picture
+function show(file) {
+    var reader = new FileReader(); // 读取文件
+    var img = document.getElementById('uploadPic'); // 获取要显示图片的标签
+
+    reader.onload = function (evt) {
+        img.src = evt.target.result;
+    }
+    reader.readAsDataURL(file.files[0]);
+    document.getElementById("uploadPicBox").style.display = "contents";
+    document.getElementsByClassName("uploadBtn")[0].style.display = "none";
+}

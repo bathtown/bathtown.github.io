@@ -65,6 +65,8 @@
   
   * `pointer-events: none;`
 
+* `<input type="submit" />` 的 `padding` 是向内的，为了和上面的 `<input type="text" />` 宽度相同，要单独设定 `box-sizing: content-box;`
+
 ## 一些实现
 
 * 实现一段文字溢出后显示省略号

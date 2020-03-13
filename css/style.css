@@ -418,7 +418,7 @@ main #login section form a:active {
 main #login section form #sign {
     display: inline-block;
     border: none;
-    width: 88%;
+    box-sizing: content-box;
     height: 50px;
     border-radius: 10px;
     margin: 20px auto;
@@ -600,7 +600,7 @@ main #register form .agreeText span:active {
 main #register form #registerButton {
     display: inline-block;
     border: none;
-    width: 86.67%;
+    box-sizing: content-box;
     height: 50px;
     border-radius: 10px;
     padding: 5px 15px;
@@ -686,8 +686,6 @@ main #Details .de_author .headPic .creator > p > span:active {
 main #Details .de_author .likeShare {
     flex-shrink: 1;
     display: flex;
-    /* flex: 0; */
-    /* width: 110px; */
 }
 
 main #Details .de_author .likeShare #liking {
@@ -724,21 +722,17 @@ main #Details .de_author .likeShare #likedNumber {
 .shareList {
     width: fit-content;
     float: right;
-    /* position: inherit; */
     cursor: pointer;
 }
 
 .shareList .dropdown-content {
     display: none;
-    /* position: fixed; */
 }
 
 .shareList:hover .dropdown-content,
 .shareList:active .dropdown-content {
     display: flex;
-    /* float: left; */
     position: absolute;
-    /* flex-direction: row; */
 }
 
 .shareList ul {
@@ -1000,6 +994,184 @@ main #NotFound > button:active {
     background-color: #444444;
     color: white;
     transform: scale(1.2);
+}
+
+/* upload */
+
+main #upload {
+    padding-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+}
+
+main #upload .pic {
+    height: 60%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main #upload .pic .uploadBtn {
+    padding: 40px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main #upload .pic .uploadBtn p {
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+
+main #upload .pic .uploadBtn span {
+    display: none;
+}
+
+main #upload .pic .uploadBtn label {
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: grey;
+    cursor: pointer;
+    transition: 0.2s;
+    display: block;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+main #upload .pic .uploadBtn label:hover {
+    background-color: #444444;
+    color: #fafafa;
+}
+
+main #upload .pic .uploadBtn label:hover span {
+    display: inline;
+}
+
+main #upload .pic .uploadBtn input {
+    display: none;
+}
+
+main #upload .pic div {
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+    display: none;
+}
+
+main #upload .pic div img {
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+main #upload .info {
+    display: flex;
+    width: 40%;
+    height: 80%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main #upload .info .picInfo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+main #upload .info .picInfo label {
+    margin: auto;
+}
+
+main #upload .info .picInfo input {
+    margin: 10px auto;
+    padding: 5px 15px;
+    background-color: #fafafa;
+    border: none;
+    width: 80%;
+    border-radius: 10px;
+}
+
+main #upload .info .picInfo input[class="oneLine"] {
+    height: 40px;
+}
+
+main #upload .info .picInfo input[class="moreLine"] {
+    height: 120px;
+}
+
+main #upload .info .picInfo input[type="submit"] {
+    background: grey;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    height: 55px;
+    box-sizing: content-box;
+}
+
+main #upload .info .picInfo input[type="submit"]:hover {
+    background-color: #444444;
+    color: #fafafa;
+}
+
+@media screen and (max-width: 830px) {
+    main #upload {
+        height: initial;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    main #upload .pic {
+        height: 100%;
+        width: 80%;
+    }
+    
+    main #upload .pic div {
+        margin: auto;
+        display: none;
+    }
+
+    main #upload .pic div img {
+        max-width: 64%;
+    }
+
+    main #upload .info {
+        width: 100%;
+    }
+
+    main #upload .info .picInfo {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    main #upload .info .picInfo input {
+        margin: 10px auto;
+        padding: 5px 15px;
+        background-color: #fafafa;
+        border: none;
+        width: 80%;
+        border-radius: 10px;
+    }
+
+    main #upload .info .picInfo input[class="moreLine"] {
+        height: 80px;
+    }
+
+    main #upload .info .picInfo input[type="submit"] {
+        background-color: #444444;
+        color: #fafafa;
+        height: 40px;
+    }
 }
 
 /* footer */
