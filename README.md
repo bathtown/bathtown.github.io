@@ -71,10 +71,31 @@
 
 * 实现一段文字溢出后显示省略号
 
+  一行
+
   ```css
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  ```
+
+  多行
+
+  ```HTML
+  <div class="mult_line_ellipsis">
+    多行文本css溢出部分css溢出部分css溢出部分css溢出部分css溢出部分css溢出部分css溢出部分……
+  </div>
+  ```
+
+  ```CSS
+  .mult_line_ellipsis{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    display: -webkit-box;  
+    -webkit-line-clamp: 3;// 3 lines
+    -webkit-box-orient: vertical;
+    width:130px;
+  }
   ```
 
 * 做一个nav
@@ -533,4 +554,6 @@
 
 ### 3.13.2020
 
-* 完成 upload page
+* finish upload page
+* finish my gallery page
+* finish my hearts page
