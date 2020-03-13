@@ -81,6 +81,6 @@ function show(file) {
         img.src = evt.target.result;
     }
     reader.readAsDataURL(file.files[0]);
-    document.getElementById("uploadPicBox").style.display = "contents";
+    document.getElementById("uploadPicBox").style.display = "flex";
     document.getElementsByClassName("uploadBtn")[0].style.display = "none";
 }
