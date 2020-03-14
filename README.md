@@ -470,27 +470,25 @@
       }
       ```
 
-* Grid布局
-
-  * [Grid 网格布局教程 - 阮一峰](http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html)
+* Chrome Dev
 
 ## 未实现
 
-* 首页图片切换
+* 技术类  
+  * 导航栏合并
+  * Safari 浏览器适配
+  * 懒加载：[js实现图片懒加载原理](https://blog.csdn.net/w1418899532/article/details/90515969)
+  * 瀑布流
+  * 注释和类、ID 取名
+  * 图片加载太慢
 
-* 黑暗模式
+* 设计类
+  * 黑暗模式/配色太丑/ CSS 复用：[CSS var() 函数](https://www.runoob.com/cssref/func-var.html)
+  * 首页图片切换
+  * Grid布局：[Grid 网格布局教程 - 阮一峰](http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html)
 
-* 导航栏合并
-
-* 用户换头像
-
-* Safari 浏览器适配
-
-* 懒加载：[js实现图片懒加载原理](https://blog.csdn.net/w1418899532/article/details/90515969)
-
-* 瀑布流
-
-* 图片加载太慢
+* 功能类
+  * 用户换头像
 
 ## Log
 

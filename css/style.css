@@ -1550,7 +1550,7 @@ main #search .filterAfter {
     padding: 20px;
     justify-content: space-between;
     position: fixed;
-    box-shadow: 3px 0 3px gainsboro, -3px 0 3px gainsboro, 0 3px 3px gainsboro;
+    box-shadow: 1px 0 3px gainsboro, -1px 0 3px gainsboro, 0 1px 3px gainsboro, 0 -1px 3px gainsboro;
     top: 60px;
 }
 
@@ -1675,7 +1675,6 @@ main #search .result .onePic .message p {
         padding: 20px;
         justify-content: space-between;
         position: fixed;
-        box-shadow: 3px 0 3px gainsboro, -3px 0 3px gainsboro, 0 3px 3px gainsboro;
         display: none;
         bottom: 30vh;
         top: auto;
