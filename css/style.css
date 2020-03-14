@@ -45,7 +45,7 @@ input[type="button"] {
     display: flex;
     justify-content: space-between;
     transform: none;
-    z-index: 2;
+    z-index: 3;
 }
 
 #laptopHeader #emoji {
@@ -1196,86 +1196,9 @@ main #upload .info .picInfo input[type="submit"]:hover {
     }
 }
 
-/* article=myGallery */
+/* article=myGallery & article=myHearts */
 
-main #myGallery {
-    padding-top: 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-main #myGallery .onePic {
-    height: 180px;
-    display: flex;
-    padding: 20px 40px;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    background: white;
-    margin: 20px auto;
-    border-radius: 20px;
-}
-
-main #myGallery .onePic img {
-    height: 80%;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-main #myGallery .onePic .message {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    justify-content: center;
-}
-
-main #myGallery .onePic .message h1 {
-    line-height: 40px;
-    font-size: 1.6rem;
-}
-
-main #myGallery .onePic .message p {
-    text-align: left;
-    line-height: 20px;
-    font-size: 1.2rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-height: 100px;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    margin: 0 auto 10px;
-}
-
-main #myGallery .onePic .message div div {
-    margin: 10px;
-}
-
-main #myGallery .onePic .message div button {
-    width: 100px;
-    height: 40px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: 600;
-    background-color: #fafafa;
-    margin: 0 10px;
-}
-
-main #myGallery .onePic .message div .modifyPic {
-    color: darkseagreen;
-}
-
-main #myGallery .onePic .message div .delPic {
-    color: darksalmon;
-}
-
-
-/* article=myHearts */
-
+main #myGallery,
 main #myHearts {
     padding-top: 80px;
     display: flex;
@@ -1283,6 +1206,7 @@ main #myHearts {
     align-items: center;
 }
 
+main #myGallery .onePic,
 main #myHearts .onePic {
     height: 180px;
     display: flex;
@@ -1295,12 +1219,21 @@ main #myHearts .onePic {
     border-radius: 20px;
 }
 
-main #myHearts .onePic img {
+main #myGallery .onePic .picContain,
+main #myHearts .onePic .picContain {
     height: 80%;
     border-radius: 10px;
-    cursor: pointer;
+    background-color: darkgrey;
 }
 
+main #myGallery .onePic .picContain img,
+main #myHearts .onePic .picContain img {
+    height: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+main #myGallery .onePic .message,
 main #myHearts .onePic .message {
     display: flex;
     flex-direction: column;
@@ -1309,11 +1242,13 @@ main #myHearts .onePic .message {
     justify-content: center;
 }
 
+main #myGallery .onePic .message h1,
 main #myHearts .onePic .message h1 {
     line-height: 40px;
     font-size: 1.6rem;
 }
 
+main #myGallery .onePic .message p,
 main #myHearts .onePic .message p {
     text-align: left;
     line-height: 20px;
@@ -1327,10 +1262,12 @@ main #myHearts .onePic .message p {
     margin: 0 auto 10px;
 }
 
+main #myGallery .onePic .message div div,
 main #myHearts .onePic .message div div {
     margin: 10px;
 }
 
+main #myGallery .onePic .message div button,
 main #myHearts .onePic .message div button {
     width: 100px;
     height: 40px;
@@ -1343,12 +1280,13 @@ main #myHearts .onePic .message div button {
     margin: 0 10px;
 }
 
-main #myHearts .onePic .message div .modifyPic {
-    color: darkseagreen;
-}
-
+main #myGallery .onePic .message div .delPic,
 main #myHearts .onePic .message div .delPic {
     color: darksalmon;
+}
+
+main #myGallery .onePic .message div .modifyPic{
+    color: darkseagreen;
 }
 
 /* main #myHearts & main #myGallery's width less than 830px */
@@ -1374,9 +1312,21 @@ main #myHearts .onePic .message div .delPic {
         border-radius: 0;
     }
 
-    main #myHearts .onePic img,
-    main #myGallery .onePic img {
+    main #myHearts .onePic .picContain,
+    main #myGallery .onePic .picContain {
         width: 90%;
+        height: 0;
+        padding-bottom: 50.625%;
+        background-color: darkgray;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    main #myHearts .onePic .picContain img,
+    main #myGallery .onePic .picContain img {
+        width: 100%;
+        cursor: pointer;
+        height: auto;
     }
 
     main #myHearts .onePic .message,
