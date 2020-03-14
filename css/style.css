@@ -1259,70 +1259,6 @@ main #myGallery .onePic .message div .delPic {
     color: darksalmon;
 }
 
-@media screen and (max-width: 830px) {
-    main #myGallery {
-        width: 100vw;
-        background-color: white;
-    }
-
-    main #myGallery .onePic {
-        height: auto;
-        padding: 10px;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        flex-direction: column;
-        box-sizing: border-box;
-        margin: 0;
-        border-radius: 0;
-    }
-
-    main #myGallery .onePic img {
-        width: 90%;
-    }
-
-    main #myGallery .onePic .message {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-        justify-content: center;
-        width: 90%;
-    }
-
-    main #myGallery .onePic .message h1 {
-        line-height: 30px;
-        font-size: 1.4rem;
-    }
-
-    main #myGallery .onePic .message p {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: 100%;
-        display: none;
-    }
-
-    main #myGallery .onePic .message div {
-        display: none;
-    }
-
-    main #myGallery .onePic .message div button {
-        width: 80px;
-        height: 30px;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-    }
-
-    main #myGallery .onePic .message div .modifyPic {
-        background-color: aliceblue;
-    }
-
-    main #myGallery .onePic .message div .delPic {
-        background-color: antiquewhite;
-    }
-}
 
 /* article=myHearts */
 
@@ -1401,13 +1337,18 @@ main #myHearts .onePic .message div .delPic {
     color: darksalmon;
 }
 
+/* main #myHearts & main #myGallery's width less than 830px */
+
 @media screen and (max-width: 830px) {
-    main #myHearts {
+
+    main #myHearts,
+    main #myGallery {
         width: 100vw;
         background-color: white;
     }
 
-    main #myHearts .onePic {
+    main #myHearts .onePic,
+    main #myGallery .onePic {
         height: auto;
         padding: 10px;
         justify-content: center;
@@ -1419,25 +1360,31 @@ main #myHearts .onePic .message div .delPic {
         border-radius: 0;
     }
 
-    main #myHearts .onePic img {
+    main #myHearts .onePic img,
+    main #myGallery .onePic img {
         width: 90%;
     }
 
-    main #myHearts .onePic .message {
+    main #myHearts .onePic .message,
+    main #myGallery .onePic .message {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 0;
         justify-content: center;
         width: 90%;
+        height: 30px;
     }
 
-    main #myHearts .onePic .message h1 {
+    main #myHearts .onePic .message h1,
+    main #myGallery .onePic .message h1 {
         line-height: 30px;
         font-size: 1.4rem;
+        position: absolute;
     }
 
-    main #myHearts .onePic .message p {
+    main #myHearts .onePic .message p,
+    main #myGallery .onePic .message p {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -1445,11 +1392,15 @@ main #myHearts .onePic .message div .delPic {
         display: none;
     }
 
-    main #myHearts .onePic .message div {
+    main #myHearts .onePic .message div,
+    main #myGallery .onePic .message div {
         display: none;
+        position: relative;
+        top: -100px;
     }
 
-    main #myHearts .onePic .message div button {
+    main #myHearts .onePic .message div button,
+    main #myGallery .onePic .message div button {
         width: 80px;
         height: 30px;
         border: none;
@@ -1457,12 +1408,18 @@ main #myHearts .onePic .message div .delPic {
         cursor: pointer;
     }
 
-    main #myHearts .onePic .message div .modifyPic {
+    main #myHearts .onePic .message div .modifyPic,
+    main #myGallery .onePic .message div .modifyPic {
         background-color: aliceblue;
+        width: 120px;
+        height: 40px;
     }
 
-    main #myHearts .onePic .message div .delPic {
+    main #myHearts .onePic .message div .delPic,
+    main #myGallery .onePic .message div .delPic {
         background-color: antiquewhite;
+        width: 120px;
+        height: 40px;
     }
 }
 

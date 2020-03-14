@@ -99,3 +99,74 @@ function showSearchBox() {
     document.getElementsByClassName('filterAfter')[0].style.display = 'block';
     document.getElementsByClassName('search_extension')[0].style.display = 'none';
 }
+
+function buttomAppear() {
+    let onePic = document.getElementsByClassName("onePic");
+    for (let i = 0; i < onePic.length; i++) {
+        onePic[i].children[0].addEventListener("swipeLeft", function () {
+            onePic[i].children[0].style.filter = "opacity(0.5)";
+            onePic[i].children[1].children[2].style.display = "block";
+        });
+    }
+}
+
+if (document.getElementsByClassName("onePic"))
+    buttomAppear();
+
+// touch function
+(function () {
+    let coord = {},
+        start = {},
+        el;
+
+    document.addEventListener('touchstart', touchStart);
+    document.addEventListener('touchmove', touchMove);
+    document.addEventListener('touchend', touchEnd);
+    document.addEventListener('touchcanel', touchCancel);
+
+    function newEvent(type) {
+        return new Event(type, {
+            bubbles: true,
+            cancelable: true
+        });
+    }
+
+    function touchCancel() {
+        coord = {}
+    }
+
+    function touchStart(e) {
+        const c = e.touches[0];
+        start = {
+            x: c.clientX,
+            y: c.clientY,
+            time: Date.now()
+        };
+        el = e.target;
+        el = 'tagName' in el ? el : el.parentNode;
+    }
+
+    function touchMove(e) {
+        const t = e.touches[0];
+        coord = {
+            x: t.clientX - start.x,
+            y: t.clientY - start.y
+        }
+    }
+
+    function touchEnd() {
+        const touchTimes = Date.now() - start.time,
+            c = 250 > touchTimes && Math.abs(coord.x) > 20 || Math.abs(coord.x) > 80,
+            s = 250 > touchTimes && Math.abs(coord.y) > 20 || Math.abs(coord.y) > 80,
+            left = coord.x < 0,
+            top = coord.y < 0;
+        if (250 > touchTimes && (isNaN(coord.y) || Math.abs(coord.y)) < 12 && (isNaN(coord.x) || Math.abs(coord.x) < 12)) {
+            el.dispatchEvent(newEvent('tap'));
+        } else if (750 < touchTimes && (isNaN(coord.y) || Math.abs(coord.y)) < 12 && (isNaN(coord.x) || Math.abs(coord.x) < 12)) {
+            el.dispatchEvent(newEvent('longTap'));
+        }
+        c ? el.dispatchEvent(left ? newEvent('swipeLeft') : newEvent('swipeRight')) : s && el.dispatchEvent(top ? newEvent('swipeUp') : newEvent('swipeDown'));
+
+        coord = {};
+    }
+}());
