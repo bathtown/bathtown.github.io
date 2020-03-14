@@ -70,17 +70,32 @@ function swap() {
     };
 }
 
-swap();
+if (document.getElementsByClassName("de_choice de_myProperties")[0])
+    swap();
 
 // show picture
 function show(file) {
-    var reader = new FileReader(); // 读取文件
-    var img = document.getElementById('uploadPic'); // 获取要显示图片的标签
+    const reader = new FileReader(); // 读取文件
+    const img = document.getElementById('uploadPic'); // 获取要显示图片的标签
 
     reader.onload = function (evt) {
         img.src = evt.target.result;
-    }
+    };
     reader.readAsDataURL(file.files[0]);
     document.getElementById("uploadPicBox").style.display = "flex";
     document.getElementsByClassName("uploadBtn")[0].style.display = "none";
+}
+
+function searchResult() {
+    alert('This is my pj!');
+    document.getElementsByClassName('filter')[0].setAttribute('class', "filterAfter");
+    document.getElementsByClassName('result')[0].style.display = 'block';
+    const winWide = window.screen.width;
+    if (winWide <= 830)
+        document.getElementsByClassName('search_extension')[0].style.display = 'flex';
+}
+
+function showSearchBox() {
+    document.getElementsByClassName('filterAfter')[0].style.display = 'block';
+    document.getElementsByClassName('search_extension')[0].style.display = 'none';
 }

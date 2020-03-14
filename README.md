@@ -67,6 +67,8 @@
 
 * `<input type="submit" />` 的 `padding` 是向内的，为了和上面的 `<input type="text" />` 宽度相同，要单独设定 `box-sizing: content-box;`
 
+* `onclick="searchResult();"`函数无法改变className？？？原来是`submit`自带刷新表单功能
+
 ## 一些实现
 
 * 实现一段文字溢出后显示省略号
@@ -557,3 +559,7 @@
 * finish upload page
 * finish my gallery page
 * finish my hearts page
+
+### 3.14.2020
+
+* finish search page
