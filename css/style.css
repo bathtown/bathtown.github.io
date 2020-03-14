@@ -899,7 +899,7 @@ main #Details .de_message .de_content .de_myProperties {
     main #Details .de_mainPic {
         order: 1;
         width: 100%;
-        /* height: 0; */
+        height: 0;
         padding-bottom: 56.25%;
     }
 
@@ -1624,7 +1624,7 @@ main #search .result .onePic .message p {
         height: 30px;
         border-radius: 10px;
         border: none;
-        background-color: #fafafa;
+        background-color: #eaeaea;       
         padding: 5px;
         font-size: 1.2rem;
         font-family: monospace;
@@ -1632,7 +1632,7 @@ main #search .result .onePic .message p {
 
     main #search .filterAfter #searchFilter #descripText {
         height: 70px;
-        background-color: #fafafa;
+        background-color: #eaeaea;
         width: 240px;
         margin: auto;
         border-radius: 10px;
