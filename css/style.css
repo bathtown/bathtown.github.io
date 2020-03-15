@@ -1688,7 +1688,7 @@ main #search .result .onePic .message p {
     color: #fafafa;
     font-size: 1.4rem;
     cursor: pointer;
-    transform: none;
+    transform: translateZ(8px);
     z-index: 2;
 }
 
