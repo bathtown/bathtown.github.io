@@ -1933,7 +1933,7 @@ main #browser .browserResult .mainPic .picContain img {
     main #browser .browserAside .searchBox {
         width: 80%;
         height: 30px;
-        padding: 4%;
+        padding: 10px;
         display: flex;
         flex-direction: row;
         background-color: #fafafa;
@@ -1963,12 +1963,14 @@ main #browser .browserResult .mainPic .picContain img {
         font-size: 1.6rem;
         align-self: baseline;
         padding-left: 8%;
+        width: 100%;
+        text-align: left;
     }
 
     main #browser .browserAside .hotList {
         width: 80%;
         text-align: left;
-        padding: 4%;
+        padding: 10px;
         list-style: none;
         box-sizing: content-box;
         background-color: #fafafa;
@@ -2028,6 +2030,7 @@ main #browser .browserResult .mainPic .picContain img {
         font-size: 1.2rem;
         padding: 0 0 0 20px;
         cursor: pointer;
+        -webkit-appearance: none;
     }
 
     main #browser .browserResult .filter select option {

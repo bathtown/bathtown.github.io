@@ -62,6 +62,7 @@
     * `<meta name="format-detection" content="telephone=no"/>`
     * `pointer-events: none;`
   * `position: fixed;` 失效——[Safari 3D transform变换z-index层级渲染异常的研究](https://www.zhangxinxu.com/wordpress/2016/08/safari-3d-transform-z-index/)
+  * 独特样式：`-webkit-appearance: none;`
 
 * `<input type="submit" />` 的 `padding` 是向内的，为了和上面的 `<input type="text" />` 宽度相同，要单独设定 `box-sizing: content-box;`
 
@@ -474,7 +475,6 @@
 
 * 技术类  
   * 导航栏合并
-  * Safari 浏览器适配
   * 懒加载：[js实现图片懒加载原理](https://blog.csdn.net/w1418899532/article/details/90515969)
   * 瀑布流
   * 注释和类、ID 取名
