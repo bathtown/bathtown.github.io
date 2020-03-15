@@ -1780,7 +1780,7 @@ main #browser .browserAside .searchBox button {
     background-color: rgba(0, 0, 0, 0);
     position: relative;
     cursor: pointer;
-    height: 40px;
+    height: inherit;
     margin: auto;
 }
 
@@ -1923,17 +1923,16 @@ main #browser .browserResult .mainPic .picContain img {
 
     main #browser .browserAside {
         width: 100%;
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
-        padding-top: 40px;
-        display: none;
-        margin-top: 40px;
+        padding-top: 60px;
+        /* margin-top: 40px; */
     }
 
     main #browser .browserAside .searchBox {
         width: 80%;
-        /* height: 70px; */
+        height: 30px;
         padding: 4%;
         display: flex;
         flex-direction: row;
@@ -1955,12 +1954,12 @@ main #browser .browserResult .mainPic .picContain img {
         background-color: rgba(0, 0, 0, 0);
         position: relative;
         cursor: pointer;
-        height: 40px;
+        height: inherit;
         margin: auto;
     }
 
     main #browser .browserAside h1 {
-        line-height: 60px;
+        line-height: 50px;
         font-size: 1.6rem;
         align-self: baseline;
         padding-left: 8%;
@@ -1978,7 +1977,7 @@ main #browser .browserResult .mainPic .picContain img {
 
     main #browser .browserAside .hotList a {
         text-decoration: none;
-        color: grey;
+        color: #444444;
         font-size: 1.2rem;
         line-height: 40px;
         padding-left: 10%;
@@ -2001,7 +2000,7 @@ main #browser .browserResult .mainPic .picContain img {
         display: none;
         position: fixed;
         top: 40vh;
-        width: 80%;
+        width: 70%;
         padding: 20px;
         border-radius: 10px;
         flex-direction: column;
