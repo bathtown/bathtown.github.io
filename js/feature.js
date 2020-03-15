@@ -94,7 +94,7 @@ function searchResult() {
     if (filterAny.style.display = 'block' && winWide <= 830) {
         filterAny.style.display = 'none';
         extension.style.display = 'flex';
-    }else{
+    } else {
         filterAny.style.display = 'block';
     }
 }
@@ -265,4 +265,21 @@ function countrysCity(thisCountry) {
         CityOption.innerHTML = data[choice][i];
         city.appendChild(CityOption);
     }
+}
+
+// login page
+function hintRegister() {
+    var hintIt = document.getElementById("hintIt");
+    let counter = setInterval(function () {
+        if (hintIt.style.display == "inline-block")
+            hintIt.style.display = "none";
+        else
+            hintIt.style.display = "inline-block";
+    }, 600);
+    setTimeout(function () {
+        clearInterval(counter)
+    }, 3000);
+}
+if (document.getElementById("hintIt")) {
+    hintRegister();
 }

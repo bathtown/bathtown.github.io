@@ -373,6 +373,7 @@ main #login section h1 {
     padding: 20px;
     font-weight: normal;
     cursor: default;
+    height: 30px;
 }
 
 main #login section.p {
@@ -383,6 +384,7 @@ main #login section form {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    height: 300px;
 }
 
 main #login section form input {
@@ -428,19 +430,34 @@ main #login section form #sign:active {
     color: white;
 }
 
-main #login section div {
+main #login section>div {
     width: 80%;
     margin: 5px auto;
     padding: 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
+    height: 40px;
+}
+
+main #login section>div>div {
+    height: 40px;
 }
 
 main #login section div a {
     text-decoration: none;
     font-size: 1rem;
     color: grey;
+    height: 40px;
+    line-height: 40px;
+}
+
+main #login section div span {
+    font-size: 2rem;
+    /*     position: relative; */
+    line-height: 30px;
+    display: none;
 }
 
 main #login section div a:hover,
