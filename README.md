@@ -53,17 +53,15 @@
 
 * 现代浏览器无法支持透明度？不！只是把 `rgba` 写成了 `rgb` ...🙃
 
-* safari 浏览器中 `hover` 失效
+* safari（新时代的IE6！）
 
-  * 试图添加 `:active`——没用
-
-  * 解决：在 js 中添加代码 `document.body.addEventListener('touchstart', function () { }, false);`
-
-* 防止safari 识别电话号码
-
-  * `<meta name="format-detection" content="telephone=no"/>`
-  
-  * `pointer-events: none;`
+  * `hover` 失效
+    * 添加 `:active` 无效
+    * 解决：在 js 中添加代码 `document.body.addEventListener('touchstart', function () { }, false);`
+  * 自动识别电话号码
+    * `<meta name="format-detection" content="telephone=no"/>`
+    * `pointer-events: none;`
+  * `position: fixed;` 失效——[Safari 3D transform变换z-index层级渲染异常的研究](https://www.zhangxinxu.com/wordpress/2016/08/safari-3d-transform-z-index/)
 
 * `<input type="submit" />` 的 `padding` 是向内的，为了和上面的 `<input type="text" />` 宽度相同，要单独设定 `box-sizing: content-box;`
 
@@ -511,13 +509,16 @@
   ```css
   div {
     width: 100%;
-    padding-bottom: 56.25%;/* 16:9 */
+    padding-bottom: 56.25%;/* 16:9, 56.25% = 100% * 9 / 16 */
     height: 0;
     overflow: hidden;
     background-color: gainsboro;/* rainbow color not complete */
   }
 
-  img {width: 100%;}
+  img {
+    width: 100%;
+    /* cursor: pointer; */
+    }
   ```
 
 ### 3.12.2020
@@ -562,3 +563,7 @@
 
 * finish search page
 * touch
+
+### 3.15.2020
+
+* fix `position: fixed;` in Safari
