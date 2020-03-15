@@ -26,7 +26,7 @@ function goTop() {
 function refreshPic() {
     // 刷新页面
     location.reload();
-    alert('This is my PJ');
+    alert('This is my pj!');
 }
 
 // heart++
@@ -43,7 +43,7 @@ function likedPlus() {
         heart.style.color = "rgb(255, 225, 225)";
     }
     likedNumberObj.innerHTML = num;
-    alert('This is my PJ');
+    alert('This is my pj!');
 }
 
 // switch description and properties
