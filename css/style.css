@@ -42,7 +42,7 @@ input[type="button"] {
     left: 0;
     display: flex;
     justify-content: space-between;
-    transform: none;
+    transform: translateZ(10px);
     z-index: 3;
 }
 
