@@ -104,29 +104,31 @@ function showSearchBox() {
     document.getElementsByClassName('search_extension')[0].style.display = 'none';
 }
 
-function buttomAppear() {
+function buttonAppear() {
     let onePic = document.getElementsByClassName("onePic");
     for (let i = 0; i < onePic.length; i++) {
-        const addr = onePic[i].children[0].children[0].onclick;
-        onePic[i].children[0].addEventListener("swipeLeft", function() {
-            if (onePic[i].children[1].children[2] != undefined) {
-                onePic[i].children[0].style.filter = "opacity(0.5)";
-                onePic[i].children[0].children[0].onclick = " ";
-                onePic[i].children[1].children[2].style.display = "block";
+        let addr = onePic[i].children[0].children[0].onclick;
+        let picture = onePic[i].children[0];
+        let button = onePic[i].children[1].children[2];
+        picture.addEventListener("swipeLeft", function() {
+            if (button != undefined) {
+                picture.style.filter = "opacity(0.5)";
+                picture.children[0].onclick = " ";
+                button.style.display = "block";
             }
         });
-        onePic[i].children[0].addEventListener("swipeRight", function() {
+        picture.addEventListener("swipeRight", function() {
             if (onePic[i].children[1].children[2] != undefined) {
-                onePic[i].children[0].style.filter = "none";
-                onePic[i].children[0].children[0].onclick = addr;
-                onePic[i].children[1].children[2].style.display = "none";
+                picture.style.filter = "none";
+                picture.children[0].onclick = addr;
+                button.style.display = "none";
             }
         });
     }
 }
 
 if (document.getElementsByClassName("onePic"))
-    buttomAppear();
+    buttonAppear();
 
 // touch function
 (function() {
@@ -199,11 +201,11 @@ function browserAsideAppear() {
     });
 
     mainPic.addEventListener("swipeLeft", function() {
-        threeFilter.style.display = "block";
+        threeFilter.style.transform = "translateX(0)";
     });
 
     threeFilter.addEventListener("swipeRight", function() {
-        threeFilter.style.display = "none";
+        threeFilter.style.transform = "translateX(1000px)";
     });
 
     browserAside.addEventListener("swipeLeft", function() {

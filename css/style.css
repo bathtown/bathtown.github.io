@@ -1369,6 +1369,8 @@ main #myGallery .onePic .message div .modifyPic {
         display: none;
         position: relative;
         top: -100px;
+        transform: translateZ(6px);
+        z-index: 2;
     }
 
     main #myHearts .onePic .message div button,
@@ -1928,6 +1930,7 @@ main #browser .browserResult .mainPic .picContain img {
         align-items: center;
         padding-top: 60px;
         /* margin-top: 40px; */
+        position: fixed;
     }
 
     main #browser .browserAside .searchBox {
@@ -1962,8 +1965,7 @@ main #browser .browserResult .mainPic .picContain img {
         line-height: 50px;
         font-size: 1.6rem;
         align-self: baseline;
-        padding-left: 8%;
-        width: 100%;
+        width: 80%;
         text-align: left;
     }
 
@@ -1999,7 +2001,7 @@ main #browser .browserResult .mainPic .picContain img {
     }
 
     main #browser .browserResult .filter {
-        display: none;
+        display: block;
         position: fixed;
         top: 40vh;
         width: 70%;
@@ -2010,6 +2012,8 @@ main #browser .browserResult .mainPic .picContain img {
         box-sizing: border-box;
         background-color: white;
         box-shadow: 1px 0 3px gainsboro, -1px 0 3px gainsboro, 0 1px 3px gainsboro, 0 -1px 3px gainsboro;
+        transform: translateX(1000px);
+        transition-duration: 0.2s;
     }
 
     main #browser .browserResult .filter div {
@@ -2201,7 +2205,8 @@ footer p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transform: translateZ(10px);
+    transform: translateZ(8px);
+    z-index: 2;
 }
 
 .home_extension .fa {
