@@ -107,11 +107,19 @@ function showSearchBox() {
 function buttomAppear() {
     let onePic = document.getElementsByClassName("onePic");
     for (let i = 0; i < onePic.length; i++) {
+        const addr = onePic[i].children[0].children[0].onclick;
         onePic[i].children[0].addEventListener("swipeLeft", function() {
             if (onePic[i].children[1].children[2] != undefined) {
                 onePic[i].children[0].style.filter = "opacity(0.5)";
                 onePic[i].children[0].children[0].onclick = " ";
                 onePic[i].children[1].children[2].style.display = "block";
+            }
+        });
+        onePic[i].children[0].addEventListener("swipeRight", function() {
+            if (onePic[i].children[1].children[2] != undefined) {
+                onePic[i].children[0].style.filter = "none";
+                onePic[i].children[0].children[0].onclick = addr;
+                onePic[i].children[1].children[2].style.display = "none";
             }
         });
     }
@@ -161,8 +169,8 @@ if (document.getElementsByClassName("onePic"))
 
     function touchEnd() {
         const touchTimes = Date.now() - start.time
-          , c = 250 > touchTimes && Math.abs(coord.x) > 20 || Math.abs(coord.x) > 80
-          , s = 250 > touchTimes && Math.abs(coord.y) > 20 || Math.abs(coord.y) > 80
+          , c = 250 > touchTimes && Math.abs(coord.x) > 40 || Math.abs(coord.x) > 120
+          , s = 250 > touchTimes && Math.abs(coord.y) > 40 || Math.abs(coord.y) > 120
           , left = coord.x < 0
           , top = coord.y < 0;
         if (250 > touchTimes && (isNaN(coord.y) || Math.abs(coord.y)) < 12 && (isNaN(coord.x) || Math.abs(coord.x) < 12)) {
