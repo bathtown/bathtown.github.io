@@ -567,3 +567,4 @@
 ### 3.15.2020
 
 * fix `position: fixed;` in Safari
+* finish browser page

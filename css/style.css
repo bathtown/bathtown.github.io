@@ -1,6 +1,9 @@
-@charset "utf-8"; * {
+@charset "utf-8";
+
+* {
     padding: 0;
     margin: 0;
+    outline: none;
 }
 
 html {
@@ -22,7 +25,8 @@ body {
 }
 
 /* 解决safari圆角问题 */
-input[type="submit"], input[type="button"] {
+input[type="submit"],
+input[type="button"] {
     -webkit-appearance: none;
 }
 
@@ -58,7 +62,8 @@ input[type="submit"], input[type="button"] {
     float: left;
 }
 
-#laptopHeader ul li a, #laptopHeader ul li p {
+#laptopHeader ul li a,
+#laptopHeader ul li p {
     cursor: pointer;
     font-size: 1.2rem;
     text-decoration: none;
@@ -68,6 +73,7 @@ input[type="submit"], input[type="button"] {
     transition-duration: 0.2s;
     text-align: left;
     padding-left: 20%;
+    height: 40px;
 }
 
 #laptopHeader ul li p {
@@ -76,7 +82,8 @@ input[type="submit"], input[type="button"] {
     width: 160px;
 }
 
-#laptopHeader ul li a:hover, #laptopHeader ul li a:active {
+#laptopHeader ul li a:hover,
+#laptopHeader ul li a:active {
     color: #fafafa;
     /* font-size: 1.25rem; */
 }
@@ -93,7 +100,8 @@ input[type="submit"], input[type="button"] {
     box-shadow: 3px 0 3px #444444, -3px 0 3px #444444, 0 3px 3px #444444;
 }
 
-#laptopHeader ul li:hover ul, #laptopHeader ul li:active ul {
+#laptopHeader ul li:hover ul,
+#laptopHeader ul li:active ul {
     display: block;
 }
 
@@ -135,13 +143,18 @@ input[type="submit"], input[type="button"] {
         text-align: center;
         position: relative;
         float: left;
+        height: 40px;
     }
 
-    #phoneHeader ul #bar, #phoneHeader ul #logo, #phoneHeader ul #my {
+    #phoneHeader ul #bar,
+    #phoneHeader ul #logo,
+    #phoneHeader ul #my {
         text-align: center;
+        height: 40px;
     }
 
-    #phoneHeader ul li a, #phoneHeader ul li p {
+    #phoneHeader ul li a,
+    #phoneHeader ul li p {
         cursor: pointer;
         font-size: 1.2rem;
         text-decoration: none;
@@ -157,7 +170,8 @@ input[type="submit"], input[type="button"] {
         cursor: default;
     }
 
-    #phoneHeader ul li a:hover, #phoneHeader ul li a:active {
+    #phoneHeader ul li a:hover,
+    #phoneHeader ul li a:active {
         color: #fafafa;
     }
 
@@ -172,7 +186,8 @@ input[type="submit"], input[type="button"] {
         box-shadow: 3px 0 3px #444444, -3px 0 3px #444444, 0 3px 3px #444444;
     }
 
-    #phoneHeader ul li:hover ul, #phoneHeader ul li:active ul {
+    #phoneHeader ul li:hover ul,
+    #phoneHeader ul li:active ul {
         display: block;
     }
 }
@@ -182,7 +197,8 @@ input[type="submit"], input[type="button"] {
     color: rgba(250, 250, 250, 0.5);
 }
 
-.imlooking:hover, .imlooking:active {
+.imlooking:hover,
+.imlooking:active {
     color: rgba(250, 250, 250, 0.5);
 }
 
@@ -195,8 +211,8 @@ main {
     display: flex;
 }
 
-/* article=browser */
-main #browser {
+/* article=home */
+main #home {
     padding-top: 40px;
     width: 100%;
     display: flex;
@@ -205,7 +221,7 @@ main #browser {
     background-color: white;
 }
 
-main #browser #firstPic {
+main #home #firstPic {
     width: 100%;
     padding-bottom: 56.25%;
     height: 0;
@@ -213,11 +229,11 @@ main #browser #firstPic {
     background-color: gainsboro;
 }
 
-main #browser #firstPic img {
+main #home #firstPic img {
     width: 100%;
 }
 
-main #browser #showPic {
+main #home #showPic {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -227,7 +243,7 @@ main #browser #showPic {
     width: auto;
 }
 
-main #browser #showPic .pin {
+main #home #showPic .pin {
     width: 250px;
     margin: 20px;
     background-color: #fafafa;
@@ -239,7 +255,7 @@ main #browser #showPic .pin {
 }
 
 @media screen and (max-width: 720px) {
-    main #browser #showPic .pin {
+    main #home #showPic .pin {
         width: 45%;
         margin: 15px auto;
         overflow: hidden;
@@ -249,7 +265,8 @@ main #browser #showPic .pin {
     }
 }
 
-main #browser #showPic .pin:hover, main #browser #showPic .pin:active {
+main #home #showPic .pin:hover,
+main #home #showPic .pin:active {
     transform-origin: bottom;
     /* transform: scale(1.01); */
     /* 四周都有阴影 */
@@ -257,12 +274,12 @@ main #browser #showPic .pin:hover, main #browser #showPic .pin:active {
     transform: translateY(-10px);
 }
 
-main #browser #showPic .pin a {
+main #home #showPic .pin a {
     text-decoration: none;
     width: 100%;
 }
 
-main #browser #showPic .pin a div {
+main #home #showPic .pin a div {
     width: 100%;
     height: 0;
     padding-bottom: 133.3%;
@@ -270,22 +287,23 @@ main #browser #showPic .pin a div {
     background-color: gainsboro;
 }
 
-main #browser #showPic .pin a img {
+main #home #showPic .pin a img {
     cursor: pointer;
     width: 100%;
 }
 
-main #browser #showPic .pin img:hover, main #browser #showPic .pin img:active {
+main #home #showPic .pin img:hover,
+main #home #showPic .pin img:active {
     opacity: 0.8;
 }
 
-main #browser #showPic .pin h1 {
+main #home #showPic .pin h1 {
     font-size: 1.6rem;
     margin: 10px;
     cursor: default;
 }
 
-main #browser #showPic .pin p {
+main #home #showPic .pin p {
     color: #444444;
     border-top: 1px solid gainsboro;
     padding: 5px 15px;
@@ -323,11 +341,11 @@ main #login {
     }
 }
 
-main #login > h1 {
+main #login>h1 {
     margin: 30px;
 }
 
-main #login > h1 > .fa {
+main #login>h1>.fa {
     padding: 20px;
     font-size: 3em;
     font-weight: normal;
@@ -387,7 +405,8 @@ main #login section form a {
     color: grey;
 }
 
-main #login section form a:hover, main #login section form a:active {
+main #login section form a:hover,
+main #login section form a:active {
     color: black;
 }
 
@@ -404,7 +423,8 @@ main #login section form #sign {
     cursor: pointer;
 }
 
-main #login section form #sign:hover, main #login section form #sign:active {
+main #login section form #sign:hover,
+main #login section form #sign:active {
     color: white;
 }
 
@@ -423,7 +443,8 @@ main #login section div a {
     color: grey;
 }
 
-main #login section div a:hover, main #login section div a:active {
+main #login section div a:hover,
+main #login section div a:active {
     color: black;
 }
 
@@ -485,11 +506,11 @@ main #register form input {
     background-color: #fafafa;
 }
 
-main #register form #password1 + p {
+main #register form #password1+p {
     display: none;
 }
 
-main #register form #password1:focus + p {
+main #register form #password1:focus+p {
     display: block;
 }
 
@@ -517,7 +538,8 @@ main #register form #verifyCode #getCode {
     cursor: pointer;
 }
 
-main #register form #verifyCode #getCode:hover, main #register form #verifyCode #getCode:active {
+main #register form #verifyCode #getCode:hover,
+main #register form #verifyCode #getCode:active {
     background-color: grey;
     color: white;
 }
@@ -533,7 +555,8 @@ main #register form p {
     cursor: default;
 }
 
-main #register form .agreeText, main #register form > p {
+main #register form .agreeText,
+main #register form>p {
     width: 85%;
     margin: 0 auto;
     text-align: justify;
@@ -563,7 +586,8 @@ main #register form .agreeText span {
     cursor: pointer;
 }
 
-main #register form .agreeText span:hover, main #register form .agreeText span:active {
+main #register form .agreeText span:hover,
+main #register form .agreeText span:active {
     color: #444444;
 }
 
@@ -579,7 +603,7 @@ main #register form #registerButton {
     cursor: default;
 }
 
-main #register form #checkAgreement:checked ~ #registerButton {
+main #register form #checkAgreement:checked~#registerButton {
     background-color: #444444;
     color: white;
     cursor: pointer;
@@ -630,24 +654,25 @@ main #Details .de_author .headPic .creator {
     padding-left: 5px;
 }
 
-main #Details .de_author .headPic .creator > h1 {
+main #Details .de_author .headPic .creator>h1 {
     line-height: 30px;
     font-size: 1.5rem;
     display: inline-block;
 }
 
-main #Details .de_author .headPic .creator > p {
+main #Details .de_author .headPic .creator>p {
     line-height: 20px;
     display: inline;
 }
 
-main #Details .de_author .headPic .creator > p > span {
+main #Details .de_author .headPic .creator>p>span {
     color: grey;
     cursor: pointer;
     padding: 5px;
 }
 
-main #Details .de_author .headPic .creator > p > span:hover, main #Details .de_author .headPic .creator > p > span:active {
+main #Details .de_author .headPic .creator>p>span:hover,
+main #Details .de_author .headPic .creator>p>span:active {
     color: #444444;
 }
 
@@ -668,7 +693,8 @@ main #Details .de_author .likeShare #liking {
     transition-duration: 0.4s;
 }
 
-main #Details .de_author .likeShare #liking:hover, main #Details .de_author .likeShare #liking:active {
+main #Details .de_author .likeShare #liking:hover,
+main #Details .de_author .likeShare #liking:active {
     color: orangered;
     transform: scale(1.2);
 }
@@ -695,7 +721,8 @@ main #Details .de_author .likeShare #likedNumber {
     display: none;
 }
 
-.shareList:hover .dropdown-content, .shareList:active .dropdown-content {
+.shareList:hover .dropdown-content,
+.shareList:active .dropdown-content {
     display: flex;
     position: absolute;
 }
@@ -710,7 +737,8 @@ main #Details .de_author .likeShare #likedNumber {
     text-decoration: none;
 }
 
-.shareList .fa, main #NotFound > .socialIcon .fa {
+.shareList .fa,
+main #NotFound>.socialIcon .fa {
     /*icons size*/
     font-size: 1.5rem;
     /*icons circle size*/
@@ -726,7 +754,8 @@ main #Details .de_author .likeShare #likedNumber {
     display: inline-block;
 }
 
-.shareList .fa:hover, .shareList .fa:active {
+.shareList .fa:hover,
+.shareList .fa:active {
     color: white;
     transform: translateY(-5px);
 }
@@ -773,7 +802,8 @@ main #Details .de_author .likeShare #likedNumber {
     transform: none;
 }
 
-.shareList .shareBtn:hover, .shareList .shareBtn:active {
+.shareList .shareBtn:hover,
+.shareList .shareBtn:active {
     color: #444444;
     transform: none;
 }
@@ -885,7 +915,7 @@ main #NotFound {
     cursor: default;
 }
 
-main #NotFound > #NotFoundLogo {
+main #NotFound>#NotFoundLogo {
     border-radius: 50%;
     margin: auto;
     transition-duration: 0.5s;
@@ -897,11 +927,12 @@ main #NotFound > #NotFoundLogo {
     height: 96px;
 }
 
-main #NotFound > #NotFoundLogo:hover, main #NotFound > #NotFoundLogo:active {
+main #NotFound>#NotFoundLogo:hover,
+main #NotFound>#NotFoundLogo:active {
     transform: rotate(-360deg);
 }
 
-main #NotFound > h1 {
+main #NotFound>h1 {
     font-size: 2.5rem;
     font-weight: normal;
     padding: 5rem 5rem 0.5rem;
@@ -911,31 +942,32 @@ main #NotFound > h1 {
     /* border-bottom: 1px solid; */
 }
 
-main #NotFound > p {
+main #NotFound>p {
     font-size: 1.5rem;
     padding: 1em;
     line-height: 3rem;
     border-top: 2px solid grey;
 }
 
-main #NotFound > .socialIcon .fa:hover, main #NotFound > .socialIcon .fa:active {
+main #NotFound>.socialIcon .fa:hover,
+main #NotFound>.socialIcon .fa:active {
     color: white;
     transform: translateY(-5px);
 }
 
-main #NotFound > .socialIcon .fa-github {
+main #NotFound>.socialIcon .fa-github {
     background-color: #444444;
 }
 
-main #NotFound > .socialIcon .fa-weibo {
+main #NotFound>.socialIcon .fa-weibo {
     background-color: #D72B2B;
 }
 
-main #NotFound > .socialIcon .fa-wechat {
+main #NotFound>.socialIcon .fa-wechat {
     background-color: #2fdd5b;
 }
 
-main #NotFound > button {
+main #NotFound>button {
     width: 12rem;
     line-height: 3rem;
     border: 0;
@@ -948,7 +980,8 @@ main #NotFound > button {
     transition-duration: 0.5s;
 }
 
-main #NotFound > button:hover, main #NotFound > button:active {
+main #NotFound>button:hover,
+main #NotFound>button:active {
     background-color: #444444;
     color: white;
     transform: scale(1.2);
@@ -1174,14 +1207,16 @@ main #upload .info .picInfo input[type="submit"]:hover {
 }
 
 /* article=myGallery & article=myHearts */
-main #myGallery, main #myHearts {
+main #myGallery,
+main #myHearts {
     padding-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-main #myGallery .onePic, main #myHearts .onePic {
+main #myGallery .onePic,
+main #myHearts .onePic {
     height: 180px;
     display: flex;
     padding: 20px 40px;
@@ -1193,19 +1228,22 @@ main #myGallery .onePic, main #myHearts .onePic {
     border-radius: 20px;
 }
 
-main #myGallery .onePic .picContain, main #myHearts .onePic .picContain {
+main #myGallery .onePic .picContain,
+main #myHearts .onePic .picContain {
     height: 80%;
     border-radius: 10px;
     background-color: darkgrey;
 }
 
-main #myGallery .onePic .picContain img, main #myHearts .onePic .picContain img {
+main #myGallery .onePic .picContain img,
+main #myHearts .onePic .picContain img {
     height: 100%;
     cursor: pointer;
     border-radius: 10px;
 }
 
-main #myGallery .onePic .message, main #myHearts .onePic .message {
+main #myGallery .onePic .message,
+main #myHearts .onePic .message {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1213,12 +1251,14 @@ main #myGallery .onePic .message, main #myHearts .onePic .message {
     justify-content: center;
 }
 
-main #myGallery .onePic .message h1, main #myHearts .onePic .message h1 {
+main #myGallery .onePic .message h1,
+main #myHearts .onePic .message h1 {
     line-height: 40px;
     font-size: 1.6rem;
 }
 
-main #myGallery .onePic .message p, main #myHearts .onePic .message p {
+main #myGallery .onePic .message p,
+main #myHearts .onePic .message p {
     text-align: left;
     line-height: 20px;
     font-size: 1.2rem;
@@ -1231,11 +1271,13 @@ main #myGallery .onePic .message p, main #myHearts .onePic .message p {
     margin: 0 auto 10px;
 }
 
-main #myGallery .onePic .message div div, main #myHearts .onePic .message div div {
+main #myGallery .onePic .message div div,
+main #myHearts .onePic .message div div {
     margin: 10px;
 }
 
-main #myGallery .onePic .message div button, main #myHearts .onePic .message div button {
+main #myGallery .onePic .message div button,
+main #myHearts .onePic .message div button {
     width: 100px;
     height: 40px;
     border: none;
@@ -1247,7 +1289,8 @@ main #myGallery .onePic .message div button, main #myHearts .onePic .message div
     margin: 0 10px;
 }
 
-main #myGallery .onePic .message div .delPic, main #myHearts .onePic .message div .delPic {
+main #myGallery .onePic .message div .delPic,
+main #myHearts .onePic .message div .delPic {
     color: darksalmon;
 }
 
@@ -1257,12 +1300,15 @@ main #myGallery .onePic .message div .modifyPic {
 
 /* main #myHearts & main #myGallery's width less than 830px */
 @media screen and (max-width: 830px) {
-    main #myHearts, main #myGallery {
+
+    main #myHearts,
+    main #myGallery {
         width: 100vw;
         background-color: white;
     }
 
-    main #myHearts .onePic, main #myGallery .onePic {
+    main #myHearts .onePic,
+    main #myGallery .onePic {
         height: auto;
         padding: 10px;
         justify-content: center;
@@ -1274,7 +1320,8 @@ main #myGallery .onePic .message div .modifyPic {
         border-radius: 0;
     }
 
-    main #myHearts .onePic .picContain, main #myGallery .onePic .picContain {
+    main #myHearts .onePic .picContain,
+    main #myGallery .onePic .picContain {
         width: 90%;
         height: 0;
         padding-bottom: 50.625%;
@@ -1283,13 +1330,15 @@ main #myGallery .onePic .message div .modifyPic {
         overflow: hidden;
     }
 
-    main #myHearts .onePic .picContain img, main #myGallery .onePic .picContain img {
+    main #myHearts .onePic .picContain img,
+    main #myGallery .onePic .picContain img {
         width: 100%;
         cursor: pointer;
         height: auto;
     }
 
-    main #myHearts .onePic .message, main #myGallery .onePic .message {
+    main #myHearts .onePic .message,
+    main #myGallery .onePic .message {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1299,13 +1348,15 @@ main #myGallery .onePic .message div .modifyPic {
         height: 30px;
     }
 
-    main #myHearts .onePic .message h1, main #myGallery .onePic .message h1 {
+    main #myHearts .onePic .message h1,
+    main #myGallery .onePic .message h1 {
         line-height: 30px;
         font-size: 1.4rem;
         position: absolute;
     }
 
-    main #myHearts .onePic .message p, main #myGallery .onePic .message p {
+    main #myHearts .onePic .message p,
+    main #myGallery .onePic .message p {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -1313,13 +1364,15 @@ main #myGallery .onePic .message div .modifyPic {
         display: none;
     }
 
-    main #myHearts .onePic .message div, main #myGallery .onePic .message div {
+    main #myHearts .onePic .message div,
+    main #myGallery .onePic .message div {
         display: none;
         position: relative;
         top: -100px;
     }
 
-    main #myHearts .onePic .message div button, main #myGallery .onePic .message div button {
+    main #myHearts .onePic .message div button,
+    main #myGallery .onePic .message div button {
         width: 80px;
         height: 30px;
         border: none;
@@ -1327,13 +1380,15 @@ main #myGallery .onePic .message div .modifyPic {
         cursor: pointer;
     }
 
-    main #myHearts .onePic .message div .modifyPic, main #myGallery .onePic .message div .modifyPic {
+    main #myHearts .onePic .message div .modifyPic,
+    main #myGallery .onePic .message div .modifyPic {
         background-color: aliceblue;
         width: 120px;
         height: 40px;
     }
 
-    main #myHearts .onePic .message div .delPic, main #myGallery .onePic .message div .delPic {
+    main #myHearts .onePic .message div .delPic,
+    main #myGallery .onePic .message div .delPic {
         background-color: antiquewhite;
         width: 120px;
         height: 40px;
@@ -1679,6 +1734,367 @@ main #search .result .onePic .message p {
     }
 }
 
+/* article = browser */
+main #browser {
+    padding-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: white;
+}
+
+main #browser .hinter {
+    display: none;
+}
+
+main #browser .browserAside {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+
+main #browser .browserAside .searchBox {
+    width: 80%;
+    /* height: 70px; */
+    padding: 4%;
+    display: flex;
+    flex-direction: row;
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-sizing: content-box;
+}
+
+main #browser .browserAside .searchBox input {
+    border: none;
+    width: inherit;
+    height: 30px;
+    margin: auto;
+    background-color: #fafafa;
+}
+
+main #browser .browserAside .searchBox button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    cursor: pointer;
+    height: 40px;
+    margin: auto;
+}
+
+main #browser .browserAside h1 {
+    line-height: 60px;
+    font-size: 1.6rem;
+    align-self: baseline;
+    padding-left: 8%;
+}
+
+main #browser .browserAside .hotList {
+    width: 80%;
+    text-align: left;
+    padding: 4%;
+    list-style: none;
+    box-sizing: content-box;
+    background-color: #fafafa;
+    border-radius: 10px;
+}
+
+main #browser .browserAside .hotList a {
+    text-decoration: none;
+    color: grey;
+    font-size: 1.2rem;
+    line-height: 40px;
+    padding-left: 10%;
+}
+
+main #browser .browserAside .hotList a:hover {
+    color: #444444;
+}
+
+main #browser .browserResult {
+    width: 70%;
+    padding-top: 40px;
+}
+
+main #browser .browserResult .filter {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 3% 0 3%;
+    box-sizing: border-box;
+}
+
+main #browser .browserResult .filter div {
+    display: initial;
+}
+
+main #browser .browserResult .filter div select {
+    border: none;
+    width: 150px;
+    line-height: 40px;
+    height: 40px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    color: #444444;
+    font-size: 1.2rem;
+    padding: 0 2% 0 2%;
+    cursor: pointer;
+}
+
+main #browser .browserResult .filter select option {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: inherit;
+    line-height: 40px;
+    height: 40px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    color: #444444;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    padding: 2%;
+    border: none;
+}
+
+main #browser .browserResult .filter button {
+    border: none;
+    width: 100px;
+    height: 40px;
+    background-color: #444444;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+main #browser .browserResult .filter button:hover {
+    color: #fafafa;
+}
+
+main #browser .browserResult .mainPic {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+main #browser .browserResult .mainPic .picContain {
+    /* 3:4 */
+    width: 20%;
+    height: 0;
+    padding-bottom: 26.67%;
+    background-color: gainsboro;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 2%;
+    transition: 0.2s;
+}
+
+main #browser .browserResult .mainPic .picContain:hover {
+    transform-origin: bottom;
+    transform: translateY(-10px);
+    filter: opacity(0.8);
+}
+
+main #browser .browserResult .mainPic .picContain img {
+    cursor: pointer;
+    width: 100%;
+}
+
+@media screen and (max-width: 830px) {
+    main #browser {
+        padding-top: 40px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: white;
+    }
+
+    main #browser .hinter {
+        display: initial;
+    }
+
+    main #browser .browserAside {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+        display: none;
+        margin-top: 40px;
+    }
+
+    main #browser .browserAside .searchBox {
+        width: 80%;
+        /* height: 70px; */
+        padding: 4%;
+        display: flex;
+        flex-direction: row;
+        background-color: #fafafa;
+        border-radius: 10px;
+        box-sizing: content-box;
+    }
+
+    main #browser .browserAside .searchBox input {
+        border: none;
+        width: inherit;
+        height: 30px;
+        margin: auto;
+        background-color: #fafafa;
+    }
+
+    main #browser .browserAside .searchBox button {
+        border: none;
+        background-color: rgba(0, 0, 0, 0);
+        position: relative;
+        cursor: pointer;
+        height: 40px;
+        margin: auto;
+    }
+
+    main #browser .browserAside h1 {
+        line-height: 60px;
+        font-size: 1.6rem;
+        align-self: baseline;
+        padding-left: 8%;
+    }
+
+    main #browser .browserAside .hotList {
+        width: 80%;
+        text-align: left;
+        padding: 4%;
+        list-style: none;
+        box-sizing: content-box;
+        background-color: #fafafa;
+        border-radius: 10px;
+    }
+
+    main #browser .browserAside .hotList a {
+        text-decoration: none;
+        color: grey;
+        font-size: 1.2rem;
+        line-height: 40px;
+        padding-left: 10%;
+    }
+
+    main #browser .browserAside .hotList a:hover {
+        color: #444444;
+    }
+
+    main #browser .browserResult {
+        width: 100%;
+        padding-top: 0;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main #browser .browserResult .filter {
+        display: none;
+        position: fixed;
+        top: 40vh;
+        width: 80%;
+        padding: 20px;
+        border-radius: 10px;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        background-color: white;
+        box-shadow: 1px 0 3px gainsboro, -1px 0 3px gainsboro, 0 1px 3px gainsboro, 0 -1px 3px gainsboro;
+    }
+
+    main #browser .browserResult .filter div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    main #browser .browserResult .filter div select {
+        border: none;
+        width: 100%;
+        margin: 10px auto;
+        line-height: 40px;
+        height: 40px;
+        background-color: #eaeaea;
+        border-radius: 10px;
+        color: #444444;
+        font-size: 1.2rem;
+        padding: 0 0 0 20px;
+        cursor: pointer;
+    }
+
+    main #browser .browserResult .filter select option {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: inherit;
+        line-height: 40px;
+        height: 40px;
+        background-color: #fafafa;
+        border-radius: 10px;
+        color: #444444;
+        font-size: 1.2rem;
+        margin-right: 10px;
+        padding: 2%;
+        border: none;
+    }
+
+    main #browser .browserResult .filter button {
+        border: none;
+        width: 100%;
+        height: 40px;
+        margin: 10px 0;
+        background-color: #444444;
+        border-radius: 10px;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+    main #browser .browserResult .filter button:hover {
+        color: #fafafa;
+    }
+
+    main #browser .browserResult .mainPic {
+        width: 100%;
+        padding-top: 40px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    main #browser .browserResult .mainPic .picContain {
+        /* 3:4 */
+        width: 40%;
+        height: 0;
+        padding-bottom: 53.2%;
+        background-color: gainsboro;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 2%;
+        transition: 0.2s;
+    }
+
+    main #browser .browserResult .mainPic .picContain:hover {
+        transform: none;
+        filter: none;
+    }
+
+    main #browser .browserResult .mainPic .picContain img {
+        cursor: pointer;
+        width: 100%;
+    }
+}
+
 /* page number */
 .pageNum {
     width: 100%;
@@ -1690,6 +2106,7 @@ main #search .result .onePic .message p {
     font-size: 1.6rem;
     padding: 20px;
     margin: auto;
+    cursor: pointer;
 }
 
 .pageNum p span {
@@ -1753,7 +2170,8 @@ footer section a {
     color: grey;
 }
 
-footer section a:hover, footer section a:active {
+footer section a:hover,
+footer section a:active {
     color: #444444;
 }
 
@@ -1797,7 +2215,8 @@ footer p {
     display: inline-block;
 }
 
-.home_extension .fa:hover, .home_extension .fa:active {
+.home_extension .fa:hover,
+.home_extension .fa:active {
     color: white;
     background-color: #444444;
 }
@@ -1826,7 +2245,8 @@ footer p {
     display: inline-block;
 }
 
-.search_extension .fa:hover, .search_extension .fa:active {
+.search_extension .fa:hover,
+.search_extension .fa:active {
     color: white;
     background-color: #444444;
 }
