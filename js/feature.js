@@ -110,6 +110,7 @@ function buttomAppear() {
         onePic[i].children[0].addEventListener("swipeLeft", function() {
             if (onePic[i].children[1].children[2] != undefined) {
                 onePic[i].children[0].style.filter = "opacity(0.5)";
+                onePic[i].children[0].children[0].onclick=" ";
                 onePic[i].children[1].children[2].style.display = "block";
             }
         });

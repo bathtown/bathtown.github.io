@@ -1058,14 +1058,27 @@ main #upload .info .picInfo input {
     border: none;
     width: 80%;
     border-radius: 10px;
+    font-family: monospace;
+    font-size: 1rem;
 }
 
 main #upload .info .picInfo input[class="oneLine"] {
     height: 40px;
+    line-height: 20px;
 }
 
-main #upload .info .picInfo input[class="moreLine"] {
+main #upload .info .picInfo textarea[class="moreLine"] {
+    margin: 10px auto;
+    padding: 5px 15px;
+    background-color: #fafafa;
+    border: none;
+    width: 80%;
+    border-radius: 10px;
+    font-family: monospace;
+    font-size: 1rem;
+    resize: none;
     height: 120px;
+    line-height: 20px;
 }
 
 main #upload .info .picInfo input[type="submit"] {
@@ -1074,6 +1087,7 @@ main #upload .info .picInfo input[type="submit"] {
     cursor: pointer;
     height: 55px;
     box-sizing: content-box;
+    font-size: 1.4rem;
 }
 
 main #upload .info .picInfo input[type="submit"]:hover {
@@ -1141,8 +1155,15 @@ main #upload .info .picInfo input[type="submit"]:hover {
         border-radius: 10px;
     }
 
-    main #upload .info .picInfo input[class="moreLine"] {
+    main #upload .info .picInfo textarea[class="moreLine"] {
+        margin: 5px auto;
+        padding: 5px 15px;
+        background-color: #fafafa;
+        border: none;
+        width: 80%;
+        border-radius: 10px;
         height: 80px;
+        resize: none;
     }
 
     main #upload .info .picInfo input[type="submit"] {
