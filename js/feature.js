@@ -129,8 +129,16 @@ function buttonAppear() {
     }
 }
 // condition
-if (document.getElementsByClassName("onePic"))
+if (document.getElementsByClassName("onePic") && window.screen.width <= 830) {
     buttonAppear();
+    let hinter = document.getElementsByClassName("hinter")[0];
+    if (document.getElementById("myHearts")) {
+        hinter.innerHTML = "My Hearts | try ←👆'";
+    }
+    if (document.getElementById("myGallery")) {
+        hinter.innerHTML = "My Gallery | try ←👆'";
+    }
+}
 
 // touch function
 (function () {
@@ -275,10 +283,10 @@ function hintRegister() {
             hintIt.style.display = "none";
         else
             hintIt.style.display = "inline-block";
-    }, 600);
+    }, 400);
     setTimeout(function () {
         clearInterval(counter)
-    }, 3000);
+    }, 1500);
 }
 if (document.getElementById("hintIt")) {
     hintRegister();

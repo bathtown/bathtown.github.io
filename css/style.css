@@ -617,7 +617,7 @@ main #register form #registerButton {
     padding: 5px 15px;
     background-color: grey;
     color: rgba(255, 255, 255, 0.8);
-    cursor: default;
+    cursor: no-drop;
 }
 
 main #register form #checkAgreement:checked~#registerButton {
