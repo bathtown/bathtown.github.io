@@ -1,6 +1,8 @@
 # 😜Notes about my Project 01  
 
-* sources：[fudan_19ss_web基础课程_Project_01_旅游照片分享平台（上）](https://github.com/fudansswebfundamental/Project1-2020)
+* sources: [fudan_19ss_web基础课程_Project_01_旅游照片分享平台（上）](https://github.com/fudansswebfundamental/Project1-2020)
+
+* site: [Bathtub.com](https://bathtown.github.io/)
 
 * PJ is PJ.
 
