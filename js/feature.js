@@ -86,12 +86,12 @@ function searchResult() {
         filterAny.setAttribute('class', "filterAfter");
     }
 
-    const winWide = window.screen.width;
+    const width = document.body.clientWidth;
     const extension = document.getElementsByClassName('search_extension')[0];
-    if (winWide <= 830)
+    if (width <= 830)
         extension.style.display = 'flex';
     filterAny = document.getElementsByClassName('filterAfter')[0];
-    if (filterAny.style.display = 'block' && winWide <= 830) {
+    if (filterAny.style.display = 'block' && width <= 830) {
         filterAny.style.display = 'none';
         extension.style.display = 'flex';
     } else {
@@ -129,14 +129,14 @@ function buttonAppear() {
     }
 }
 // condition
-if (document.getElementsByClassName("onePic") && window.screen.width <= 830) {
+if (document.getElementsByClassName("onePic") && document.body.clientWidth <= 830) {
     buttonAppear();
     let hinter = document.getElementsByClassName("hinter")[0];
     if (document.getElementById("myHearts")) {
-        hinter.innerHTML = "My Hearts | try ←👆'";
+        hinter.innerHTML = "My Hearts | try ←👆";
     }
     if (document.getElementById("myGallery")) {
-        hinter.innerHTML = "My Gallery | try ←👆'";
+        hinter.innerHTML = "My Gallery | try ←👆";
     }
 }
 
