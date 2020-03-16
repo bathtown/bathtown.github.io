@@ -423,6 +423,7 @@ main #login section form #sign {
     background-color: #444444;
     color: rgba(255, 255, 255, 0.8);
     cursor: pointer;
+    width: 80%;
 }
 
 main #login section form #sign:hover,
@@ -468,7 +469,6 @@ main #login section div a:active {
 /* article=register */
 main #register {
     width: 450px;
-    height: inherit;
     border-radius: 10px;
     margin: auto;
     display: flex;

@@ -1,15 +1,45 @@
 # 😜Notes about my Project 01  
 
+## 关于pj
+
+* **姓名：胡彧锋**
+
+* **学号：18307130207**
+
 * sources: [fudan_19ss_web基础课程_Project_01_旅游照片分享平台（上）](https://github.com/fudansswebfundamental/Project1-2020)
 
-* site: [Bathtub.com](https://bathtown.github.io/)
+* my Github Page: [Bathtub.com](https://bathtown.github.io/)
 
-* PJ is PJ.
+* 完成情况：3.16.20 完成
 
-## wicked problems👻
+* Bonus 的完成情况
+  * Bonus 1
+
+  * Bonus 2
+    * 用 `Media Queries` 为不同尺寸的页面设计了不同的 `css`
+    * 手机屏幕隐去过量组件，用手势操作弥补功能缺陷
+
+  * Bonus 3: `David Hume: Beauty in things exists in the mind which contemplates them.`
+
+* ⭐️ **my bright spots**
+  * [404 page](https://bathtown.github.io/html/privacy.html)
+  * [site map](https://bathtown.github.io/html/siteMap.html)
+  * highly adapted to mobile phones( even Safari! )
+  
+## 感想
+
+* First bear in mind: **Pj is pj.**
+
+* 不足
+
+  * 未养成写注释习惯
+  * className, ID smells not good
+  * CSS 未能做到足够多的复用
+
+## wicked points👻
 
 * 在设置CSS的hover时，有时会发现hover不起作用，原因：  
-  * 顺序：`a:link` < `a:visited` < `a:hover` < `a:active`
+  * wrong oder: `a:link` < `a:visited` < `a:hover` < `a:active`
   * `hover` 后面有空格——子元素起效  
   * 颜色没写对🙃
 
@@ -19,38 +49,27 @@
   * W3C盒子模型（标准模型）：`width` 不包含 `padding` 和 `border`
   * IE盒子模型：`width = padding + border`
   * 怪异盒子模型：部分部分
-  * 参见 `box-sizing: content-box | border-box;`
+  * solution: try `box-sizing: content-box | border-box;`
+  * 例：`<input type="submit" />` 的 `padding` 是向内的，为了和上面的 `<input type="text" />` 宽度相同，要单独设定 `box-sizing: content-box;`
 
-* 前面的 css 会被后面的 css 覆盖🙃
+* 外部css表中，前面的 css 会被后面的 css 覆盖🙃
 
 * `transform` 对应的时间是 `transition-duration` 🙃  
 
-* `document.getElementById( ).style.color` 获取不了外部css的颜色，所以最开始都是 `""` ，类型是字符串型，而且 `=` 是拷贝而不是引用，无法改变原值
+* `document.getElementById( ).style.` 无法获取外部css的`color`/`display`……，所以最开始都是字符串 `""` ，可以先设置 `filterAny.setAttribute('display', 'block');`
 
-  ```js
-  function likedPlus() {
-    if (document.getElementById("liking").style.color === "rgb(255, 225, 225)" || document.getElementById("liking").style.color == "") {
-        likedNumber++;
-        document.getElementById("liking").style.color = "orangered";
-    } else {
-        likedNumber--;
-        document.getElementById("liking").style.color = "rgb(255, 225, 225)";
-    }
-    document.getElementById("likedNumber").innerHTML = likedNumber;
-    alert('This is my PJ');
-  }
-  ```
-
-* 下层元素的 `transform` 会覆盖掉其他元素，甚至连 `position: fixed` 都无法幸免，解决：
+* `transform` 会覆盖掉其他元素，即使是 `position: fixed` 也会被无视，解决：
 
   ```css
   transform: none;
   z-index: 2;
+  /* or */
+  transform: translateZ(8px);
   ```
 
-* 定位浮动
-  * `position: absolute;` 是相对于 `static` 定位以外的第一个父元素
-  * `position: fixed;` 相对于窗口
+* 定位浮动相对窗口还是父元素？
+  * `position: absolute;` 是相对于 `static` 定位以外的第一个**父元素**
+  * `position: fixed;` 相对于**窗口**
   * 在做 share list 时候要用 `absolute` ，以防止滚动不变
 
 * 现代浏览器无法支持透明度？不！只是把 `rgba` 写成了 `rgb` ...🙃
@@ -58,26 +77,24 @@
 * safari（新时代的IE6！）
 
   * `hover` 失效
-    * 添加 `:active` 无效
+    * 尝试：添加 `:active` 无效
     * 解决：在 js 中添加代码 `document.body.addEventListener('touchstart', function () { }, false);`
 
-  * 自动识别电话号码
-    * `<meta name="format-detection" content="telephone=no"/>`
-    * `pointer-events: none;`
+  * 防止自动识别电话号码
+    * 头文件引入：`<meta name="format-detection" content="telephone=no"/>`
+    * 添加样式：`pointer-events: none;`
 
-  * `position: fixed;` 失效——[Safari 3D transform变换z-index层级渲染异常的研究](https://www.zhangxinxu.com/wordpress/2016/08/safari-3d-transform-z-index/)
+  * `position: fixed;` 失效，解决参见：[Safari 3D transform变换z-index层级渲染异常的研究](https://www.zhangxinxu.com/wordpress/2016/08/safari-3d-transform-z-index/)
 
-  * 独特样式：`-webkit-appearance: none;`
+  * 去除 `radio`、`input`、`select` 的独特样式：`-webkit-appearance: none;`
 
   * js 无法识别 `window.screen.width` ，用 `document.body.clientWidth` 代替
 
-* `<input type="submit" />` 的 `padding` 是向内的，为了和上面的 `<input type="text" />` 宽度相同，要单独设定 `box-sizing: content-box;`
-
-* `onclick="searchResult();"`函数无法改变className？？？原来是`submit`自带刷新表单功能
+* `onclick="searchResult();"`函数无法改变className？？？原来是`submit`自带刷新表单功能（同时也无法实现`onclick="window.open('../html/home.html','_self')"`），解决：用 `button` 代替
 
 ## 一些实现
 
-* 实现一段文字溢出后显示省略号
+* 实现文字溢出后显示省略号
 
   一行
 
@@ -105,11 +122,6 @@
     width:130px;
   }
   ```
-
-* 做一个nav
-  * `fixed`
-  * `transform : none`
-  * 避免nav遮盖下面内容：`body` 设置 `padding-top`
   
 * 下拉菜单
   * 整个 `dropList` 分为 `dropBtn` 和 `dropContent` 两个部分
@@ -128,8 +140,7 @@
       <article>
           <h1>Dark Mode w Pure CSS</h1>
           <p>
-              This is an example to display how to support dark mode without using
-              any Javascript.
+            This is an example to display how to support dark mode without using any Javascript.
           </p>
       </article>
     ```
@@ -213,7 +224,7 @@
 
 * 模糊：`filter: blur;//filter用处很多啊`
 
-* 404 page ：直接参考 giuhub 官方教程，值得注意的是，所有地址要引用绝对地址（css rel，href……），而不是相对于文件夹的地址
+* 404 page ：直接参考 giuhub 官方教程，值得注意的是，**所有地址** 都要引用绝对地址（css rel，href……），而不是相对于文件夹的地址
 
 * font-awesome icon 加载太慢
   * **16.5s**，难以置信
@@ -241,19 +252,19 @@
     <span class="fa fa-github" title="share on github~"></span> <!-- 注意，这里如果是 <i> 标签则会被识别为斜体，如果是 <div> 则会是块元素 -->
     ```
   
-  * ⭐️ [Icon font 4 Font Awesome](https://www.iconfont.cn/collections/detail?spm=a313x.7781069.0.da5a778a4&cid=2124) **一开始就应该改选这个！！** 改进后在进入页面时便可以看到 icon
+  * ⭐️ 利用 [Icon font 4 Font Awesome](https://www.iconfont.cn/collections/detail?spm=a313x.7781069.0.da5a778a4&cid=2124) 减少字体文件大小，**一开始就应该改选这个！！** 改进后在进入页面时便可以看到 icon
 
 * 图片加载太慢
 
   * 原因：带宽太低、图片太大——控制在 100kb 之内最好
 
-  * 解决方法：[tinypng](https://tinypng.com/)、[压缩图](https://www.yasuotu.com/)(**不完全**)
+  * ~~不完全~~解决方法：[tinypng](https://tinypng.com/)、[压缩图](https://www.yasuotu.com/)
 
   * 转化为 webp 格式
 
-* transition：[cubic-bezier(.17,.67,.83,.67)](https://cubic-bezier.com/#.17,.67,.83,.67)
+* cubic transition：[cubic-bezier](https://cubic-bezier.com/#.17,.67,.83,.67)
 
-* 下拉选框
+* 下拉输入选框
 
   ```html
   <form>
@@ -268,26 +279,14 @@
   </form>
   ```
 
-* 404page 要使用绝对地址，不然会一直加////
+* CSS 复用：[CSS var() 函数](https://www.runoob.com/cssref/func-var.html)
 
 ## 设计手册
 
-* 页面
-  * Home
-  * Browser
-  * Search
-  * login
-  * register
-  * upload
-  * my favorites & my photos
-  * 404
-  * bonus
-  * end
-
-* 正在浏览页面：`class="imlooking"`
+* 正在浏览页面“高亮”：`class="imlooking"`
 
 * 字体大小 `font-size`:
-  * html. `font-size: 12px`; html 的 `font-size` 才是 root，而不是 body
+  * html. `font-size: 12px`; `/ * html 的 font-size 才是 root，而不是 body */`
   * a. `font-size: 1.2rem`;
   * p. `font-size: 1.2rem`;
   * h1. `font-size: 1.6rem`;
@@ -296,9 +295,8 @@
 * 字体 `font-family: monospace;`
 
 * 颜色
-  * 浅色： `white` < `#fafafa` < `gainsboro` < `grey`
-  * 深色：`black` > `#444444`  
-  * 透明白色：before linked: `rgba(255, 255, 255, 0.8)`
+  * 白 → 黑： `white` < `#fafafa` < `whitesmoke` < `gainsboro` < `darkgrey` < `grey` < `#444444` < `black`
+  * 透明：`rgba(255, 255, 255, 0.8)`
 
 * 全局设置
 
@@ -307,14 +305,14 @@
       padding: 0;/* 避免样式自动添加的padding和margin */
       margin: 0;
       box-sizing: content-box | border-box;/* 标准盒子模型 */
+      outline: none;/* 取消选中时突出 */
   }
   ```
 
 * 语义元素
   * `main`：主体部分
     * `article`：主体内容中的文章
-  * `copyright`：用于页脚版权
-  * `hgroup`：用于 site map 列表
+  * `copyright`：用于页脚版权（非正式）
   * `details`：用于细节，有折叠起来的样式（ `summary` & `p`）
   * `small`：定义小型文本
   * `figure`：图表，标题为 `figcaption`
@@ -323,7 +321,7 @@
 
 * 响应式布局  
   * 少使用绝对的宽度，多使用百分比  
-  * 字体不使用 `px` ，使用 `rem`
+  * 少用 `px` ，多用 `rem`（包括字体大小、宽度……）
   * 选择加载css
     * `<link rel="stylesheet" type="text/css" media="screen and (max-device-width: 400px)" href="tinyScreen.css" />`
     * 如果屏幕宽度小于400像素（max-device-width: 400px），就加载 tinyScreen.css 文件
@@ -478,20 +476,17 @@
       }
       ```
 
-* Chrome Dev
-
-## 未实现
+## 未实现/未解决
 
 * 技术类  
   * 导航栏合并
   * 懒加载：[js实现图片懒加载原理](https://blog.csdn.net/w1418899532/article/details/90515969)
   * 瀑布流
-  * 注释和类、ID 取名
   * 图片加载太慢
   * 上传图片“类型”验证
 
 * 设计类
-  * 黑暗模式/配色太丑/ CSS 复用：[CSS var() 函数](https://www.runoob.com/cssref/func-var.html)
+  * 黑暗模式
   * 首页图片切换
   * Grid布局：[Grid 网格布局教程 - 阮一峰](http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html)
 
@@ -502,7 +497,9 @@
 
 ### 3.11.2020
 
-* 1.0 版本完成，完成内容：所有网站已搭建（ browser、search、myGallery、myHearts、upload 无内容）,index.html 做一个重定向到 login.html
+* 0.8 版本完成，共用部分搭建完成
+* browser、search、myGallery、myHearts、upload 无内容
+* index.html 重定向到 login.html
 
 * 解决问题：图片占位
 
@@ -572,7 +569,7 @@
 ### 3.14.2020
 
 * finish search page
-* touch
+* add touch to my gallery page & my hearts page
 
 ### 3.15.2020
 
@@ -580,6 +577,6 @@
 * finish browser page
 * finish pj!
 
-## 3.16.2020
+### 3.16.2020
 
 * add site map
