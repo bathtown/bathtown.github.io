@@ -479,6 +479,7 @@
   * 瀑布流
   * 注释和类、ID 取名
   * 图片加载太慢
+  * 上传图片“类型”验证
 
 * 设计类
   * 黑暗模式/配色太丑/ CSS 复用：[CSS var() 函数](https://www.runoob.com/cssref/func-var.html)
@@ -568,3 +569,8 @@
 
 * fix `position: fixed;` in Safari
 * finish browser page
+* finish pj!
+
+## 3.16.2020
+
+* add site map
