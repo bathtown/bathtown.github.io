@@ -60,11 +60,16 @@
   * `hover` 失效
     * 添加 `:active` 无效
     * 解决：在 js 中添加代码 `document.body.addEventListener('touchstart', function () { }, false);`
+
   * 自动识别电话号码
     * `<meta name="format-detection" content="telephone=no"/>`
     * `pointer-events: none;`
+
   * `position: fixed;` 失效——[Safari 3D transform变换z-index层级渲染异常的研究](https://www.zhangxinxu.com/wordpress/2016/08/safari-3d-transform-z-index/)
+
   * 独特样式：`-webkit-appearance: none;`
+
+  * js 无法识别 `window.screen.width` ，用 `document.body.clientWidth` 代替
 
 * `<input type="submit" />` 的 `padding` 是向内的，为了和上面的 `<input type="text" />` 宽度相同，要单独设定 `box-sizing: content-box;`
 
