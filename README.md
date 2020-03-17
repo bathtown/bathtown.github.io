@@ -20,7 +20,7 @@
     * 目标：①尽可能展示原图片更多的部分；②图片不会扭曲变形
     * 思路：`div` 作为容器，`img` 水平和垂直都居中
 
-      <img src="./img/bonus1.png." width=600px alt="bonus1"/>
+      <img src="./img/bonus1.png" width=600px alt="bonus1"/>
 
     * 代码
 
