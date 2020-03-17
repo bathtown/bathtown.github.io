@@ -10,6 +10,8 @@
 
 * my Github page: **[Bathtub.com](https://bathtown.github.io/)**
 
+* my files url:[](https://github.com/bathtown/bathtown.github.io)
+
 * 完成情况：3.16.20 完成
 
 * Bonus 完成情况
@@ -18,7 +20,7 @@
     * 目标：①尽可能展示原图片更多的部分；②图片不会扭曲变形
     * 思路：`div` 作为容器，`img` 水平和垂直都居中
 
-      <img src="./images/bonus1.png" width=600px alt="bonus1"/>
+      <img src="./img/bonus1.png." width=600px alt="bonus1"/>
 
     * 代码
 
@@ -96,26 +98,26 @@
 
       ⭐️ browser page 👇
 
-      <img src="./images/browser.gif" width=200px alt="browser page">
+      <img src="./img/browser.gif" width=200px alt="browser page">
 
       ⭐️ details page 👇
 
-      <img src="./images/details.gif" width=200px alt="details page">
+      <img src="./img/details.gif" width=200px alt="details page">
 
       ⭐️ myGallery page 👇
 
-      <img src="./images/myGallery.gif" width=200px alt="myGallery page">
+      <img src="./img/myGallery.gif" width=200px alt="myGallery page">
 
       ⭐️ search page 👇
 
-      <img src="./images/search.gif" width=200px alt="search page">
+      <img src="./img/search.gif" width=200px alt="search page">
 
   * Bonus 3:
     > David Hume: Beauty in things exists in the mind which contemplates them.
 
 * ⭐️ **my bright spots**
-  * [404 page](https://bathtown.github.io/html/privacy.html)
-  * [site map](https://bathtown.github.io/html/siteMap.html)
+  * [404 page](https://bathtown.github.io/src/html/privacy.html)
+  * [site map](https://bathtown.github.io/src/html/siteMap.html)
   * highly adapted to mobile phones( **even Safari!** as you can see in **Bonus 2** 👆)
   
 ## 感想
@@ -221,7 +223,7 @@
   * 整个 `dropList` 分为 `dropBtn` 和 `dropContent` 两个部分
   * `dropContent` 最开始隐藏，当鼠标移动到 `dropList` (这时就是指 `dropBtn` ) 上时，整个 `dropList` 显示
 
-* 浏览器上加logo：`<link rel="icon" href="../images/Bathtub.png" type="image/x-icon"/>`
+* 浏览器上加logo：`<link rel="icon" href="../img/Bathtub.png" type="image/x-icon"/>`
 
 * 夜间模式
   * Reference: [How to Enable Dark Mode on Your Website with Pure CSS?](https://dev.to/oahehc/how-to-enable-dark-mode-on-your-website-with-pure-css-ake)

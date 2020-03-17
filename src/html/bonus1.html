@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .picContainer {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: darkgrey;
+        }
+
+    </style>
+</head>
+
+<body>
+    <p>Both showed the most central part👇 </p>
+
+    <div class="picContainer">
+        <img src="../../img/firstPic.jpg">
+    </div>
+    <p>The original picture is 16:9 👆 </p>
+
+    <div class="picContainer">
+        <img src="../../img/sample.jpg">
+    </div>
+    <p>The original picture is 3:4 👆 </p>
+
+    <script>
+        let div = document.getElementsByClassName("picContainer")[0];
+        // 都是一样的
+
+        const divRatio = (div.offsetWidth / div.offsetHeight);
+
+        function setImgSize(self) {
+            self.onload = function () {
+                ratio = self.width / self.height;
+                if (divRatio > ratio) {
+                    self.style.width = "100%";
+                } else {
+                    self.style.height = "100%";
+                }
+            }
+        }
+
+        let imgs = document.getElementsByTagName("img");
+        const len = imgs.length;
+        for (let i = 0; i < len; i++) {
+            setImgSize(imgs[i]);
+        }
+    </script>
+</body>
+
+</html>
