@@ -113,7 +113,10 @@
       <img src="./img/search.gif" width=200px alt="search page">
 
   * Bonus 3:
-    > David Hume: Beauty in things exists in the mind which contemplates them.
+
+    ```markdown
+    David Hume: Beauty in things exists in the mind which contemplates them.
+    ```
 
 * ⭐️ **my bright spots**
   * [404 page](https://bathtown.github.io/src/html/privacy.html)
