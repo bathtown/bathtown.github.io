@@ -6,25 +6,101 @@
 
 * **学号：18307130207**
 
-* sources: [fudan_19ss_web基础课程_Project_01_旅游照片分享平台（上）](https://github.com/fudansswebfundamental/Project1-2020)
+* sources: **[fudan_19ss_web基础课程_Project_01_旅游照片分享平台（上）](https://github.com/fudansswebfundamental/Project1-2020)**
 
-* my Github Page: [Bathtub.com](https://bathtown.github.io/)
+* my Github page: **[Bathtub.com](https://bathtown.github.io/)**
 
 * 完成情况：3.16.20 完成
 
-* Bonus 的完成情况
+* Bonus 完成情况
+
   * Bonus 1
+    * 目标：①尽可能展示原图片更多的部分；②图片不会扭曲变形
+    * 思路：`div` 作为容器，`img` 水平和垂直都居中
+
+      ![Bonus1示意图](./images/bonus1.png)
+
+    * 代码
+
+      HTML
+
+      ```html
+      <div class="picContainer">
+        <img src="" class="imgPart">
+      </div>
+      ```
+
+      CSS
+
+      ```CSS
+      .picContainer {
+        width: 400px;
+        height: 300px;
+        /* This is a 4/3 picture */
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: darkgrey;
+      }
+
+      /* or */
+
+      .picContainer {
+        width: 400px;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .imgPart {
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+      ```
+
+      JS
+
+      ```js
+      let div = document.getElementsByClassName("picContainer")[0];
+      // 都是一样的
+
+      const divRatio = (div.offsetWidth / div.offsetHeight);
+
+      function setImgSize(self) {
+          self.onload = function () {
+              ratio = self.width / self.height;
+              if (divRatio > ratio) {
+                  self.style.width = "100%";
+              } else {
+                  self.style.height = "100%";
+              }
+          }
+      }
+
+      let imgs = document.getElementsByTagName("img");
+      const len = imgs.length;
+      for (let i = 0; i < len; i++) {
+          setImgSize(imgs[i]);
+      }
+      ```
+
+    * 效果展示：[bonus1](./html/bonus1.html)
+    * 缺陷：必须在 `onload` 之后才能调整，速度会有些慢
 
   * Bonus 2
     * 用 `Media Queries` 为不同尺寸的页面设计了不同的 `css`
     * 手机屏幕隐去过量组件，用手势操作弥补功能缺陷
 
-  * Bonus 3: `David Hume: Beauty in things exists in the mind which contemplates them.`
+  * Bonus 3:
+    > David Hume: Beauty in things exists in the mind which contemplates them.
 
 * ⭐️ **my bright spots**
   * [404 page](https://bathtown.github.io/html/privacy.html)
   * [site map](https://bathtown.github.io/html/siteMap.html)
-  * highly adapted to mobile phones( even Safari! )
+  * highly adapted to mobile phones( **even Safari!** as you can see in Bonus 2 👆)
   
 ## 感想
 
@@ -91,6 +167,8 @@
   * js 无法识别 `window.screen.width` ，用 `document.body.clientWidth` 代替
 
 * `onclick="searchResult();"`函数无法改变className？？？原来是`submit`自带刷新表单功能（同时也无法实现`onclick="window.open('../html/home.html','_self')"`），解决：用 `button` 代替
+
+* **`setInterval` 函数无法`return`**
 
 ## 一些实现
 
@@ -516,7 +594,7 @@
   ```css
   div {
     width: 100%;
-    padding-bottom: 56.25%;/* 16:9, 56.25% = 100% * 9 / 16 */
+    padding-bottom: 56.25%;/* 16:9, 56.25% = 100% * 9 / 16 padding-bottom的为百分比的时候是相对于父类宽度*/
     height: 0;
     overflow: hidden;
     background-color: gainsboro;/* rainbow color not complete */
