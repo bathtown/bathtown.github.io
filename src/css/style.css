@@ -2023,7 +2023,7 @@ main #browser .browserResult .mainPic .picContain img {
         position: fixed;
         top: 40vh;
         width: 80%;
-        width: min(80%,300px);
+        width: min(80%, 300px);
         padding: 20px;
         border-radius: 10px;
         flex-direction: column;
