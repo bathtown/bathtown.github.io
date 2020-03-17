@@ -18,7 +18,7 @@
     * 目标：①尽可能展示原图片更多的部分；②图片不会扭曲变形
     * 思路：`div` 作为容器，`img` 水平和垂直都居中
 
-      ![Bonus1示意图](./images/bonus1.png)
+      <img src="./images/bonus1.png" width=600px alt="bonus1"/>
 
     * 代码
 
@@ -94,13 +94,29 @@
     * 用 `Media Queries` 为不同尺寸的页面设计了不同的 `css`
     * 手机屏幕隐去过量组件，用手势操作弥补功能缺陷
 
+      ⭐️ browser page 👇
+
+      <img src="./images/browser.gif" width=200px alt="browser page">
+
+      ⭐️ details page 👇
+
+      <img src="./images/details.gif" width=200px alt="details page">
+
+      ⭐️ myGallery page 👇
+
+      <img src="./images/myGallery.gif" width=200px alt="myGallery page">
+
+      ⭐️ search page 👇
+
+      <img src="./images/search.gif" width=200px alt="search page">
+
   * Bonus 3:
     > David Hume: Beauty in things exists in the mind which contemplates them.
 
 * ⭐️ **my bright spots**
   * [404 page](https://bathtown.github.io/html/privacy.html)
   * [site map](https://bathtown.github.io/html/siteMap.html)
-  * highly adapted to mobile phones( **even Safari!** as you can see in Bonus 2 👆)
+  * highly adapted to mobile phones( **even Safari!** as you can see in **Bonus 2** 👆)
   
 ## 感想
 
@@ -132,7 +148,7 @@
 
 * `transform` 对应的时间是 `transition-duration` 🙃  
 
-* `document.getElementById( ).style.` 无法获取外部css的`color`/`display`……，所以最开始都是字符串 `""` ，可以先设置 `filterAny.setAttribute('display', 'block');`
+* `document.getElementById( ).style.` 无法获取外部css的`color`/`display`……，所以最开始都是字符串 `""` ，可以先设置 `filterAny.setAttribute('display', 'block');`（同时，如果样式是行内样式，才能通过 `div.style.width` 拿到宽度，而样式表里的样式要通过 `div.offsetWidth` 才可以拿到宽度）
 
 * `transform` 会覆盖掉其他元素，即使是 `position: fixed` 也会被无视，解决：
 
