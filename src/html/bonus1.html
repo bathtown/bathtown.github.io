@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        .picContainer {
+        .picContainer,
+        #uploadPicBox {
             width: 300px;
             height: 300px;
             overflow: hidden;
@@ -18,39 +19,61 @@
 </head>
 
 <body>
-    <p>Both showed the most central part👇 </p>
+    <!-- <div>
+        <p>👇This is an example, showed the most central part</p>
 
-    <div class="picContainer">
-        <img src="../../img/firstPic.jpg">
-    </div>
-    <p>The original picture is 16:9 👆 </p>
+        <div class="picContainer">
+            <img src="../../img/firstPic.jpg">
+        </div>
+        <p>The original picture is 16:9 👆 </p>
 
-    <div class="picContainer">
-        <img src="../../img/sample.jpg">
+        <div class="picContainer">
+            <img src="../../img/sample.jpg">
+        </div>
+        <p>The original picture is 3:4 👆 </p>
+    </div> -->
+
+    <div>
+        <p>You can try this yourself 👇 👇 👇</p>
+
+        <div class="pic">
+            <div id="uploadPicBox">
+                <img id="uploadPic" src="" alt="Upload a picture..." />
+            </div>
+            <br>
+            <form class="uploadBtn">
+                <label for="picFile">Upload a picture <span class="fa fa-cloud-upload"></span></label>
+                <input type="file" onchange="show(this)" id="picFile" />
+            </form>
+        </div>
     </div>
-    <p>The original picture is 3:4 👆 </p>
+
+    <script src="../js/feature.js" type="text/javascript"></script>
 
     <script>
-        let div = document.getElementsByClassName("picContainer")[0];
-        // 都是一样的
-
+        var div = document.getElementById("uploadPicBox");
         const divRatio = (div.offsetWidth / div.offsetHeight);
 
-        function setImgSize(self) {
-            self.onload = function () {
-                ratio = self.width / self.height;
+        var ratio = 0;
+        function setImgSize(img) {
+            img.onload = function () {
+                // console.log(img.height);
+                // console.log(img.width);
+                ratio = img.width / img.height;
                 if (divRatio > ratio) {
-                    self.style.width = "100%";
+                    img.style.width = "100%";
                 } else {
-                    self.style.height = "100%";
+                    img.style.height = "100%";
                 }
             }
         }
 
         let imgs = document.getElementsByTagName("img");
         const len = imgs.length;
+
         for (let i = 0; i < len; i++) {
             setImgSize(imgs[i]);
+            console.log(imgs[i]);
         }
     </script>
 </body>

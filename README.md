@@ -10,7 +10,7 @@
 
 - my Github page: **[Bathtub.com](https://bathtown.github.io/)**
 
-- my files url: **[bathtown/bathtown.github.io](https://github.com/bathtown/bathtown.github.io)**
+- my repository: **[bathtown/bathtown.github.io](https://github.com/bathtown/bathtown.github.io)**
 
 - 完成情况：3.16.20 完成
 
