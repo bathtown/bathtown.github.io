@@ -1,18 +1,15 @@
 # 😜Notes about my Project 01
 
+- SEALED TIME: 20/4/14
+- project 02 repository: **[squareChat](https://github.com/bathtown/squareChat)**
+
 ## 关于 pj
-
-- **姓名：胡彧锋**
-
-- **学号：18307130207**
 
 - sources: **[fudan*19ss_web 基础课程\_Project_01*旅游照片分享平台（上）](https://github.com/fudansswebfundamental/Project1-2020)**
 
 - my Github page: **[Bathtub.com](https://bathtown.github.io/)**
 
-- my repository: **[bathtown/bathtown.github.io](https://github.com/bathtown/bathtown.github.io)**
-
-- 完成情况：3.16.20 完成
+- my repository: **[bathtown.github.io](https://github.com/bathtown/bathtown.github.io)**
 
 - Bonus 完成情况
 
@@ -67,26 +64,26 @@
       JS
 
       ```js
-      let div = document.getElementsByClassName('picContainer')[0]
+      let div = document.getElementsByClassName('picContainer')[0];
       // 都是一样的
 
-      const divRatio = div.offsetWidth / div.offsetHeight
+      const divRatio = div.offsetWidth / div.offsetHeight;
 
       function setImgSize(self) {
-        self.onload = function() {
-          ratio = self.width / self.height
+        self.onload = function () {
+          ratio = self.width / self.height;
           if (divRatio > ratio) {
-            self.style.width = '100%'
+            self.style.width = '100%';
           } else {
-            self.style.height = '100%'
+            self.style.height = '100%';
           }
-        }
+        };
       }
 
-      let imgs = document.getElementsByTagName('img')
-      const len = imgs.length
+      let imgs = document.getElementsByTagName('img');
+      const len = imgs.length;
       for (let i = 0; i < len; i++) {
-        setImgSize(imgs[i])
+        setImgSize(imgs[i]);
       }
       ```
 
@@ -312,9 +309,9 @@
     <body style="height:2000px;">
       <button id="test" style="position:fixed;right:0;bottom:0">回到顶部</button>
       <script>
-        test.onclick = function() {
-          document.body.scrollTop = document.documentElement.scrollTop = 0
-        }
+        test.onclick = function () {
+          document.body.scrollTop = document.documentElement.scrollTop = 0;
+        };
       </script>
     </body>
     ```
@@ -325,9 +322,9 @@
     <body style="height:2000px;">
       <button id="test" style="position:fixed;right:0;bottom:0">回到顶部</button>
       <script>
-        test.onclick = function() {
-          scrollTo(0, 0) //window.scrollTo({ top: 0, behavior: "smooth" });平滑滚动
-        }
+        test.onclick = function () {
+          scrollTo(0, 0); //window.scrollTo({ top: 0, behavior: "smooth" });平滑滚动
+        };
       </script>
     </body>
     ```
@@ -485,7 +482,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>Document</title>
         <script>
-          document.createElement('picture')
+          document.createElement('picture');
         </script>
       </head>
 
@@ -659,27 +656,27 @@
   ```js
   // switch description and properties
   function swap() {
-    document.getElementsByClassName('de_choice de_myProperties')[0].style.display = 'none'
+    document.getElementsByClassName('de_choice de_myProperties')[0].style.display = 'none';
 
-    var choice1 = document.getElementById('description') // 上面两个tab
-    var choice2 = document.getElementById('properties')
+    var choice1 = document.getElementById('description'); // 上面两个tab
+    var choice2 = document.getElementById('properties');
 
-    choice1.onclick = function() {
-      document.getElementsByClassName('de_choice de_myProperties')[0].style.display = 'none'
-      document.getElementsByClassName('de_choice de_myWords')[0].style.display = 'block'
-      choice1.className = 'selected'
-      choice2.className = ''
-    }
+    choice1.onclick = function () {
+      document.getElementsByClassName('de_choice de_myProperties')[0].style.display = 'none';
+      document.getElementsByClassName('de_choice de_myWords')[0].style.display = 'block';
+      choice1.className = 'selected';
+      choice2.className = '';
+    };
 
-    choice2.onclick = function() {
-      document.getElementsByClassName('de_choice de_myProperties')[0].style.display = 'inline-table'
-      document.getElementsByClassName('de_choice de_myWords')[0].style.display = 'none'
-      choice1.className = ''
-      choice2.className = 'selected'
-    }
+    choice2.onclick = function () {
+      document.getElementsByClassName('de_choice de_myProperties')[0].style.display = 'inline-table';
+      document.getElementsByClassName('de_choice de_myWords')[0].style.display = 'none';
+      choice1.className = '';
+      choice2.className = 'selected';
+    };
   }
 
-  swap()
+  swap();
   ```
 
 ### 3.13.2020
