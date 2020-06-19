@@ -1,15 +1,13 @@
 # 😜Notes about my Project 01
 
 - SEALED TIME: 20/4/14
-- project 02 repository: **[squareChat](https://github.com/bathtown/squareChat)**
+- project 02 repository: **[Fotagrafia](https://github.com/bathtown/Fotagrafia)**
 
 ## 关于 pj
 
 - sources: **[fudan*19ss_web 基础课程\_Project_01*旅游照片分享平台（上）](https://github.com/fudansswebfundamental/Project1-2020)**
 
-- my Github page: **[Bathtub.com](https://bathtown.github.io/)**
-
-- my repository: **[bathtown.github.io](https://github.com/bathtown/bathtown.github.io)**
+- my repository: **[Fotagrafia-frontend](https://github.com/bathtown/Fotagrafia-frontend)**
 
 - Bonus 完成情况
 
