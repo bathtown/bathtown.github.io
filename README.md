@@ -1,7 +1,6 @@
 # 😜Notes about my Project 01
 
-- SEALED TIME: 20/4/14
-- project 02 repository: **[Fotagrafia](https://github.com/bathtown/Fotagrafia)**
+> For more features, please visit **[Fotagrafia 🗽](https://github.com/bathtown/Fotagrafia)**
 
 ## 关于 pj
 
